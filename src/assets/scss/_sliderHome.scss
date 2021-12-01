@@ -1,0 +1,28 @@
+
+.slick-slider .slick-initialized{
+    text-align: center;
+}
+
+.slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px -6px 20px 0px;
+    width: 100%;
+}
+.slick-dots li{
+    list-style: none;
+}
+.slick-dots li button{
+
+    font-size: 0; 
+    width: 40px;
+    height: 1px;
+    background: #FFFFFF;
+   
+    margin-right: 6px;
+}
+.slick-dots li.slick-active button{
+    background: #FFFFFF;
+    height: 5px;
+}
