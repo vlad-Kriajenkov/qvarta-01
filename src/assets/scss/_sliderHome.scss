@@ -1,13 +1,38 @@
+.home {
 
-.slick-slider .slick-initialized{
+    &__slider {
+        background: #1D1D1D;
+        color: #ffff;
+        // height: 600px;
+    }
+}
+.slider {
+
+    &__title {
+        text-align: center;
+        padding: 79px 0px 154px 0px;
+        font-size: 18px;
+    }
+
+    &__quotes {
+        font-size: 32px;
+    }
+}
+.slick-slide.slick-active.slick-current{
+    margin-bottom: 167px;
+}
+.slick-list{
+    
+}
+.slick-slider.slick-initialized{
     text-align: center;
 }
 
 .slick-dots{
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
-    margin: 0px -6px 20px 0px;
+    padding-bottom: 80px;
     width: 100%;
 }
 .slick-dots li{

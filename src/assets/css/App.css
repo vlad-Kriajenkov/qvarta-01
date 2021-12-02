@@ -112,6 +112,12 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
+.textTitleCard {
+  font-family: "Zona Pro";
+  font-weight: 600;
+  font-style: normal;
+}
+
 .textBtn {
   font-family: "Zona Pro";
   font-weight: 600;
@@ -175,7 +181,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .info__text {
-  margin-bottom: 10px;
   font-size: 16px;
 }
 .info__title {
@@ -183,23 +188,85 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 42px;
 }
 
-/*Slider*/
+/*home__ourWorks*/
+.home__ourWorks {
+  margin: 0px 80px 0px 80px;
+}
+
+.ourWorks__header {
+  margin: 119px 0px 76px 0px;
+}
+.ourWorks__text {
+  font-size: 16px;
+}
+.ourWorks__title {
+  font-size: 42px;
+}
+.ourWorks__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 0px 111px 0px;
+}
+.ourWorks__btn button {
+  background: none;
+}
+
+.btn__text {
+  padding: 10px 0px 0px 0px;
+  font-size: 16px;
+  transition: all ease-in-out 0.2s;
+}
+.btn__text:hover {
+  padding: 0px 0px 10px 0px;
+  transition: all ease-in-out 0.2s;
+}
+
+.different::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  left: 48.5%;
+  margin-top: 2px;
+  background-color: black;
+  transition: all ease-in-out 0.2s;
+}
+
+.different:hover::after {
+  width: 11%;
+  left: 44.5%;
+  margin-top: 2px;
+}
+
+/*home__ourWorks*/
 .home__slider {
   background: #1D1D1D;
   color: #ffff;
-  height: 600px;
 }
 
-/*Slider*/
-.slick-slider .slick-initialized {
+.slider__title {
+  text-align: center;
+  padding: 79px 0px 154px 0px;
+  font-size: 18px;
+}
+.slider__quotes {
+  font-size: 32px;
+}
+
+.slick-slide.slick-active.slick-current {
+  margin-bottom: 167px;
+}
+
+.slick-slider.slick-initialized {
   text-align: center;
 }
 
 .slick-dots {
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
-  margin: 0px -6px 20px 0px;
+  padding-bottom: 80px;
   width: 100%;
 }
 
@@ -218,4 +285,16 @@ h1, h2, h3, h4, h5, h6 {
 .slick-dots li.slick-active button {
   background: #FFFFFF;
   height: 5px;
+}
+
+.postItemWork__wrapper:nth-child(2n) {
+  margin-top: 120px;
+}
+.postItemWork__title {
+  font-size: 24px;
+  margin: 38px 0px 10px 0px;
+}
+.postItemWork__text {
+  font-size: 13px;
+  width: 510px;
 }

@@ -33,23 +33,41 @@
             {{quote.text}}
           </div>
       </VueSlickCarousel>
-    </div>  
+    </div>
+    <div class="home__ourWorks">
+      <div class="ourWorks__header">
+        <div class="ourWorks__text textNormal">реализации</div>
+        <div class="ourWorks__title textTitleCard">Наши работы</div>
+      </div>
+      <post-list-work/>
+      <div class="ourWorks__btn">
+        <router-link
+        to="#">
+          <button class="different">
+            <div class="btn__text textBtn">Все работы</div>
+          </button>
+        </router-link>
+      </div>
+    </div>
   </div>
+  
 </template>
 
 <script>
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import PostListWork from '../components/post-list-work/post-list-work.vue'
+
 
 export default {
   name: 'Home',
   components: {
-    VueSlickCarousel
+    VueSlickCarousel,
+    PostListWork
   },
   data(){
     return{
       settings:{
-                "dots": true,
                 "dotsClass": "slick-dots custom-dot-class",
                 "edgeFriction": 0.35,
                 "infinite": false,
@@ -78,8 +96,9 @@ export default {
           title:'Клиент не всегда прав',
           text:'Мы точно знаем, что в некоторых вещах разбираемся лучше.'
         },
-      ]  
+      ],
+
   }
-  }
+  },
 }
 </script>

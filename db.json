@@ -1,0 +1,28 @@
+{
+    "work": [
+        {
+            "id": 1,
+            "img":"img/product/miniPha.svg",
+            "title": "MINI PHA",
+            "text": "Разработка дизайна ночной лампы"
+        },
+        {
+            "id": 2,
+            "img":"img/product/LUXIEVASELAMP.svg",
+            "title": "LUXIE VASE LAMP",
+            "text":"Разработка дизайна ночной лампы"
+        },
+        {
+            "id": 3,
+            "img":"img/product/SMARTASHRTAY.svg",
+            "title": "SMART ASHRTAY",
+            "text": "Разработка дизайна, конструкции и функциональной части устройства"
+        },
+        {
+            "id": 4,
+            "img":"img/product/BAMBOOFOODSTEAMER.svg",
+            "title": "BAMBOO FOOD STEAMER",
+            "text": "Разработка концепт-дизайна пароварки"
+        }
+    ]
+}
