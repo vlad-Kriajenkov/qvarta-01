@@ -135,3 +135,29 @@
     margin-top: 2px;
   }
 /*home__ourWorks*/
+
+
+/*home__whatWeDo*/
+.home {
+
+    &__whatWeDo {
+        display: flex;
+    }
+}
+.whatWeDo {
+   
+    &__imgBlock {
+        width: 50%;
+        height: 100vh;
+        background: url('../img/Lamp/LampForm.svg') no-repeat center center ; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    &__ourServices {
+        width: 50%;
+    }
+}
+/*home__whatWeDo*/

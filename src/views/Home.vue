@@ -49,6 +49,14 @@
         </router-link>
       </div>
     </div>
+    <div class="home__whatWeDo">
+      <div class="whatWeDo__imgBlock">
+        
+      </div>
+      <div class="whatWeDo__ourServices">
+        <our-services/>
+      </div>
+    </div>
   </div>
   
 </template>
@@ -57,13 +65,14 @@
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import PostListWork from '../components/post-list-work/post-list-work.vue'
-
+import ourServices from '../components/our-services/our-services'
 
 export default {
   name: 'Home',
   components: {
     VueSlickCarousel,
-    PostListWork
+    PostListWork,
+    ourServices
   },
   data(){
     return{

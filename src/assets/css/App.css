@@ -240,6 +240,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*home__ourWorks*/
+/*home__whatWeDo*/
+.home__whatWeDo {
+  display: flex;
+}
+
+.whatWeDo__imgBlock {
+  width: 50%;
+  height: 100vh;
+  background: url("../img/Lamp/LampForm.svg") no-repeat center center;
+  background-size: cover;
+}
+.whatWeDo__ourServices {
+  width: 50%;
+}
+
+/*home__whatWeDo*/
 .home__slider {
   background: #1D1D1D;
   color: #ffff;
@@ -297,4 +313,72 @@ h1, h2, h3, h4, h5, h6 {
 .postItemWork__text {
   font-size: 13px;
   width: 510px;
+}
+
+.ourServices {
+  background: #1D1D1D;
+  height: 100vh;
+  color: #ffff;
+  padding: 70px 80px 0px 80px;
+}
+.ourServices__text {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.ourServices__title {
+  font-size: 42px;
+  margin-bottom: 60px;
+}
+.ourServices__link {
+  color: #707070;
+  font-size: 24px;
+}
+.ourServices__a {
+  position: relative;
+  border-bottom: 2px solid #707070;
+  padding-bottom: 16px;
+  margin-bottom: 22px;
+}
+.ourServices__a:hover {
+  border-bottom: 2px solid #ffff;
+  padding-left: 10px;
+}
+.ourServices__moreInfo {
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  opacity: 0;
+}
+.ourServices__moreInfo:hover {
+  opacity: 1;
+}
+
+.column__btnWhite {
+  background: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 72px;
+  transition: margin-top 0.5s linear;
+  font-size: 16px;
+}
+.column__btnWhite p {
+  padding: 5px;
+}
+.column__btnWhite .lineWhite {
+  width: 40px;
+  border-bottom: 2px solid #ffff;
+  margin-top: 0px;
+  transition: width 0.5s linear, margin-top 0.5s linear;
+}
+.column__btnWhite:hover {
+  margin-top: 67px;
+  transition: margin-top 0.5s linear;
+}
+.column__btnWhite:hover .lineWhite {
+  width: 100%;
+  margin-top: 5px;
+  border-bottom: 2px solid #ffff;
+  transition: width 0.5s linear, margin-top 0.5s linear;
 }
