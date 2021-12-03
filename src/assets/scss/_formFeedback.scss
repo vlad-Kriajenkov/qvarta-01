@@ -1,0 +1,77 @@
+.form-feedback {
+    padding: 120px 80px 120px 80px;
+    &__boxTitle {
+        margin-bottom: 80px;
+    }
+
+    &__boxForm {
+    }
+}
+.boxTitle {
+
+    &__tetx {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 42px;
+    }
+}
+.boxForm {
+
+    &__inputbox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        input{
+            border-bottom: 1px solid #707070;
+            width: 48%;
+            margin-bottom: 40PX;
+            padding-bottom: 10px;
+        }
+        input:hover{
+            border-bottom: 2px solid #1D1D1D;
+            margin-bottom: 39PX;
+        }
+        input:last-child{
+            width: 100%;
+        }
+        input::after{
+            border-bottom: 2px solid #1D1D1D;
+        }
+        input::placeholder{
+            font-size: 13px;
+            color: #707070;
+            padding-left: 0px;
+            transition: padding-left 0.2s linear;
+        }
+        input:hover::placeholder{
+            padding-left: 10px;
+            transition: padding-left 0.2s linear;
+        }
+    }
+ 
+    &__btn {
+        width: 280px;
+        height: 54px;
+        
+        color: #ffff;
+        background-color: #1D1D1D;
+        transition: width 0.2s linear, height 0.2s linear;
+    }
+
+    &__btn:hover{
+        width: 260px;
+        
+        height: 50px;
+        transition: width 0.2s linear, height 0.2s linear;
+    }
+
+}
+.boxBtn{
+    width: 280px;
+    height: 54px;
+    margin-top: 70px;
+}

@@ -161,3 +161,84 @@
     }
 }
 /*home__whatWeDo*/
+
+/* home__footer*/
+.home {
+
+    &_footerLine {
+        position: absolute;
+        top:0;
+        left: 0;
+        z-index: 2;
+        width: 20%;
+        height: 2px;
+        background: #ffff;
+    }
+    &_footerLine:hover{
+        width:100%;
+    }
+    &__bg{
+        
+        opacity: 0.8 ;
+    }
+    &__footer {
+        position: relative;
+        width: 100%;
+
+    }
+}
+.footer {
+
+    &__link {
+        position: absolute;
+        left: 80px;
+        bottom: 80px;
+        color: #ffff;
+        z-index: 2;
+    }
+
+    &__timer {
+        position: absolute;
+        right: 80px;
+        bottom: 80px;
+        color: #ffff;
+        z-index: 2;
+    }
+}
+.link {
+
+    &__text {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 29px;
+    }
+}
+.timer {
+
+    &__text {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 29px;
+    }
+}
+.darkened {
+    position: relative;
+  }
+   
+.darkened::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);  
+    z-index: 1;
+  }
+/* home__footer*/

@@ -256,6 +256,74 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*home__whatWeDo*/
+/* home__footer*/
+.home_footerLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 20%;
+  height: 2px;
+  background: #ffff;
+}
+.home_footerLine:hover {
+  width: 100%;
+}
+.home__bg {
+  opacity: 0.8;
+}
+.home__footer {
+  position: relative;
+  width: 100%;
+}
+
+.footer__link {
+  position: absolute;
+  left: 80px;
+  bottom: 80px;
+  color: #ffff;
+  z-index: 2;
+}
+.footer__timer {
+  position: absolute;
+  right: 80px;
+  bottom: 80px;
+  color: #ffff;
+  z-index: 2;
+}
+
+.link__text {
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+.link__title {
+  font-size: 29px;
+}
+
+.timer__text {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.timer__title {
+  font-size: 29px;
+}
+
+.darkened {
+  position: relative;
+}
+
+.darkened::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* home__footer*/
 .home__slider {
   background: #1D1D1D;
   color: #ffff;
@@ -338,20 +406,33 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 2px solid #707070;
   padding-bottom: 16px;
   margin-bottom: 22px;
+  font-size: 19px;
+  padding-left: 0px;
+  transition: padding-left 0.2s linear;
 }
 .ourServices__a:hover {
   border-bottom: 2px solid #ffff;
   padding-left: 10px;
+  transition: padding-left 0.2s linear;
 }
-.ourServices__moreInfo {
+
+.ourServices__a .ourServices__moreInfo {
+  visibility: hidden;
+  opacity: 0;
+  color: #fff;
   font-size: 12px;
   position: absolute;
+  z-index: 1;
+  top: 35%;
   right: 0;
-  top: 25px;
-  opacity: 0;
+  transition: visibility 0.2s ease-out, top 0.2s linear, opacity 0.3s linear;
 }
-.ourServices__moreInfo:hover {
+
+.ourServices__a:hover .ourServices__moreInfo {
+  visibility: visible;
   opacity: 1;
+  top: 15%;
+  transition: visibility 0.2s ease-out, top 0.2s linear, opacity 0.3s linear;
 }
 
 .column__btnWhite {
@@ -381,4 +462,167 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 5px;
   border-bottom: 2px solid #ffff;
   transition: width 0.5s linear, margin-top 0.5s linear;
+}
+
+.form-feedback {
+  padding: 120px 80px 120px 80px;
+}
+.form-feedback__boxTitle {
+  margin-bottom: 80px;
+}
+.boxTitle__tetx {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.boxTitle__title {
+  font-size: 42px;
+}
+
+.boxForm__inputbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.boxForm__inputbox input {
+  border-bottom: 1px solid #707070;
+  width: 48%;
+  margin-bottom: 40PX;
+  padding-bottom: 10px;
+}
+.boxForm__inputbox input:hover {
+  border-bottom: 2px solid #1D1D1D;
+  margin-bottom: 39PX;
+}
+.boxForm__inputbox input:last-child {
+  width: 100%;
+}
+.boxForm__inputbox input::after {
+  border-bottom: 2px solid #1D1D1D;
+}
+.boxForm__inputbox input::-moz-placeholder {
+  font-size: 13px;
+  color: #707070;
+  padding-left: 0px;
+  -moz-transition: padding-left 0.2s linear;
+  transition: padding-left 0.2s linear;
+}
+.boxForm__inputbox input:-ms-input-placeholder {
+  font-size: 13px;
+  color: #707070;
+  padding-left: 0px;
+  -ms-transition: padding-left 0.2s linear;
+  transition: padding-left 0.2s linear;
+}
+.boxForm__inputbox input::placeholder {
+  font-size: 13px;
+  color: #707070;
+  padding-left: 0px;
+  transition: padding-left 0.2s linear;
+}
+.boxForm__inputbox input:hover::-moz-placeholder {
+  padding-left: 10px;
+  -moz-transition: padding-left 0.2s linear;
+  transition: padding-left 0.2s linear;
+}
+.boxForm__inputbox input:hover:-ms-input-placeholder {
+  padding-left: 10px;
+  -ms-transition: padding-left 0.2s linear;
+  transition: padding-left 0.2s linear;
+}
+.boxForm__inputbox input:hover::placeholder {
+  padding-left: 10px;
+  transition: padding-left 0.2s linear;
+}
+.boxForm__btn {
+  width: 280px;
+  height: 54px;
+  color: #ffff;
+  background-color: #1D1D1D;
+  transition: width 0.2s linear, height 0.2s linear;
+}
+.boxForm__btn:hover {
+  width: 260px;
+  height: 50px;
+  transition: width 0.2s linear, height 0.2s linear;
+}
+
+.boxBtn {
+  width: 280px;
+  height: 54px;
+  margin-top: 70px;
+}
+
+.formContact {
+  display: flex;
+}
+.formContact__conatinerContact {
+  width: 50%;
+  height: 100vh;
+  background: #1D1D1D;
+  color: #ffff;
+  padding: 80px 80px 90px 80px;
+}
+
+.conatinerContact_text {
+  font-size: 16px;
+}
+.conatinerContact_title {
+  font-size: 42px;
+}
+.conatinerContact__boxTitle {
+  margin-bottom: 70px;
+}
+.conatinerContact__boxInfo hr {
+  width: 100%;
+  height: 1px;
+  background: #ffff;
+  margin-bottom: 40px;
+}
+
+.boxInfo__email {
+  font-size: 16px;
+  margin-bottom: 38px;
+}
+.boxInfo__phone {
+  font-size: 16px;
+  margin-bottom: 38px;
+}
+.boxInfo__address {
+  font-size: 16px;
+  margin-bottom: 79px;
+}
+.boxInfo__networks {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px 0px 10px;
+}
+
+.email__title {
+  margin-bottom: 10px;
+}
+.phone__title {
+  margin-bottom: 10px;
+}
+.phone__text li:first-child {
+  margin-bottom: 10px;
+}
+
+.address__title {
+  margin-bottom: 10px;
+}
+.networks__link a {
+  color: #ffff;
+  padding: 0px 5px 0px 5px;
+}
+.networks__link .border {
+  width: 0px;
+  height: 1px;
+  background: #ffff;
+  margin-top: 10px;
+  transition: width 0.3s linear;
+}
+.networks__link:hover .border {
+  width: 100%;
+  transition: width 0.3s linear;
 }
