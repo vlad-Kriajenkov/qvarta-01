@@ -1,6 +1,6 @@
 <template>
     <div>
-        <NavBar/>
+        <main-nav-header/>
         <main >
             <router-view
             @postFilter="getFilter"
@@ -12,7 +12,7 @@
 
 
 <script>
-import NavBar from '../components/app/Header/NavBar'
+import MainNavHeader from '../components/main-nav-header/main-nav-header.vue'
 
 
 export default {
@@ -23,7 +23,7 @@ export default {
         }
     },
     components:{
-        NavBar
+        MainNavHeader
     },
     
     methods:{

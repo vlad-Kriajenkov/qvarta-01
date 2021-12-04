@@ -130,6 +130,121 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
+.mainNavHeader {
+  position: absolute;
+  padding: 30px 80px 80px 80px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+}
+.mainNavHeader__mainNav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  width: 98vw;
+}
+.mainNavHeader__mainNav.active2 {
+  top: 0px;
+  transition: all 0.2s ease-out;
+}
+.mainNavHeader__logg {
+  font-size: 40px;
+}
+.mainNavHeader__leng {
+  position: absolute;
+  right: 80px;
+  bottom: 50px;
+  display: flex;
+}
+.mainNavHeader__leng button div {
+  width: 0px;
+  height: 1px;
+  background: #fff;
+  transition: all 0.3s ease-out;
+}
+.mainNavHeader__leng button:hover div {
+  width: 100%;
+  margin-top: 5px;
+  transition: all 0.3s ease-out;
+}
+
+.leng__ru {
+  background: none;
+  color: #fff;
+  margin-right: 10px;
+}
+.leng__eng {
+  background: none;
+  color: #fff;
+}
+
+.menu {
+  display: inline-block;
+  z-index: 10;
+}
+
+.burger-container {
+  width: 24px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.burger {
+  display: block;
+  width: 24px;
+  height: 2px;
+  position: relative;
+  top: 10px;
+  background-color: #fff;
+  transform: rotate(90deg);
+  transition: all 0.3s ease-out;
+}
+
+.burger::after {
+  position: relative;
+  display: block;
+  content: " ";
+  top: 8px;
+  width: 12px;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease-out;
+}
+
+.burger::before {
+  position: relative;
+  display: block;
+  content: " ";
+  bottom: 10px;
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease-out;
+}
+
+.active {
+  visibility: hidden;
+  transition: all 0.1s ease-out;
+}
+
+.active::after {
+  transform: rotate(-45deg);
+  visibility: visible;
+  width: 24px;
+}
+
+.active::before {
+  transform: rotate(45deg);
+  visibility: visible;
+  bottom: -10px;
+}
+
+.burger-container:hover > .burger::after {
+  width: 24px;
+}
+
 .home__header {
   display: flex;
   justify-content: space-between;
@@ -153,6 +268,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 72px;
   transition: margin-top 0.5s linear;
   font-size: 16px;
+  z-index: 3;
 }
 .column__btn p {
   padding: 5px;
@@ -625,4 +741,151 @@ h1, h2, h3, h4, h5, h6 {
 .networks__link:hover .border {
   width: 100%;
   transition: width 0.3s linear;
+}
+
+.mainNav {
+  display: flex;
+  background: #1D1D1D;
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  transition: all 0.3s ease-out;
+}
+.mainNav__conatinerContact {
+  width: 50%;
+  height: 100vh;
+  color: #ffff;
+  padding: 40px 80px 90px 80px;
+}
+.mainNav__logo {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+.mainNav__img {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.img__form {
+  width: 85%;
+  height: 70%;
+  background: url("../img/mainNav/img-0.svg") no-repeat center center;
+}
+
+.conatinerContact_text {
+  font-size: 16px;
+}
+.conatinerContact_title {
+  font-size: 42px;
+}
+.conatinerContact__boxTitle {
+  margin-bottom: 70px;
+}
+.conatinerContact__boxInfo hr {
+  width: 100%;
+  height: 1px;
+  background: #ffff;
+  margin-bottom: 40px;
+}
+
+.boxInfomainNav__email {
+  font-size: 16px;
+  margin-bottom: 38px;
+}
+.boxInfomainNav__phone {
+  font-size: 16px;
+  margin-bottom: 38px;
+}
+.boxInfomainNav__address {
+  font-size: 16px;
+  margin-bottom: 79px;
+}
+.boxInfomainNav__networks {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px 0px 10px;
+  margin-top: 139px;
+}
+
+.email__title {
+  margin-bottom: 10px;
+}
+.phone__title {
+  margin-bottom: 10px;
+}
+.phone__text li:first-child {
+  margin-bottom: 10px;
+}
+
+.address__title {
+  margin-bottom: 10px;
+}
+.networks__link a {
+  color: #ffff;
+  padding: 0px 5px 0px 5px;
+}
+.networks__link .border {
+  width: 0px;
+  height: 1px;
+  background: #ffff;
+  margin-top: 10px;
+  transition: width 0.3s linear;
+}
+.networks__link:hover .border {
+  width: 100%;
+  transition: width 0.3s linear;
+}
+
+.ourServicesmainNav {
+  background: #1D1D1D;
+  height: 100vh;
+  color: #ffff;
+  padding: 70px 80px 0px 80px;
+}
+.ourServicesmainNav__link {
+  color: #707070;
+  font-size: 24px;
+}
+.ourServicesmainNav__a {
+  position: relative;
+  border-bottom: 2px solid #707070;
+  padding-bottom: 16px;
+  margin-bottom: 22px;
+  font-size: 19px;
+  padding-left: 0px;
+  transition: padding-left 0.2s linear;
+}
+.ourServicesmainNav__a:hover {
+  border-bottom: 2px solid #ffff;
+  padding-left: 10px;
+  transition: padding-left 0.2s linear;
+}
+
+.ourServices__a .ourServices__moreInfo {
+  visibility: hidden;
+  opacity: 0;
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  z-index: 1;
+  top: 35%;
+  right: 0;
+  transition: visibility 0.2s ease-out, top 0.2s linear, opacity 0.3s linear;
+}
+
+.ourServices__a:hover .ourServices__moreInfo {
+  visibility: visible;
+  opacity: 1;
+  top: 15%;
+  transition: visibility 0.2s ease-out, top 0.2s linear, opacity 0.3s linear;
+}
+
+.mainNavMenu {
+  display: inline-block;
+  position: absolute;
+  right: 80px;
+  top: 40px;
 }
