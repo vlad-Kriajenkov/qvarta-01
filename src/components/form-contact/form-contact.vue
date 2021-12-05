@@ -4,7 +4,8 @@
             :center="{lat:50.44914612370747, lng:30.60060378286676}" 
             :zoom="15.5"
             map-type-id="terrain"
-            style="width: 50%; height: 100vh"
+            
+            class="formContact__conatinerMap"
         >            
         </GmapMap>
         <div class="formContact__conatinerContact">

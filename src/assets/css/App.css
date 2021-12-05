@@ -397,7 +397,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 .home__bg {
-  opacity: 0.8;
+  background: url("../img/footer/homeFoter.svg") no-repeat center center;
+  width: 100%;
+  height: 420px;
 }
 .home__footer {
   position: relative;
@@ -498,7 +500,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 5px;
 }
 
-.postItemWork__wrapper:nth-child(2n) {
+.postItemWork__container:nth-child(2n) {
   margin-top: 120px;
 }
 .postItemWork__title {
@@ -688,6 +690,10 @@ h1, h2, h3, h4, h5, h6 {
   background: #1D1D1D;
   color: #ffff;
   padding: 80px 80px 90px 80px;
+}
+.formContact__conatinerMap {
+  width: 50%;
+  height: 100vh;
 }
 
 .conatinerContact_text {
@@ -911,7 +917,77 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
   .home__columnInfo {
-    width: 100%;
     padding: 130px 0px 80px 0px;
   }
+  .home__columnProduct {
+    width: 100%;
+  }
+  .home__ourWorks {
+    margin: 0px;
+  }
+  .home__whatWeDo {
+    display: block;
+  }
+  .info__text {
+    font-size: 14px;
+  }
+  .info__title {
+    font-size: 32px;
+  }
+
+  .textNormal {
+    font-size: 14px;
+  }
+
+  .textTitle {
+    font-size: 32px;
+  }
+
+  .whatWeDo__imgBlock {
+    width: 100%;
+  }
+  .whatWeDo__ourServices {
+    width: 100%;
+  }
+
+  /**/
+  .mainNavHeader {
+    padding: 30px 20px 80px 20px;
+  }
+  /**/
+  /**/
+  .formContact {
+    display: block;
+  }
+  .formContact__conatinerContact {
+    width: 100%;
+  }
+
+  .vue-map-container {
+    width: 100%;
+  }
+
+  /**/
+  /**/
+  .postItemWork {
+    width: 100%;
+  }
+  .postItemWork__container {
+    width: 100%;
+  }
+  .postItemWork__img {
+    width: 100%;
+  }
+  .postItemWork__text {
+    font-size: 13px;
+    width: 100%;
+  }
+
+  /**/
+  /*s*/
+  .home__bg {
+   
+    height: 420px;
+  }
+  /*e*/
 }

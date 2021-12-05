@@ -27,17 +27,12 @@
       <div class="slider__title textNormal">
         концепция <span class="textBold">Q</span>
       </div>
-      <VueSlickCarousel :arrows="false" :dots="true">
-          <div 
-          v-for="quote in quotes"
-          :key="quote.id"
-          class="slider__quotes textNormal ml3"
-          
-          >
-            {{quote.title}}
-            <br>
-            {{quote.text}}
-          </div>
+      <VueSlickCarousel :arrows="false" :dots="true" >
+          <div class="slider__quotes textNormal ml1">asdsad asdasd</div>
+          <div class="slider__quotes textNormal ml2">asdsasdasvzxcvxvzxsd</div>
+          <div class="slider__quotes textNormal ml3">asdsa2132352345dasdasd</div>
+          <div class="slider__quotes textNormal ml4">asdsadasd234c2ee2asd</div>
+
       </VueSlickCarousel>
     </div>
     <div class="home__ourWorks">
@@ -67,8 +62,8 @@
     <form-contact/>
     <div class="home__footer">
       <hr class="home_footerLine">
-      <div class="cvc darkened">
-        <img class="home__bg" src="../assets/img/footer/homeFoter.svg" width="100%" alt="">
+      <div class="darkened">
+        <div class="home__bg" ></div>
       </div>
       
       <router-link
@@ -143,27 +138,84 @@ export default {
   }
   },
    mounted() {
-    //  teicletter:{
-    //   var textWrapper = document.querySelector('.ml3');
-    //   textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-    //   console.log(textWrapper);
-    //   anime.timeline({loop: true})
-    //   .add({
-    //     targets: '.ml3 .letter',
-    //     opacity: [0,1],
-    //     easing: "easeInOutQuad",
-    //     duration: 2250,
-    //     delay: (el, i) => 150 * (i+1)
-    //   }).add({
-    //     targets: '.ml3',
-    //     opacity: 0,
-    //     duration: 1000,
-    //     easing: "easeOutExpo",
-    //     delay: 1000
-    //   });
-    //  }
-    
-  },
+      const textWrapper1 = document.querySelector('.ml1');
+      const textWrapper2 = document.querySelector('.ml2');
+      const textWrapper3 = document.querySelector('.ml3');
+      const textWrapper4 = document.querySelector('.ml4');
 
+      textWrapper1.innerHTML = textWrapper1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+      textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+      textWrapper3.innerHTML = textWrapper3.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+      textWrapper4.innerHTML = textWrapper4.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+      
+      this
+        .$anime
+        .timeline({loop: true})
+        .add({
+          targets: '.ml1 .letter',
+          opacity: [0,1],
+          easing: "easeInOutQuad",
+          duration: 2250,
+          delay: (el, i) => 150 * (i+1)
+        }).add({
+          targets: '.ml1',
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          delay: 1000
+        });
+
+      this
+        .$anime
+        .timeline({loop: true})
+        .add({
+          targets: '.ml2 .letter',
+          opacity: [0,1],
+          easing: "easeInOutQuad",
+          duration: 2250,
+          delay: (el, i) => 150 * (i+1)
+        }).add({
+          targets: '.ml2',
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          delay: 1000
+        });  
+
+         this
+        .$anime
+        .timeline({loop: true})
+        .add({
+          targets: '.ml3 .letter',
+          opacity: [0,1],
+          easing: "easeInOutQuad",
+          duration: 2250,
+          delay: (el, i) => 150 * (i+1)
+        }).add({
+          targets: '.ml3',
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          delay: 1000
+        });  
+
+      this
+        .$anime
+        .timeline({loop: true})
+        .add({
+          targets: '.ml4 .letter',
+          opacity: [0,1],
+          easing: "easeInOutQuad",
+          duration: 2250,
+          delay: (el, i) => 150 * (i+1)
+        }).add({
+          targets: '.ml4',
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          delay: 1000
+        });  
+  },
+ 
 }
 </script>

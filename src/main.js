@@ -6,7 +6,11 @@ import store from './store'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import * as VueGoogleMaps from 'vue2-google-maps'
-
+import ajax from "vuejs-ajax"
+import VueAnime from 'vue-animejs';
+ 
+Vue.use(VueAnime)
+Vue.use(ajax)
 Vue.config.productionTip = false
 Vue.use(VueGoogleMaps, {
   load: {
