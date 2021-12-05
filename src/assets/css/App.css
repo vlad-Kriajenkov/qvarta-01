@@ -157,6 +157,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 80px;
   bottom: 50px;
   display: flex;
+  z-index: 10;
 }
 .mainNavHeader__leng button div {
   width: 0px;
@@ -233,12 +234,13 @@ h1, h2, h3, h4, h5, h6 {
   transform: rotate(-45deg);
   visibility: visible;
   width: 24px;
+  top: -1px;
 }
 
 .active::before {
   transform: rotate(45deg);
   visibility: visible;
-  bottom: -10px;
+  bottom: 0px;
 }
 
 .burger-container:hover > .burger::after {
@@ -258,6 +260,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .home__columnProduct {
   width: 50%;
+  cursor: pointer;
+  z-index: 4;
 }
 
 .column__btn {
@@ -293,6 +297,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100vh;
   background: url("../img/home/img-1.svg") no-repeat center center;
+  background-size: cover;
+}
+
+.column__imgProducts.newbg {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/home/Img-2.svg") no-repeat center center;
   background-size: cover;
 }
 
@@ -888,4 +899,19 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   right: 80px;
   top: 40px;
+}
+
+@media (max-width: 767px) {
+  .selection__Stage {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .home__header {
+    display: block;
+  }
+  .home__columnInfo {
+    width: 100%;
+    padding: 130px 0px 80px 0px;
+  }
 }

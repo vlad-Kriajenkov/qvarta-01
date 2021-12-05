@@ -29,6 +29,7 @@
         right: 80px;
         bottom: 50px;
         display: flex;
+        z-index: 10;
         button{
            div{
                width: 0px;
@@ -137,11 +138,12 @@
     transform: rotate(-45deg);
     visibility: visible;
     width: 24px;
+    top: -1px;
   }
   .active::before{
     transform: rotate(45deg);
     visibility: visible;
-    bottom: -10px;
+    bottom: 0px;
   }
   .burger-container:hover>.burger::after{
     width: 24px;

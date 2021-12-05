@@ -1,0 +1,157 @@
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+    .selection__Stage{
+        display: none;
+    }
+    
+}
+
+@media (max-width:650px) {
+}
+
+@media (max-width: 480px) {
+    .home {
+
+		&_footerLine {
+		}
+
+		&__header {
+            display: block;
+		}
+
+		&__columnInfo {
+            width: 100%;
+            padding: 130px 0px 80px 0px;
+
+		}
+
+		&__columnProduct {
+		}
+
+		&__slider {
+		}
+
+		&__ourWorks {
+		}
+
+		&__whatWeDo {
+		}
+
+		&__footer {
+		}
+
+		&__bg {
+		}
+}
+.column {
+
+		&__info {
+		}
+
+		&__btn {
+		}
+
+		&__imgProducts {
+		}
+}
+.info {
+
+		&__text {
+		}
+
+		&__title {
+		}
+}
+.textNormal {
+}
+.textTitle {
+}
+.textBtn {
+}
+.line {
+}
+.slider {
+
+		&__title {
+		}
+
+		&__quotes {
+		}
+}
+.textBold {
+}
+.ml3 {
+}
+.ourWorks {
+
+		&__header {
+		}
+
+		&__text {
+		}
+
+		&__title {
+		}
+
+		&__btn {
+		}
+}
+.textTitleCard {
+}
+.different {
+}
+.btn {
+
+		&__text {
+		}
+}
+.whatWeDo {
+
+		&__imgBlock {
+		}
+
+		&__ourServices {
+		}
+}
+.cvc {
+}
+.darkened {
+}
+.footer {
+
+		&__link {
+		}
+
+		&__timer {
+		}
+}
+.link {
+
+		&__text {
+		}
+
+		&__title {
+		}
+}
+.timer {
+
+		&__text {
+		}
+
+		&__title {
+		}
+}
+
+}
+

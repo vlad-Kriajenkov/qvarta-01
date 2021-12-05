@@ -14,8 +14,13 @@
           <div class="line"></div>
         </button>
       </div>
-      <div class="home__columnProduct">
-        <div class="column__imgProducts"></div>
+      <div 
+      class="home__columnProduct" 
+      @click="newBg =!newBg">
+        <div 
+        class="column__imgProducts"
+        :class="{newbg: newBg}"
+        ></div>
       </div> 
     </div>
     <div class="home__slider">
@@ -27,6 +32,7 @@
           v-for="quote in quotes"
           :key="quote.id"
           class="slider__quotes textNormal ml3"
+          
           >
             {{quote.title}}
             <br>
@@ -81,7 +87,8 @@
   
 </template>
 
-<script>
+
+<script >
 import VueSlickCarousel from 'vue-slick-carousel';
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import PostListWork from '../components/post-list-work/post-list-work.vue';
@@ -100,6 +107,8 @@ export default {
   },
   data(){
     return{
+    
+      newBg: false,
       settings:{
                 "dotsClass": "slick-dots custom-dot-class",
                 "edgeFriction": 0.35,
@@ -133,5 +142,28 @@ export default {
 
   }
   },
+   mounted() {
+    //  teicletter:{
+    //   var textWrapper = document.querySelector('.ml3');
+    //   textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    //   console.log(textWrapper);
+    //   anime.timeline({loop: true})
+    //   .add({
+    //     targets: '.ml3 .letter',
+    //     opacity: [0,1],
+    //     easing: "easeInOutQuad",
+    //     duration: 2250,
+    //     delay: (el, i) => 150 * (i+1)
+    //   }).add({
+    //     targets: '.ml3',
+    //     opacity: 0,
+    //     duration: 1000,
+    //     easing: "easeOutExpo",
+    //     delay: 1000
+    //   });
+    //  }
+    
+  },
+
 }
 </script>
