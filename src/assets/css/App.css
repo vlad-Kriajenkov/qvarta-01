@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .mainNavHeader__mainNav.active2 {
   top: 0px;
-  transition: all 0.2s ease-out;
+  transition: all 1s ease-out;
 }
 .mainNavHeader__logg {
   font-size: 40px;
@@ -293,18 +293,18 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 2px solid black;
   transition: width 0.5s linear, margin-top 0.5s linear;
 }
-.column__imgProducts {
+.column__imgProducts img {
   width: 100%;
-  height: 100vh;
-  background: url("../img/home/img-1.svg") no-repeat center center;
-  background-size: cover;
 }
 
-.column__imgProducts.newbg {
-  width: 100%;
-  height: 100vh;
-  background: url("../img/home/Img-2.svg") no-repeat center center;
-  background-size: cover;
+.imgProducts__imgLVL.newbg {
+  display: none;
+}
+.imgProducts__imgBFS {
+  display: none;
+}
+.imgProducts__imgBFS.newbg {
+  display: block;
 }
 
 .info__text {
@@ -448,7 +448,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
 
@@ -615,7 +615,7 @@ h1, h2, h3, h4, h5, h6 {
 .boxForm__inputbox input {
   border-bottom: 1px solid #707070;
   width: 48%;
-  margin-bottom: 40PX;
+  margin-bottom: 40px;
   padding-bottom: 10px;
 }
 .boxForm__inputbox input:hover {
@@ -765,8 +765,8 @@ h1, h2, h3, h4, h5, h6 {
   background: #1D1D1D;
   width: 100%;
   position: absolute;
-  top: -100%;
-  transition: all 0.3s ease-out;
+  top: -1000%;
+  transition: all 5s ease-out;
 }
 .mainNav__conatinerContact {
   width: 50%;
@@ -917,13 +917,15 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
   .home__columnInfo {
-    padding: 130px 0px 80px 0px;
+    padding: 130px 0px 80px 20px;
+    margin: 0px;
+    width: 100%;
   }
   .home__columnProduct {
     width: 100%;
   }
   .home__ourWorks {
-    margin: 0px;
+    margin: 0px 20px 0px 20px;
   }
   .home__whatWeDo {
     display: block;
@@ -943,17 +945,55 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 32px;
   }
 
+  .different::after {
+    left: 44.5%;
+  }
+
   .whatWeDo__imgBlock {
-    width: 100%;
+    display: none;
   }
   .whatWeDo__ourServices {
     width: 100%;
   }
 
+  .ourServices {
+    padding: 70px 20px 0px 20px;
+    height: 620px;
+  }
+  .ourServices__a {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+  }
+
+  .footer__link {
+    left: 20px;
+    top: 80px;
+  }
+  .footer__timer {
+    left: 20px;
+    bottom: 80px;
+  }
+
   /**/
   .mainNavHeader {
     padding: 30px 20px 80px 20px;
+    height: 0px;
   }
+  .mainNavHeader__leng {
+    display: none;
+  }
+  .burger {
+    background-color: black;
+  }
+
+  .burger::after {
+    background-color: black;
+  }
+
+  .burger::before {
+    background-color: black;
+  }
+
   /**/
   /**/
   .formContact {
@@ -986,8 +1026,60 @@ h1, h2, h3, h4, h5, h6 {
   /**/
   /*s*/
   .home__bg {
-   
     height: 420px;
   }
   /*e*/
+  /**/
+  .slider__quotes {
+    font-size: 24px;
+  }
+
+  /**/
+  /**/
+  .form-feedback {
+    padding: 80px 20px 80px 20px;
+  }
+  .boxForm__inputbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .boxForm__inputbox input {
+    width: 100%;
+    margin-bottom: 55px;
+    border-bottom: 1px solid black;
+  }
+  .boxForm__inputbox input::-moz-placeholder {
+    font-size: 20px;
+  }
+  .boxForm__inputbox input:-ms-input-placeholder {
+    font-size: 20px;
+  }
+  .boxForm__inputbox input::placeholder {
+    font-size: 20px;
+  }
+  .boxBtn {
+    margin: 70px auto 0px auto;
+  }
+
+  /**/
+  /**/
+  .formContact__conatinerContact {
+    padding: 80px 20px 90px 20px;
+  }
+
+  .boxInfo__email {
+    font-size: 19px;
+  }
+  .boxInfo__phone {
+    font-size: 19px;
+  }
+  .boxInfo__address {
+    font-size: 19px;
+  }
+  .boxInfo__networks {
+    font-size: 19px;
+  }
+
+  /**/
 }

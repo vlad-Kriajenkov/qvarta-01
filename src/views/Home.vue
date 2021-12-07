@@ -17,10 +17,10 @@
       <div 
       class="home__columnProduct" 
       @click="newBg =!newBg">
-        <div 
-        class="column__imgProducts"
-        :class="{newbg: newBg}"
-        ></div>
+        <div class="column__imgProducts"> 
+        <img class="imgProducts__imgLVL" :class="{newbg: newBg}" src="../assets/img/home/img-1.svg" alt="LUXIE VASE LAMP">
+        <img class="imgProducts__imgBFS" :class="{newbg: newBg}" src="../assets/img/home/Img-2.svg" alt="BAMBOO FOOD STEAMER">
+        </div>
       </div> 
     </div>
     <div class="home__slider">
@@ -28,12 +28,16 @@
         концепция <span class="textBold">Q</span>
       </div>
       <VueSlickCarousel :arrows="false" :dots="true" >
-          <div class="slider__quotes textNormal ml1">asdsad asdasd</div>
-          <div class="slider__quotes textNormal ml2">asdsasdasvzxcvxvzxsd</div>
-          <div class="slider__quotes textNormal ml3">asdsa2132352345dasdasd</div>
-          <div class="slider__quotes textNormal ml4">asdsadasd234c2ee2asd</div>
+          <div class="slider__quotes textNormal ml1">Продукт превыше всего. Либо делаем крутой продукт, либо не делаем его вообще.  </div>
+          <div class="slider__quotes textNormal ml2">Мы ценим честность. Честны перед собой, нашим клиентом и продуктом.</div>
+          <div class="slider__quotes textNormal ml3">Работаем ради денег. Главная задача проекта - принести вам прибыль. </div>
+          <div class="slider__quotes textNormal ml4">Клиент не всегда прав. Мы точно знаем, что в некоторых вещах разбираемся лучше.</div>
 
       </VueSlickCarousel>
+         <!-- <div class="slider__quotes textNormal ml1">Продукт превыше всего.  Либо делаем крутой продукт, либо не делаем его вообще.</div>
+          <div class="slider__quotes textNormal ml2">Мы ценим честность. Честны перед собой, нашим клиентом и продуктом.</div>
+          <div class="slider__quotes textNormal ml3">Работаем ради денег. Главная задача проекта - принести вам прибыль. </div>
+          <div class="slider__quotes textNormal ml4">Клиент не всегда прав. Мы точно знаем, что в некоторых вещах разбираемся лучше.</div> -->
     </div>
     <div class="home__ourWorks">
       <div class="ourWorks__header">
@@ -60,7 +64,9 @@
     </div>
     <formFeedback/>
     <form-contact/>
-    <div class="home__footer">
+    <div
+    v-scroll="handleScroll" 
+    class="home__footer">
       <hr class="home_footerLine">
       <div class="darkened">
         <div class="home__bg" ></div>
@@ -75,7 +81,7 @@
       </router-link>
       <div class="footer__timer">
         <div class="timer__text textNormal">Через</div>
-        <div class="timer__title textTitle">08</div>
+        <div class="timer__title textTitle">0{{ currentTime }}</div>
       </div>  
     </div>
   </div>
@@ -83,13 +89,28 @@
 </template>
 
 
+
+
 <script >
+import Vue from 'vue'
 import VueSlickCarousel from 'vue-slick-carousel';
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import PostListWork from '../components/post-list-work/post-list-work.vue';
 import ourServices from '../components/our-services/our-services';
 import formFeedback from '../components/form-feedback/form-feedback.vue';
 import FormContact from '../components/form-contact/form-contact.vue';
+
+Vue.directive('scroll', {
+  inserted: function (el, binding) {
+    let f = function (evt) {
+      if (binding.value(evt, el)) {
+        window.removeEventListener('scroll', f)
+      }
+    }
+    window.addEventListener('scroll', f)
+  }
+})
+
 
 export default {
   name: 'Home',
@@ -102,7 +123,8 @@ export default {
   },
   data(){
     return{
-    
+      currentTime: 8,
+      timer: null,
       newBg: false,
       settings:{
                 "dotsClass": "slick-dots custom-dot-class",
@@ -138,6 +160,8 @@ export default {
   }
   },
    mounted() {
+     
+     
       const textWrapper1 = document.querySelector('.ml1');
       const textWrapper2 = document.querySelector('.ml2');
       const textWrapper3 = document.querySelector('.ml3');
@@ -147,7 +171,7 @@ export default {
       textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
       textWrapper3.innerHTML = textWrapper3.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
       textWrapper4.innerHTML = textWrapper4.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-      
+      console.log(textWrapper4);
       this
         .$anime
         .timeline({loop: true})
@@ -216,6 +240,33 @@ export default {
           delay: 1000
         });  
   },
- 
+  destroyed() {
+    this.stopTimer()
+  }, 
+  methods: {
+     handleScroll: function(evt, el){
+      if (window.scrollY > 4600) {
+           this.startTimer()
+           console.log(scrollY);
+      }
+      return window.scrollY > 4600
+     },
+      startTimer() {
+        this.timer = setInterval(() => {
+          this.currentTime--
+        }, 1000)
+      },
+      stopTimer() {
+        clearTimeout(this.timer)
+        this.$router.push('Home') 
+      },
+    },
+    watch: {
+      currentTime(time) {
+        if (time === 0) {
+          this.stopTimer()
+        }
+      }
+    },
 }
 </script>

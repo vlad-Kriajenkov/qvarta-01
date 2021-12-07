@@ -25,6 +25,8 @@ Vue.use(VueGoogleMaps, {
   },
 })
 
+
+
 new Vue({
   created(){
     AOS.init();

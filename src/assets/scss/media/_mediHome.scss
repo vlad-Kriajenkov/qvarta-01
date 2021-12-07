@@ -31,7 +31,9 @@
 		}
 
 		&__columnInfo {
-            padding: 130px 0px 80px 0px;
+            padding: 130px 0px 80px 20px;
+			margin: 0px;
+			width: 100%;
 
 		}
 
@@ -43,7 +45,7 @@
 		}
 
 		&__ourWorks {
-			margin: 0px;
+			margin: 0px 20px 0px 20px;
 		}
 
 		&__whatWeDo {
@@ -95,10 +97,7 @@
 		&__quotes {
 		}
 }
-.textBold {
-}
-.ml3 {
-}
+
 .ourWorks {
 
 		&__header {
@@ -117,6 +116,9 @@
 }
 .different {
 }
+.different::after {
+	left: 44.5%;
+}
 .btn {
 
 		&__text {
@@ -125,23 +127,35 @@
 .whatWeDo {
 
 		&__imgBlock {
-			width: 100%;
+			display: none;
 		}
 
 		&__ourServices {
 			width: 100%;
 		}
 }
-.cvc {
+.ourServices{
+	padding: 70px 20px 0px 20px;
+	height: 620px;
+	&__a{
+		color: #fff;
+		border-bottom: 2px solid #fff;
+	}
 }
+
 .darkened {
 }
 .footer {
 
 		&__link {
+			left: 20px;
+			top: 80px;
+		
 		}
 
 		&__timer {
+			left: 20px;
+			bottom: 80px;
 		}
 }
 .link {
@@ -163,23 +177,31 @@
 /**/
 .mainNavHeader {
     padding: 30px 20px 80px 20px;
-
+	height: 0px;
 	&__logg {
 	}
 
 	&__leng {
+		display: none;
 	}
 
 	&__mainNav {
+		
 	}
 }
-.textTitle {
-}
+
 .menu {
 }
 .burger-container {
 }
 .burger {
+	background-color: black;
+}
+.burger::after{
+	background-color: black;
+}
+.burger::before{
+	background-color: black;
 }
 .leng {
 
@@ -314,6 +336,142 @@
     }
 }
 /*e*/
+
+/**/
+.slider {
+
+    &__title {
+        // text-align: center;
+        // padding: 79px 0px 154px 0px;
+        // font-size: 18px;
+    }
+
+    &__quotes {
+        font-size: 24px;
+    }
+}
+/**/
+
+/**/
+.form-feedback {
+	padding: 80px 20px 80px 20px;
+	&__boxTitle {
+	}
+
+	&__boxForm {
+	}
+}
+.boxTitle {
+
+	&__tetx {
+	}
+
+	&__title {
+	}
+}
+
+.boxForm {
+
+	&__inputbox {
+		display: flex;
+		flex-direction: column;
+    	justify-content: space-between;
+		
+		input{
+			width: 100%;
+			margin-bottom: 55px;
+			border-bottom: 1px solid black;
+		}
+		input::placeholder{
+			font-size: 20px;
+		}
+	}
+
+	&__btn {
+	}
+}
+.boxBtn {
+	margin: 70px auto 0px auto;
+}
+/**/
+
+/**/
+.formContact {
+
+	&__conatinerMap {
+	}
+
+	&__conatinerContact {
+		padding: 80px 20px 90px 20px;
+	}
+}
+.conatinerContact {
+
+	&_text {
+	}
+
+	&_title {
+	}
+
+	&__boxTitle {
+	}
+
+	&__boxInfo {
+	}
+}
+
+.boxInfo {
+
+	&__email {
+		font-size: 19px;
+	}
+
+	&__phone {
+		font-size: 19px;
+	}
+
+	&__address {
+		font-size: 19px;
+	}
+
+	&__networks {
+		font-size: 19px;
+	}
+}
+.email {
+
+	&__title {
+	}
+
+	&__link {
+	}
+}
+
+.phone {
+
+	&__title {
+	}
+
+	&__text {
+	}
+}
+.address {
+
+	&__title {
+	}
+
+	&__text {
+	}
+}
+.networks {
+
+	&__link {
+	}
+}
+.border {
+}
+
+/**/
 
 }
 

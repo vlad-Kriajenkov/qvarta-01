@@ -35,14 +35,14 @@
         </div>
         <div class="mainNav__img">
             <div class="img__form"></div>
-            <div class="mainNavHeader__leng">
+            <!-- <div class="mainNavHeader__leng">
                 <button class="leng__ru textNormal">ru
                     <div class="leng__line"></div>
                 </button>
                 <button class="leng__eng textNormal">eng
                     <div class="leng__line"></div>
                 </button>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>

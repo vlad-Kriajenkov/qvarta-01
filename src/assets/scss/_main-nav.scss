@@ -3,12 +3,12 @@
     background: #1D1D1D;
     width: 100%;
     position: absolute;
-    top: -100%;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    top: -1000%;
+    -webkit-transition: all 5s ease-out;
+    -moz-transition: all 5s ease-out;
+    -ms-transition: all 5s ease-out;
+    -o-transition: all 5s ease-out;
+    transition: all 5s ease-out;
     &__conatinerContact {
         width: 50%;
         height: 100vh;
