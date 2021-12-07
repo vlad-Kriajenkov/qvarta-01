@@ -189,8 +189,9 @@
         height: 2px;
         background: #ffff;
     }
-    &_footerLine:hover{
-        width:100%;
+    &_footerLine.activeLine{
+        width: 100%;
+        transition: width 8s linear;
     }
     &__bg{
         background: url('../img/footer/homeFoter.svg') no-repeat center center;
@@ -204,6 +205,7 @@
 
     }
 }
+
 .footer {
 
     &__link {

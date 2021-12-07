@@ -65,20 +65,18 @@
     <formFeedback/>
     <form-contact/>
     <div
-    v-scroll="handleScroll" 
-    class="home__footer">
-      <hr class="home_footerLine">
+      v-scroll="handleScroll" 
+      class="home__footer">
+      <hr class="home_footerLine" id="line">
       <div class="darkened">
-        <div class="home__bg" ></div>
+        <!-- <img src="../assets/img/footer/footer.svg" class="home__bg" alt=""> -->
+        <div class="home__bg"></div>
       </div>
       
-      <router-link
-      to="#"
-      class="footer__link"
-      >
+      <div class="footer__link">
         <div class="link__text textNormal">Узнать больше</div>
         <div class="link__title textTitle">О нас</div>
-      </router-link>
+      </div>
       <div class="footer__timer">
         <div class="timer__text textNormal">Через</div>
         <div class="timer__title textTitle">0{{ currentTime }}</div>
@@ -246,8 +244,9 @@ export default {
   methods: {
      handleScroll: function(evt, el){
       if (window.scrollY > 4600) {
-           this.startTimer()
-           console.log(scrollY);
+          this.startTimer()
+          this.startLine()
+          console.log(scrollY);
       }
       return window.scrollY > 4600
      },
@@ -258,8 +257,12 @@ export default {
       },
       stopTimer() {
         clearTimeout(this.timer)
-        this.$router.push('Home') 
+        // this.$router.push('Home') 
       },
+      startLine(){
+        document.getElementById('line').classList.add('activeLine');
+
+      }
     },
     watch: {
       currentTime(time) {

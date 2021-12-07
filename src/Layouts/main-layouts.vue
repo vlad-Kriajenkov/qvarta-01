@@ -34,3 +34,10 @@ export default {
     }
 }
 </script>
+
+<style>
+ main{
+     position: inherit;
+    z-index: 15;
+ }
+</style>
