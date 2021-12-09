@@ -32,7 +32,6 @@
           <div class="slider__quotes textNormal ml2">Мы ценим честность. Честны перед собой, нашим клиентом и продуктом.</div>
           <div class="slider__quotes textNormal ml3">Работаем ради денег. Главная задача проекта - принести вам прибыль. </div>
           <div class="slider__quotes textNormal ml4">Клиент не всегда прав. Мы точно знаем, что в некоторых вещах разбираемся лучше.</div>
-
       </VueSlickCarousel>
          <!-- <div class="slider__quotes textNormal ml1">Продукт превыше всего.  Либо делаем крутой продукт, либо не делаем его вообще.</div>
           <div class="slider__quotes textNormal ml2">Мы ценим честность. Честны перед собой, нашим клиентом и продуктом.</div>
@@ -56,7 +55,6 @@
     </div>
     <div class="home__whatWeDo">
       <div class="whatWeDo__imgBlock">
-        
       </div>
       <div class="whatWeDo__ourServices">
         <our-services/>
@@ -68,8 +66,7 @@
       v-scroll="handleScroll" 
       class="home__footer">
       <hr class="home_footerLine" id="line">
-      <div class="darkened">
-        <!-- <img src="../assets/img/footer/footer.svg" class="home__bg" alt=""> -->
+      <div id="Bg" class="darkened">
         <div class="home__bg"></div>
       </div>
       
@@ -87,27 +84,15 @@
 </template>
 
 
-
+ 
 
 <script >
-import Vue from 'vue'
 import VueSlickCarousel from 'vue-slick-carousel';
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import PostListWork from '../components/post-list-work/post-list-work.vue';
 import ourServices from '../components/our-services/our-services';
 import formFeedback from '../components/form-feedback/form-feedback.vue';
 import FormContact from '../components/form-contact/form-contact.vue';
-
-Vue.directive('scroll', {
-  inserted: function (el, binding) {
-    let f = function (evt) {
-      if (binding.value(evt, el)) {
-        window.removeEventListener('scroll', f)
-      }
-    }
-    window.addEventListener('scroll', f)
-  }
-})
 
 
 export default {
@@ -246,6 +231,7 @@ export default {
       if (window.scrollY > 4600) {
           this.startTimer()
           this.startLine()
+          this.startOpasity();
           console.log(scrollY);
       }
       return window.scrollY > 4600
@@ -261,7 +247,9 @@ export default {
       },
       startLine(){
         document.getElementById('line').classList.add('activeLine');
-
+      }, 
+      startOpasity(){
+        document.getElementById("Bg").classList.add('activeOpacity')
       }
     },
     watch: {

@@ -35,14 +35,14 @@
         </div>
         <div class="mainNav__img">
             <div class="img__form"></div>
-            <!-- <div class="mainNavHeader__leng">
+            <div class="mainNavHeader__leng">
                 <button class="leng__ru textNormal">ru
                     <div class="leng__line"></div>
                 </button>
                 <button class="leng__eng textNormal">eng
                     <div class="leng__line"></div>
                 </button>
-            </div> -->
+            </div>
         </div>
     </div>
 </template>
@@ -54,9 +54,9 @@ export default {
         return{
             showMenu: false,
             links: [
-                {title: 'О нас', url: '/'},
-                {title: 'Наши работы', url: '/1'},
-                {title: 'Наши услуги', url: '/2'},
+                {title: 'О нас', url: '/about'},
+                {title: 'Наши работы', url: '/work'},
+                {title: 'Наши услуги', url: '/work-product'},
                 {title: 'Блог', url: '/3'},
                 {title: 'Контакты', url: '/4'}
                  

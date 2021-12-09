@@ -8,6 +8,8 @@ import 'aos/dist/aos.css';
 import * as VueGoogleMaps from 'vue2-google-maps'
 import ajax from "vuejs-ajax"
 import VueAnime from 'vue-animejs';
+import VueVideoPlayer from 'vue-video-player'
+import 'video.js/dist/video-js.css'
  
 Vue.use(VueAnime)
 Vue.use(ajax)
@@ -24,7 +26,21 @@ Vue.use(VueGoogleMaps, {
     // v: '3.26',
   },
 })
+Vue.use(VueVideoPlayer, /* {
+  options: global default options,
+  events: global videojs events
+} */)
 
+Vue.directive('scroll', {
+  inserted: function (el, binding) {
+    let f = function (evt) {
+      if (binding.value(evt, el)) {
+        window.removeEventListener('scroll', f)
+      }
+    }
+    window.addEventListener('scroll', f)
+  }
+})
 
 
 new Vue({

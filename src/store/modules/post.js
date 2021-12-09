@@ -2,23 +2,23 @@ export default{
     actions: {
        async fetchPost(ctx){
             const res = await fetch('http://localhost:3000/work')
-            const cards = await res.json()
+            const work = await res.json()
 
-            ctx.commit('updatePost', cards)
+            ctx.commit('updatePost', work)
         }
     },
   
     mutations: {
-        updatePost(state, cards){
-            state.cards = cards;
+        updatePost(state, work){
+            state.work = work;
         }
     },
     state: {
-        cards: []
+        work: []
     },
     getters:{
         allPosts(state){
-            return state.cards;
+            return state.work;
         },
        
     },

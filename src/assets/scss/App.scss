@@ -1,14 +1,21 @@
 @import '_nullStyle';
 @import '_textStyle';
-@import '_main-nav-header';
+
 @import '_homePage';
+@import '_aboutPage';
+@import '_workPage';
+@import '_workProductPage';
+
+@import '_main-nav-header';
 @import '_sliderHome';
 @import '_post-item-work';
 @import '_ourServices';
 @import '_formFeedback';
 @import '_formContact';
 @import '_main-nav';
-@import '_aboutPage';
+@import '_custom-video';
 
 @import './media/mediHome';
 @import './media/mediAbout';
+@import './media/mediaWork';
+@import './media/mediaWorkProduct';

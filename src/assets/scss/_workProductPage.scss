@@ -1,0 +1,220 @@
+.workProduct {
+
+    &__header {
+        background-image: url("../img/work-product/luxie-lamp-headr.svg") ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover ;
+        width: 100%;
+        height: 100vh;
+    }
+    &__imgbg{
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+    &__boxTitle{
+        position: absolute;
+        top: 45%;
+        left: 35%;
+        color:#fff;
+        text-align: center;
+    }
+    &__boxBtn{
+        position: absolute;
+        bottom: 10px;
+        right: 75px;
+    }
+}
+.boxTitle{
+    &__text {
+    }
+
+    &__title {
+        margin: 10px 0px 10px 0px;
+    }
+}
+.box1 {
+
+    &__btn {
+        p{
+            font-size: 12px;
+        }
+    }
+}
+
+/**/
+.workProduct{
+    &__luxieLamp{
+        padding: 0px 80px;
+    }
+}
+
+
+.luxieLamp {
+    &__title{
+        margin: 40px 0px 80px 0px;
+    }
+    &__wrapperAboutProject {
+        display: flex;
+    }
+    &__boxImg{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        img{
+            width: 48%;
+            padding: 20px 0px 40px 0px;
+        } 
+        img:first-child{
+            width: 100%;
+            padding-bottom: 20px;
+        }
+    }
+}
+.wrapperAboutProject {
+
+    &__columImg {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50%;
+        img{
+            padding: 0px 40px 40px 0px;
+        }
+    }
+
+    &__AboutProject {
+        background: #1D1D1D;
+        color: #fff;
+        margin-bottom: 40px;
+        width: 50%;
+        padding: 0px 40px 0px 40px;
+    }
+}
+.AboutProject {
+    
+    &__boxTitle {
+        margin: 40px 0px 75px 0px;
+    }
+
+    &__boxSubTitle {
+        margin-bottom: 37px;
+       
+    }
+}
+.boxTitle {
+
+    &__text {
+        
+    }
+
+    &__title {
+    }
+}
+.boxSubTitle {
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__text {
+    }
+    &__texts{
+        margin-bottom: 20px;
+    }
+}
+.textTitleCard {
+}
+
+/**/
+/* workProduct__footer*/
+.workProduct {
+
+    &_footerLine {
+        position: absolute; 
+        top:0;
+        left: 0;
+        z-index: 2;
+        width: 20%;
+        height: 2px;
+        background: #ffff;
+    }
+    &_footerLine.activeLine{
+        width: 100%;
+        transition: width 8s linear;
+    }
+    &__bg{
+        width: 100%;
+        height: 420px;
+        background-image: url('../img/work-product/imf-Footer.svg');
+        background-position: center ; 
+        background-repeat: no-repeat;
+        background-size: cover ;
+    }
+    &__footer {
+        position: relative;
+        
+    }
+}
+
+.footer {
+
+    &__link {
+        position: absolute;
+        left: 80px;
+        bottom: 80px;
+        color: #ffff;
+        z-index: 2;
+    }
+
+    &__timer {
+        position: absolute;
+        right: 80px;
+        bottom: 80px;
+        color: #ffff;
+        z-index: 2;
+    }
+}
+.link {
+
+    &__text {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 29px;
+    }
+}
+.timer {
+
+    &__text {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 29px;
+    }
+}
+.darkened {
+    position: relative;
+   
+  }
+.darkened::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);  
+    z-index: 1;
+  }
+.activeOpacity::before{
+    background-color: rgba(255, 255, 255, 0); 
+    transition: background-color 7s linear;
+  }
+/* workProduct__footer*/
+
