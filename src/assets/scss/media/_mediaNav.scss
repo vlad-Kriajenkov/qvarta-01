@@ -1,0 +1,93 @@
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+
+    
+}
+
+@media (max-width:650px) {
+}
+
+@media (max-width: 480px) {
+    .mainNav {
+
+		&__conatinerContact {
+            width: 100%;
+		}
+
+		&__logo {
+		}
+
+		&__img {
+            display: none;
+		}
+}
+.textTitle {
+}
+.conatinerContact {
+
+		&__boxInfo {
+		}
+}
+.ourServicesmainNav {
+
+		&__link {
+		}
+}
+.ourServices {
+
+		&__a {
+		}
+
+		&__moreInfo {
+		}
+}
+.textNormal {
+}
+.boxInfomainNav {
+
+		&__networks {
+		}
+}
+.networks {
+
+		&__link {
+		}
+}
+.border {
+}
+.img {
+
+		&__form {
+		}
+}
+.mainNavHeader {
+
+		&__leng {
+		}
+}
+.leng {
+
+		&__ru {
+		}
+
+		&__line {
+		}
+
+		&__eng {
+		}
+}
+
+
+}
+

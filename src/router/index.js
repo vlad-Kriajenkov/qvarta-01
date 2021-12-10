@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Work from '../views/Work.vue'
 import WorkProduct from '../views/Work-Product.vue'
-
+import OurServices from '../views/Our-Services.vue'
 
 Vue.use(VueRouter)
 
@@ -28,6 +28,11 @@ const routes = [
     path: '/work-product',
     name: 'Work-Product',
     component: WorkProduct,
+  },
+  {
+    path: '/Our-Services',
+    name: 'Our-Services',
+    component: OurServices,
   }
 ]
 

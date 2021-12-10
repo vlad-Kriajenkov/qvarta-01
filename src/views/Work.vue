@@ -2,9 +2,7 @@
     <div class="work">
        <div class="work__header">
             <div class="header__productColum" >
-                <div class="productColum__imgProducts"> 
-                    <img  src="../assets/img/Work/Img-3.svg" alt="BAMBOO FOOD STEAMER">
-                </div>
+                <div class="productColum__imgProducts"></div>
             </div>
            <div class="header__infoColum">
                <div class="infoColum__text textNormal">работы</div>

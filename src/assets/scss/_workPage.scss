@@ -1,4 +1,4 @@
-.work {
+.ourService {
 
     &__header {
         display: flex;
@@ -6,13 +6,15 @@
 }
 
 .header {
-    &__productColum {
+    &__servicesColum {
         width: 50%;
         
       
     }
 
     &__infoColum {
+      
+        height: 100vh;
         width: 50%;
         // height: 100vh;
         background: #1D1D1D;
@@ -25,15 +27,15 @@
 
     }
 }
-.productColum{
+
+.servicesColum{
     &__imgProducts{
-        // background: url('../img/Work/Img-3.svg') no-repeat center center;
-        // width: 100%;
-        // height: 100vh;
-        img{
-            width:100%;
-            // height: 100vh;
-        }
+        background-image: url("../img/Our-Services/img-Header.svg") ;
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
     }
 }
 .infoColum {
