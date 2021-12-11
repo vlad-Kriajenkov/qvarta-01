@@ -9,7 +9,7 @@
                 <div class="infoColum__title textTitle">Наши услуги</div>
                 <button class="box1__btn textBtn">
                     <p>Обсудить ваш проект</p>
-                    <div class="line"></div>
+                    <div class="line"></div> 
                 </button>
            </div>
        </div>
@@ -25,10 +25,15 @@
                     <div class="itemCard__num textNormal">{{Service.num}}</div>
                     <div class="itemCard__title textTitle">{{Service.title}}</div>
                     <div class="itemCard__text textNormal">{{Service.text}}</div>
-                    <button class="itemCard__btn textBtn">
-                        <p>Узнать больше</p>
-                        <div class="line"></div>
-                    </button>
+                    <router-link
+                    to="/Our-Services/Services1"
+                    >
+                        <button class="itemCard__btn textBtn">
+                            <p>Узнать больше</p>
+                            <div class="line"></div>
+                        </button>
+                    </router-link>
+                
                </div>
                <div class="wrapperCard__itemProducct">
                    <img  :src="require(`@/assets/${Service.img}`)" alt="">

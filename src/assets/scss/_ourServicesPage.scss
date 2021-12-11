@@ -1,4 +1,4 @@
-.work {
+.ourService {
 
     &__header {
         display: flex;
@@ -6,7 +6,7 @@
 }
 
 .header {
-    &__productColum {
+    &__servicesColum {
         width: 50%;
         
       
@@ -28,12 +28,12 @@
     }
 }
 
-.productColum{
+.servicesColum{
     &__imgProducts{
-        background-image: url("../img/Work/Img-3.svg") ;
-        background-position: center;
+        background-image: url("../img/Our-Services/img-Header.svg") ;
+        background-position: center right;
         background-repeat: no-repeat;
-        background-size: cover ;
+        background-size: cover;
         width: 100%;
         height: 100vh;
     }
@@ -46,6 +46,21 @@
 
     &__title {
     }
+}
+.textNormal {
+    font-size: 16px;
+}
+.textTitle {
+    font-size: 42px;
+}
+.box1 {
+
+    &__btn {
+    }
+}
+.textBtn {
+}
+.line {
 }
 
 /**/

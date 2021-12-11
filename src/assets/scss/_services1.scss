@@ -1,0 +1,163 @@
+.services1 {
+
+    &__header {
+        display: flex;
+    }
+}
+
+.header {
+    &__servicesColum {
+        width: 50%;
+        img{
+            height: 100vh;
+        }
+      
+    }
+
+    &__infoColum {
+      
+        height: 100vh;
+        width: 50%;
+        // height: 100vh;
+        background: #1D1D1D;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 160px;
+        color: #fff;
+
+    }
+}
+.infoColum {
+
+    &__text {
+        margin-bottom: 10px;
+    }
+
+    &__title {
+    }
+}
+.box1 {
+
+    &__btn {
+    }
+}
+.textBtn {
+}
+.line {
+}
+
+
+/**/
+.services1 {
+
+    &__productInfo {
+        padding: 0px 80px;
+    }
+}
+.productInfo {
+
+    &__namePage {
+        margin: 40px 0px 60px 0px;
+    }
+
+    &__serviceBox {
+        display: flex;
+    }
+}
+.serviceBox {
+
+    &__infoServ {
+        background: black;
+        width: 50%;
+        padding: 50px;
+    }
+    &__infoServ:first-child{
+        
+    }
+
+    &__bgImg {
+        width: 50%;
+        img{
+            width: 100%;
+        }
+    }
+}
+.infoServ {
+
+    &__boxIS {
+        color: #fff;
+        margin-bottom: 50px ;
+    }
+    &__boxIS:first-child{
+        margin-bottom: 100px;
+        .boxIS__title {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+    }
+}
+.boxIS {
+
+    &__title {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-size: 13px;
+    }
+}
+.textTitle {
+}
+
+/**/
+
+/**/
+.productInfo {
+
+    &__examples {
+    }
+}
+.examples {
+
+    &__nameBox {
+        margin: 120px 0px 76px 0px;
+    }
+
+    &__boxProduct {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.nameBox {
+
+    &__text {
+        margin-bottom: 10px;
+    }
+
+    &__title {
+    }
+}
+.boxProduct {
+    width: 48%;
+    margin-bottom: 79px;
+    &__img {
+        width: 100%;
+    }
+
+    &__title {
+        margin: 38px 0px 10px 0px;
+    }
+
+    &__text {
+        width: 510px;
+       
+    }
+}
+.textTitleCard {
+}
+
+/**/

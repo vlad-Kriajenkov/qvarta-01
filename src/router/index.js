@@ -5,6 +5,7 @@ import About from '../views/About.vue'
 import Work from '../views/Work.vue'
 import WorkProduct from '../views/Work-Product.vue'
 import OurServices from '../views/Our-Services.vue'
+import Services1 from '../views/Services-1.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,12 @@ const routes = [
     path: '/Our-Services',
     name: 'Our-Services',
     component: OurServices,
+ 
+  },
+  {
+    path: '/Services1',
+    name: 'Services1',
+    component: Services1,
   }
 ]
 
