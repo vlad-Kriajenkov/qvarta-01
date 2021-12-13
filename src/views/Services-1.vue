@@ -6,8 +6,7 @@
             </div>
             <div class="header__infoColum">
                 <div class="infoColum__text textNormal">наши услуги</div>
-                <div v-bind="headerTitle"
-                 class="infoColum__title textTitle">{{headerTitle}}</div>
+                <div class="infoColum__title textTitle">{{headerTitle}}</div>
                 <button class="box1__btn textBtn">
                     <p>Обсудить ваш проект</p>
                     <div class="line"></div>
@@ -47,29 +46,111 @@
                         <div  class="boxProduct__text textNormal">{{product.text}}</div>
                     </div>
                 </div>
+            </div> 
+        </div>
+        <div class="services1__stagesDev">
+            <div class="stagesDev__nameBox">
+                <div class="nameBox__text textNormal">Промышленный дизайн</div>
+                <div class="nameBox__title textTitle">Этапы разработки</div>
             </div>
-            <div class="productInfo__stagesDev">
-                <div class="stagesDev__nameBox">
-                     <div class="nameBox__text textNormal">Промышленный дизайн</div>
-                    <div class="nameBox__title textTitle">Этапы разработки</div>
-                </div>
-                <div class="stagesDev__stagesBox">
-                    <div class="stagesBox__">
-                        <span class="">Составление ТЗ</span>  
+            <div 
+            v-for="stage in stages"
+            :key="stage.id"
+           
+            class="stagesDev__stagesBox"
+            @click="fav(stage)">
+            
+                <div class="stagesBox">
+                    <div class="stagesBox__title textTitle">
+                        <span>{{stage.title}}</span>  <img src="../assets/img/Industrial-design/arrow.-open.svg" alt="">
                     </div>
+                    <div 
+                    v-bind:class="{'showInfo': selectedItem == stage}"
+                    class="stagesBox__text textNormal">{{stage.text}}</div>
                 </div>
             </div>
         </div>
+        <div class="services1__addendum ">
+            <div class="addendum__nameBox">
+                <div class="nameBox__text textNormal">Будет полезно</div>
+                <div class="nameBox__title textTitle">С этой услугой заказывают</div>
+            </div>
+            <div class="addendum__serviceContainer">
+                <router-link 
+                to="/"
+                class="serviceContainer"
+                >
+                    <img class="serviceContainer__img" src="../assets/img/Industrial-design/Addendum/img-1.svg" alt="">
+                    <div class="serviceContainer__title  textBold">Разработка электроники</div>
+                    <div class="serviceContainer__bg">
+                        <p class="d textNormal">Узнать больше</p>
+                    </div>
+                </router-link>
+                 <router-link 
+                to="/"
+                class="serviceContainer"
+                >
+                    <img class="serviceContainer__img" src="../assets/img/Industrial-design/Addendum/img-2.svg" alt="">
+                    <div class="serviceContainer__title textBold">Изготовление прототипов</div>
+                    <div class="serviceContainer__bg">
+                        <p class="d textNormal">Узнать больше</p>
+                    </div>
+                </router-link>
+                 <router-link 
+                to="/"
+                class="serviceContainer"
+                >
+                    <img class="serviceContainer__img" src="../assets/img/Industrial-design/Addendum/img-3.svg" alt="">
+                    <div class="serviceContainer__title textBold">Авторский надзор за <br> производством корпусов и <br> электроники</div>
+                    <div class="serviceContainer__bg">
+                        <p class="d textNormal">Узнать больше</p>
+                    </div>
+                </router-link>
+                 <router-link 
+                to="/"
+                class="serviceContainer"
+                >
+                    <img class="serviceContainer__img" src="../assets/img/Industrial-design/Addendum/img-4.svg" alt="">
+                    <div class="serviceContainer__title textBold">Предметная визуализация</div>
+                    <div class="serviceContainer__bg">
+                        <p class="d textNormal">Узнать больше</p>
+                    </div>
+                </router-link>
+            </div>
+        </div>
+        <form-feedback/>
+        <form-contact/>
+        <div v-scroll="handleScroll"  class="workProduct__footer ">
+            <hr class="workProduct_footerLine" id="line" />
+            <div id="Bg" class="darkened">
+                <div class="workProduct__bg"></div>
+            </div>
+            <div class="footer__link">
+                <div class="link__text textNormal">Узнать больше</div>
+                <div class="link__title textTitle">MINI PHA</div>
+            </div>
+            <div class="footer__timer">
+                <div class="timer__text textNormal">Через</div>
+                <div class="timer__title textTitle">0{{ currentTime }}</div>
+            </div>
+        </div>
+
     </div>
 </template>
 
 
 <script>
+import formContact from '../components/form-contact/form-contact.vue'
+import FormFeedback from '../components/form-feedback/form-feedback.vue'
 
 export default {
+  components: { formContact, FormFeedback },
     name:'Services1',
     data(){
         return{
+            selectedItem: {},
+            currentTime: 8,
+            timer: null,        
             headerTitle: "Промышленный дизайн",
             serviceBox:[
                 {
@@ -114,12 +195,79 @@ export default {
                     "title": "UV IRRADIATOR",
                     "text": "Разработка дизайна, конструкции и функциональной части устройства"
                 },
-            
-               
-                
+            ],
+            stages: [
+                {
+                    "id": 1,
+                    "title": "Составление ТЗ",
+                    "text": " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et harum eaque velit nemo odio dolorum veniam at quasi, sed cupiditate placeat numquam est. Aut, temporibus aliquam reprehenderit labore magni ut."
+                },
+                {   
+                    "id": 2,
+                    "title": "Маркетинговое исследование",
+                    "text": " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et harum eaque velit nemo odio dolorum veniam at quasi, sed cupiditate placeat numquam est. Aut, temporibus aliquam reprehenderit labore magni ut."
+                },
+                {
+                    "id": 3,
+                    "title": "Подбор референсов",
+                    "text": " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et harum eaque velit nemo odio dolorum veniam at quasi, sed cupiditate placeat numquam est. Aut, temporibus aliquam reprehenderit labore magni ut."
+                },
+                {
+                    "id": 4,
+                    "title": "Прорисовка эскизов",
+                    "text": " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et harum eaque velit nemo odio dolorum veniam at quasi, sed cupiditate placeat numquam est. Aut, temporibus aliquam reprehenderit labore magni ut."
+                },
+                {
+                    "id": 5,
+                    "title": "Разработка конструкции",
+                    "text": " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et harum eaque velit nemo odio dolorum veniam at quasi, sed cupiditate placeat numquam est. Aut, temporibus aliquam reprehenderit labore magni ut."
+                },
+                {
+                    "id": 6,
+                    "title": "Создание 3D-модели",
+                    "text": " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et harum eaque velit nemo odio dolorum veniam at quasi, sed cupiditate placeat numquam est. Aut, temporibus aliquam reprehenderit labore magni ut."
+                },
             ]
         }
     },
+    methods: {
+      fav: function(stage){
+        this.selectedItem = stage
+      },
+    handleScroll: function (evt, el) {
+        let height = document.documentElement.scrollHeight;
+        if (window.scrollY > height) {
+            this.startTimer();
+            this.startLine();
+            this.startOpasity();
+            console.log(scrollY);
+        }
+        return window.scrollY > height;
+        },
+        startTimer() {
+        this.timer = setInterval(() => {
+            this.currentTime--;
+        }, 1000);
+        },
+        stopTimer() {
+        clearTimeout(this.timer);
+          this.$router.push("/");
+           
+        },
+        startLine() {
+        document.getElementById("line").classList.add("activeLine");
+        },
+        startOpasity(){
+            document.getElementById("Bg").classList.add('activeOpacity')
+        }
+    },
+    watch: {
+    currentTime(time) {
+      if (time === 0) {
+        this.stopTimer();
+      }
+    },
+  },
 }
 
 </script>

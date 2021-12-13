@@ -78,13 +78,14 @@ export default {
     methods: {
         ...mapActions(['fetchPostService']),
         handleScroll: function (evt, el) {
-        if (window.scrollY > 6360) {
+        let height = document.documentElement.scrollHeight;
+        if (window.scrollY > height) {
             this.startTimer();
             this.startLine();
             this.startOpasity();
             console.log(scrollY);
         }
-        return window.scrollY > 6360;
+        return window.scrollY > height;
         },
         startTimer() {
         this.timer = setInterval(() => {

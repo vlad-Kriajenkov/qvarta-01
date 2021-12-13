@@ -157,7 +157,128 @@
        
     }
 }
-.textTitleCard {
+
+/**/
+
+/**/
+.services1 {
+
+    &__stagesDev {
+        background: black;
+        padding: 0px 80px 80px 80px ;
+    }
 }
+.stagesDev {
+
+    &__nameBox {
+        color: #fff;
+        padding: 100px 0px 57px 0px;
+    }
+
+    &__stagesBox {
+        color: #fff;
+        border-bottom: 1px solid #707070;
+    }
+}      
+.stagesBox {
+
+    &__title {
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+        padding: 17px 0px 17px 0px;
+    }
+
+    &__text {
+        margin: 0px;
+        visibility: hidden;
+        opacity: 0;
+        height: 0px;
+        transition: visibility 1s linear, opacity 1s linear, margin 1s linear;
+    }
+}
+.showInfo{
+    margin: 16px 0px 60px 0px;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 1s linear, opacity 1s linear, margin 1s linear;
+}
+/**/
+
+
+/**/
+.services1{
+    &__addendum{
+        padding: 0px 80px;
+    }
+}
+.addendum {
+    &__nameBox{
+        margin: 120px 0px 79px 0px;
+    }
+    &__serviceContainer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+.serviceContainer {
+    width: 48%;
+    position: relative;
+    margin-bottom: 40px;
+    &__img {
+        width: 100%;
+    }
+
+    &__title {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 5;
+    }
+    &__bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 4;
+        .d{
+            opacity: 0;
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+            bottom: 5%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+       
+    }
+    &__bg:hover{
+        background: #1D1D1D;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 4;
+        .d{
+            opacity: 1;
+            bottom: 10%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.8s ease;
+        }
+    }
+}
+
 
 /**/

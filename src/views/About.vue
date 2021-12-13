@@ -144,13 +144,14 @@ export default {
   },
   methods: {
     handleScroll: function (evt, el) {
-      if (window.scrollY > 4020) {
+      let height = document.documentElement.scrollHeight; 
+      if (window.scrollY > height) {
         this.startTimer();
         this.startLine();
          this.startOpasity();
         console.log(scrollY);
       }
-      return window.scrollY > 4020;
+      return window.scrollY > height;
     },
     startTimer() {
       this.timer = setInterval(() => {
@@ -159,7 +160,7 @@ export default {
     },
     stopTimer() {
       clearTimeout(this.timer);
-      this.$router.push("/");
+      this.$router.push("/work");
     },
     startLine() {
       document.getElementById("line").classList.add("activeLine");

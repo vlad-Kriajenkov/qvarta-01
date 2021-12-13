@@ -18,19 +18,20 @@
                Главная <span class="textBold"> — о нас</span>
             </div>         
             <div class="product__list">
-                <div 
+                <router-link 
                 class="product__item"
                 v-for="allPostsWork in allPostsWorks"
                 :key="allPostsWork.id"
+                to="/work-product"
                 >
                     <img data-aos="fade-right" :src="require(`@/assets/${allPostsWork.img}`)" alt="" class="product__img ">
                     <div data-aos="fade-up" class="product__titleItem textTitleCard">{{allPostsWork.title}}</div>
                     <div data-aos="fade-up" class="product__text textNormal">{{allPostsWork.text}}</div>
-                </div>
+                </router-link>
             </div>  
              <div class="ourWorks__btn">
                 <router-link
-                to="#">
+                to="/work-product">
                 <button class="different">
                     <div class="btn__text textBtn">Все работы</div>
                 </button>
@@ -83,17 +84,21 @@ export default {
     // methods:,
     mounted(){ 
     this.fetchPosts();
+    
+   
     },
     methods: {
     ...mapActions(['fetchPosts']),
     handleScroll: function (evt, el) {
-      if (window.scrollY > 5350) {
+    let height = document.documentElement.scrollHeight;
+      if (window.scrollY > height) {
         this.startTimer();
         this.startLine();
         this.startOpasity();
         console.log(scrollY);
+         console.log(height);
       }
-      return window.scrollY > 5350;
+      return window.scrollY > height;
     },
     startTimer() {
       this.timer = setInterval(() => {

@@ -12,7 +12,7 @@
                     <div class="line"></div>
                 </button>
             </div>
-        </div>
+        </div> 
         <div class="workProduct__luxieLamp">\
             <div class="luxieLamp__title textNormal">
                 Главная — Работы — <span class='textBold'>LUXIE VASE & LAMP</span>
@@ -111,13 +111,14 @@ export default {
     },
     methods: {
     handleScroll: function (evt, el) {
-      if (window.scrollY > 5450) {
+    let height = document.documentElement.scrollHeight;
+      if (window.scrollY > height) {
         this.startTimer();
         this.startLine();
         this.startOpasity();
         console.log(scrollY);
       }
-      return window.scrollY > 5450;
+      return window.scrollY > height;
     },
     startTimer() {
       this.timer = setInterval(() => {

@@ -16,7 +16,7 @@ Vue.use(ajax)
 Vue.config.productionTip = false
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'AIzaSyAKKIhITpqPIucGTOJJlV3xVIn5o5RztJ4',
+    key: 'AIzaSyD9nWW1EposF5SrD8GZqlvRjOwV6m1ncCk',
     libraries: 'places', // This is required if you use the Autocomplete plugin
     // OR: libraries: 'places,drawing'
     // OR: libraries: 'places,drawing,visualization'
@@ -26,6 +26,7 @@ Vue.use(VueGoogleMaps, {
     // v: '3.26',
   },
 })
+
 Vue.use(VueVideoPlayer, /* {
   options: global default options,
   events: global videojs events
