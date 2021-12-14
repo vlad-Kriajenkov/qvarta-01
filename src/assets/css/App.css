@@ -180,13 +180,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 .column__imgProducts img {
   width: 100%;
+  height: 100vh;
 }
 
+.imgProducts__imgLVL {
+  background-image: url("../img/home/img-1.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
 .imgProducts__imgLVL.newbg {
   display: none;
 }
 .imgProducts__imgBFS {
   display: none;
+  background-image: url("../img/home/Img-2.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
 }
 .imgProducts__imgBFS.newbg {
   display: block;

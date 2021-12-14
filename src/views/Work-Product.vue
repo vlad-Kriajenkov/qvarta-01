@@ -2,12 +2,12 @@
     <div class="workProduct">
         <div class="workProduct__header">
             <div class="workProduct__boxTitle">
-                <div class="boxTitle__text textNormal">работы</div>
+                <div class="boxTitle__text textNormal">{{$t('WorksubTitle')}}</div>
                 <div class="boxTitle__title textTitle">LUXIE VASE & LAMP</div>
                 <div class="boxTitle__text textNormal">Разработка дизайна</div>
             </div>
             <div class="workProduct__boxBtn">   
-                <button class="box1__btn textBtn">
+                <button class="box1__btn textBtn"> 
                     <p>Обсудить ваш проект</p>
                     <div class="line"></div>
                 </button>

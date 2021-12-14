@@ -1,7 +1,12 @@
 <template>
     <div class="mainNav">
         <div class="mainNav__conatinerContact">
-            <div class="mainNav__logo textTitle">QVARTA</div>
+            <div class="mainNav__logo textTitle">
+                <router-link to="/">
+                    QVARTA
+                </router-link>
+                
+            </div>
             <div class="conatinerContact__boxInfo">
                  <router-link
                     v-for="link in links"
@@ -36,10 +41,14 @@
         <div class="mainNav__img">
             <div class="img__form"></div>
             <div class="mainNavHeader__leng">
-                <button class="leng__ru textNormal">ru
+                <button 
+                @click="setLocale('ru')"
+                class="leng__ru textNormal">ru
                     <div class="leng__line"></div>
                 </button>
-                <button class="leng__eng textNormal">eng
+                <button 
+                @click="setLocale('en')"
+                class="leng__eng textNormal">eng
                     <div class="leng__line"></div>
                 </button>
             </div>
@@ -53,7 +62,7 @@ export default {
     data(){
         return{
             showMenu: false,
-            links: [
+            links: [ 
                 {title: 'О нас', url: '/about'},
                 {title: 'Наши работы', url: '/work'},
                 {title: 'Наши услуги', url: '/work-product'},
@@ -61,6 +70,15 @@ export default {
                 {title: 'Контакты', url: '/4'}
                  
             ]
+        }
+    },
+    methods:{
+        setLocale(locale){
+            import(`../../lang/${locale}.json`).then((msgs) =>{
+                this.$i18n.setLocaleMessage(locale, msgs)
+                this.$i18n.locale = locale
+            })
+            
         }
     }
 }

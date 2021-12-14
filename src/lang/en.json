@@ -1,0 +1,45 @@
+{
+    "home_SubTitle": "industrial design studio",
+    "home_title": "Our products {break} created to work",
+    
+    "home_SliderTitle":"concept",
+    "home_SliderQuotes1":"The product comes first. Either we make a cool product or we don't make it at all.",
+    "home_SliderQuotes2":"We value honesty. We are honest with ourselves, our customer and the product.",
+    "home_SliderQuotes3":"We work for the money. The main goal of the project is to bring you profit.",
+    "home_SliderQuotes4":"The customer is not always right. We know for a fact that we know better about some things.",
+    "home_ourWorksText": "implementations",
+    "home_ourWorksTitle": "Our work",
+
+    "footerTitle":"Learn more",
+    "footerPage": "About us",
+    "footerTimer": "Via",
+
+    "formOurServicesText": "what we do",
+    "formOurServicesTitle": "Our Services",
+    "formOurServicesLink1": "Industrial Design",
+    "formOurServicesLink2": "Visualization",
+    "formOurServicesLink3": "Electronics Design",
+    "formOurServicesLink4": "Design Development",
+
+    "formFeedbackTitle": "let's discuss your project",
+    "formFeedbackText": "Contact Us",
+    "PlaceholderUser": "Name",
+    "PlaceholderCompani": "Company Name",
+    "PlaceholderPhone": "Phone",
+    "PlaceholderDetails": "Details", 
+
+    "formContactTitile": "get in touch",
+    "formContactText": "Contact",
+    "formContactPhone": "Phone",
+    "formContactAddress": "Address",
+    "formContactAddressText": "02002, Kiev, Eugene Sverstyuk str. 11a, office. 818",
+
+
+    "btnHeader": "Discuss your project",
+    "btnAllWork": "All works",
+    "btnMoreInfo": "Learn More",
+    "btnSeeAllServices":"See all services",
+    "btnSend": "Send",
+
+    "WorksubTitle": "worksH"
+}

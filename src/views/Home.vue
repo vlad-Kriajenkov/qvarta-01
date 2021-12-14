@@ -3,14 +3,15 @@
     <div class="home__header">
       <div class="home__columnInfo">
         <div class="column__info">
-          <p class="info__text textNormal">студия промышленного дизайна</p>
+          <p class="info__text textNormal">{{$t('home_SubTitle')}}</p>
           <div class="info__title textTitle">
-            Наши продукты <br>
-            созданы работать
-          </div>
+            <i18n path="home_title"> 
+              <br place="break" />
+            </i18n>
+            </div>
         </div>
         <button class="column__btn textBtn ">
-          <p>Обсудить ваш проект</p> 
+          <p>{{$t('btnHeader')}}</p> 
           <div class="line"></div>
         </button>
       </div>
@@ -18,20 +19,20 @@
       class="home__columnProduct" 
       @click="newBg =!newBg">
         <div class="column__imgProducts"> 
-        <img class="imgProducts__imgLVL" :class="{newbg: newBg}" src="../assets/img/home/img-1.svg" alt="LUXIE VASE LAMP">
-        <img class="imgProducts__imgBFS" :class="{newbg: newBg}" src="../assets/img/home/Img-2.svg" alt="BAMBOO FOOD STEAMER">
+          <div class="imgProducts__imgLVL" :class="{newbg: newBg}"></div>
+          <div class="imgProducts__imgBFS" :class="{newbg: newBg}"></div>
         </div>
       </div> 
     </div>
     <div class="home__slider">
       <div class="slider__title textNormal">
-        концепция <span class="textBold">Q</span>
+        {{$t('home_SliderTitle')}} <span class="textBold">Q</span>
       </div>
       <VueSlickCarousel :arrows="false" :dots="true" >
-          <div class="slider__quotes textNormal ml1">Продукт превыше всего. Либо делаем крутой продукт, либо не делаем его вообще.  </div>
-          <div class="slider__quotes textNormal ml2">Мы ценим честность. Честны перед собой, нашим клиентом и продуктом.</div>
-          <div class="slider__quotes textNormal ml3">Работаем ради денег. Главная задача проекта - принести вам прибыль. </div>
-          <div class="slider__quotes textNormal ml4">Клиент не всегда прав. Мы точно знаем, что в некоторых вещах разбираемся лучше.</div>
+          <div class="slider__quotes textNormal ml1">{{$t('home_SliderQuotes1')}}</div>
+          <div class="slider__quotes textNormal ml2">{{$t('home_SliderQuotes2')}}</div>
+          <div class="slider__quotes textNormal ml3">{{$t('home_SliderQuotes3')}}</div>
+          <div class="slider__quotes textNormal ml4">{{$t('home_SliderQuotes4')}}</div>
       </VueSlickCarousel>
          <!-- <div class="slider__quotes textNormal ml1">Продукт превыше всего.  Либо делаем крутой продукт, либо не делаем его вообще.</div>
           <div class="slider__quotes textNormal ml2">Мы ценим честность. Честны перед собой, нашим клиентом и продуктом.</div>
@@ -40,15 +41,15 @@
     </div>
     <div class="home__ourWorks">
       <div class="ourWorks__header">
-        <div class="ourWorks__text textNormal">реализации</div>
-        <div class="ourWorks__title textTitleCard">Наши работы</div>
+        <div class="ourWorks__text textNormal">{{$t('home_ourWorksText')}}</div>
+        <div class="ourWorks__title textTitleCard">{{$t('home_ourWorksTitle')}}</div>
       </div>
       <post-list-work/>
       <div class="ourWorks__btn">
         <router-link
         to="#">
           <button class="different">
-            <div class="btn__text textBtn">Все работы</div>
+            <div class="btn__text textBtn">{{$t('btnAllWork')}}</div>
           </button>
         </router-link>
       </div>
@@ -71,11 +72,11 @@
       </div>
       
       <div class="footer__link">
-        <div class="link__text textNormal">Узнать больше</div>
-        <div class="link__title textTitle">О нас</div>
+        <div class="link__text textNormal">{{$t('footerTitle')}}</div>
+        <div class="link__title textTitle">{{$t('footerPage')}}</div>
       </div>
       <div class="footer__timer">
-        <div class="timer__text textNormal">Через</div>
+        <div class="timer__text textNormal">{{$t('footerTimer')}}</div>
         <div class="timer__title textTitle">0{{ currentTime }}</div>
       </div>  
     </div>

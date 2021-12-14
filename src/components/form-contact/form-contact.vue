@@ -10,8 +10,8 @@
         </GmapMap>
         <div class="formContact__conatinerContact">
             <div class="conatinerContact__boxTitle">
-                <div class="conatinerContact_text textNormal">связаться</div>
-                <div class="conatinerContact_title textTitle">Контакты</div>
+                <div class="conatinerContact_text textNormal">{{$t('formContactTitile')}}</div>
+                <div class="conatinerContact_title textTitle">{{$t('formContactText')}}</div>
             </div>
             <div class="conatinerContact__boxInfo">
                 <div class="boxInfo__email">
@@ -19,15 +19,15 @@
                     <a herf="#" class="email__link textNormal">info@qvarta.com</a>
                 </div>
                 <div class="boxInfo__phone">
-                    <div class="phone__title textTitleCard">Телефон</div>
+                    <div class="phone__title textTitleCard">{{$t('formContactPhone')}}</div>
                     <ul class="phone__text textNormal">
                         <li>+380 68 807 9625</li>
                         <li>+380 44 232 4696</li>
                     </ul>
                 </div>
                 <div class="boxInfo__address">
-                    <div class="address__title textTitleCard">Адрес</div>
-                    <div class="address__text textNormal">02002, Киев, ул. Евгения Сверстюка 11а, оф. 818</div>
+                    <div class="address__title textTitleCard">{{$t('formContactAddress')}}</div>
+                    <div class="address__text textNormal">{{$t('formContactAddressText')}}</div>
                 </div>
                 <hr>
                 <div class="boxInfo__networks">

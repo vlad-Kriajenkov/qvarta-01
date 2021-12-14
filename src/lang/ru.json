@@ -1,0 +1,45 @@
+{
+    "home_SubTitle": "студия промышленного дизайна",
+    "home_title": "Наши продукты {break}  созданы работать",
+    
+    "home_SliderTitle": "концепция",
+    "home_SliderQuotes1":"Продукт превыше всего. Либо делаем крутой продукт, либо не делаем его вообще.",
+    "home_SliderQuotes2":"Мы ценим честность. Честны перед собой, нашим клиентом и продуктом.",
+    "home_SliderQuotes3":"Работаем ради денег. Главная задача проекта - принести вам прибыль. ",
+    "home_SliderQuotes4":"Клиент не всегда прав. Мы точно знаем, что в некоторых вещах разбираемся лучше.",
+    "home_ourWorksText": "реализации",
+    "home_ourWorksTitle": "Наши работы",
+
+    "footerTitle":"Узнать больше",
+    "footerPage":"О нас",
+    "footerTimer":"Через",
+
+    "formOurServicesText": "что мы делаем",
+    "formOurServicesTitle": "Наши услуги",
+    "formOurServicesLink1": "Промышленный дизайн",
+    "formOurServicesLink2": "Предметная визуализация",
+    "formOurServicesLink3": "Разработка электроники",
+    "formOurServicesLink4": "Конструкторская разработка",
+
+    "formFeedbackTitle":"обсудим ваши проект",
+    "formFeedbackText": "Свяжитесь с нами",
+    "PlaceholderUser": "Имя",
+    "PlaceholderCompani": "Компания",
+    "PlaceholderPhone": "Телефон",
+    "PlaceholderDetails": "Детали",
+
+    "formContactTitile": "связаться",
+    "formContactText": "Контакты",
+    "formContactPhone": "Телефон",
+    "formContactAddress": "Адрес",
+    "formContactAddressText": "02002, Киев, ул. Евгения Сверстюка 11а, оф. 818",
+
+
+    "btnHeader": "Обсудить ваш проект",
+    "btnAllWork": "Все работы",
+    "btnMoreInfo": "Узнать больше",
+    "btnSeeAllServices":"Посмотреть все услуги",
+    "btnSend": "Отправить",
+
+    "WorksubTitle": "работы"
+}
