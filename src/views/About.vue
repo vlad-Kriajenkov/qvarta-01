@@ -3,14 +3,14 @@
     <div class="about__header">
       <div class="header__box1">
         <div class="header__logo textTitle">QVARTA</div>
-        <div class="header__text textNormal">о нас</div>
+        <div class="header__text textNormal">{{$t('about_SubTitle')}}</div>
         <div class="header__title textTitle">
-          Сильная команда <br />
-          создает сильные <br />
-          продукты
+          <i18n path="about_titile">
+            <br place="break" />
+          </i18n>
         </div>
         <button class="box1__btn textBtn">
-          <p>Обсудить ваш проект</p>
+          <p>{{$t('btnHeader')}}</p>
           <div class="line"></div>
         </button>
       </div>
@@ -18,18 +18,16 @@
         <div class="box2__room"></div>
         <div class="box2__info">
           <div class="infoWrapper textNormal">
-            <span class="textBold"
-              >Базис нашей студии основан на 4 принципах</span
-            >
-            которые являются нашими преимуществами и залогом успеха наших
-            продуктов
-          </div>
+            <span class="textBold">{{$t('about_infoHederBold')}}</span>{{$t('about_infoHederNormal')}}</div>
         </div>
       </div>
     </div>
     <div class="about__content">
       <div class="content__namePage textNormal">
-        Главная <span class="textBold"> — о нас</span>
+        <i18n path="about_namePage">
+          <span class="textBold" place="action"> — {{$t('about_namePageOpen')}}</span>
+        </i18n>
+       
       </div>
       <div class="content__infoAbout">
         <div class="infoAbout__list">
@@ -47,8 +45,8 @@
       </div>
     </div>
     <div class="about__clients">
-      <div class="clients__text textNormal">нам доверяют</div>
-      <div class="clients__title textTitle">Наши клиенты</div>
+      <div class="clients__text textNormal">{{$t('about_clientsText')}}</div>
+      <div class="clients__title textTitle">{{$t('about_clientsTitle')}}</div>
       <div class="clients__logo">
         <img src="../assets/img/About/clients/PHILIPMORIRIS_logo.svg" alt="" />
         <img src="../assets/img/About/clients/spacebit.svg" alt="" />
@@ -57,8 +55,8 @@
       </div>
     </div>
     <div class="about__staff">
-      <div class="staff__text textNormal">специалисты</div>
-      <div class="staff__title textTitle">Наша команда</div>
+      <div class="staff__text textNormal">{{$t('about_stafText')}}</div>
+      <div class="staff__title textTitle">{{$t('about_stafTitle')}}</div>
       <div class="staff__wrapperlist">
         <div v-for="staf in staff" :key="staf.id" class="staff__listStaff">
           <img class="listStaff__img" :src="staf.img" alt="staff" />
@@ -75,11 +73,11 @@
         <div class="about__bg"></div>
       </div>
       <div class="footer__link">
-        <div class="link__text textNormal">Узнать больше</div>
-        <div class="link__title textTitle">Наши работы</div>
+        <div class="link__text textNormal">{{$t('footerTitle')}}</div>
+        <div class="link__title textTitle">{{$t('footerPageAbout')}}</div>
       </div>
       <div class="footer__timer">
-        <div class="timer__text textNormal">Через</div>
+        <div class="timer__text textNormal">{{$t('footerTimer')}}</div>
         <div class="timer__title textTitle">0{{ currentTime }}</div>
       </div>
     </div>
@@ -98,32 +96,15 @@ export default {
       currentTime: 8,
       timer: null,
       newBg: false,
-      infoCards: [
-        {
-          id: "1",
-          number: "01",
-          title: "Продукт превыше всего",
-          text: "Мы либо делаем крутой во всех смыслах продукт, либо не делаем его вообще. Потому что мы настоящие фанаты промышленного дизайна.",
-        },
-        {
-          id: "2",
-          number: "02",
-          title: "Клиент не всегда прав",
-          text: "Мы точно знаем, что в некоторых вещах разбираемся лучше своих клиентов. При всей нашей любви к ним, мы готовы бесконечно доказывать вам, как будет лучше.",
-        },
-        {
-          id: "3",
-          number: "03",
-          title: "Мы работаем ради денег",
-          text: "Главная задача проекта - принести вам прибыль. Мы не будем часами рассказывать о творческом подходе. Мы сделаем продукт, который купят.",
-        },
-        {
-          id: "4",
-          number: "04",
-          title: "Мы ценим честность",
-          text: "Мы всегда честны перед собой, перед нашими клиентами, партнерами и продуктом. И мы ждём того же от вас.",
-        },
-      ],
+      // infoCards: [
+      //   {
+      //     id: "1",
+      //     number: "01",
+      //     title: this.$t('about_cardTitle'),
+      //     text: this.$t('about_cardText'),
+      //   },
+        //
+      // ],
       staff: [
         {
           img: require("../assets/img/About/staff/staf1.svg"),
@@ -137,6 +118,36 @@ export default {
         },
       ],
     };
+  },
+  computed:{
+    infoCards(){
+      return [
+           {
+          id: "1",
+          number: "01",
+          title: this.$t('about_cardTitle1'),
+          text: this.$t('about_cardText1'),
+        },
+         {
+          id: "2",
+          number: "02",
+          title: this.$t('about_cardTitle2'),
+          text: this.$t('about_cardText2'),
+        },
+        {
+          id: "3",
+          number: "03",
+          title: this.$t('about_cardTitle3') ,
+          text:  this.$t('about_cardText3'),
+        },
+        {
+          id: "4",
+          number: "04",
+          title:  this.$t('about_cardTitle4'),
+          text:  this.$t('about_cardText4'),
+        },
+      ]
+    }
   },
   mounted() {},
   destroyed() {

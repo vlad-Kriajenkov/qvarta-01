@@ -5,17 +5,19 @@
                 <div class="productColum__imgProducts"></div>
             </div>
            <div class="header__infoColum">
-               <div class="infoColum__text textNormal">работы</div>
-               <div class="infoColum__title textTitle">Наши работы</div>
+               <div class="infoColum__text textNormal">{{$t('work_SubTitle')}}</div>
+               <div class="infoColum__title textTitle">{{$t('work_title')}}</div>
                <button class="box1__btn textBtn">
-                    <p>Обсудить ваш проект</p>
+                    <p>{{$t('btnHeader')}}</p>
                     <div class="line"></div>
                 </button>
            </div>
        </div>
        <div class="work__product">
             <div class="product__title textNormal">
-               Главная <span class="textBold"> — о нас</span>
+              <i18n path="work_NamePage">
+                 <span class="textBold" place="action" > — {{$t('about_namePageOpen')}}</span>
+              </i18n>
             </div>         
             <div class="product__list">
                 <router-link 
@@ -33,7 +35,7 @@
                 <router-link
                 to="/work-product">
                 <button class="different">
-                    <div class="btn__text textBtn">Все работы</div>
+                    <div class="btn__text textBtn">{{$t('btnAllWork')}}</div>
                 </button>
                 </router-link>
             </div>
@@ -53,11 +55,11 @@
                 <div class="about__bg"></div>
             </div>
             <div class="footer__link">
-                <div class="link__text textNormal">Узнать больше</div>
+                <div class="link__text textNormal">{{$t('footerTitle')}}</div>
                 <div class="link__title textTitle">LUXIE VASE & LAMP</div>
             </div>
             <div class="footer__timer">
-                <div class="timer__text textNormal">Через</div>
+                <div class="timer__text textNormal">{{$t('footerTimer')}}</div>
                 <div class="timer__title textTitle">0{{ currentTime }}</div>
             </div>
         </div>

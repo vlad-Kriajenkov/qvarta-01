@@ -367,7 +367,7 @@ h1, h2, h3, h4, h5, h6 {
 .header__box1 {
   color: #fff;
   padding: 25px 0px 0px 80px;
-  width: 40%;
+  width: 60%;
 }
 .header__logo {
   font-size: 40px;
@@ -431,7 +431,7 @@ h1, h2, h3, h4, h5, h6 {
   background: white;
 }
 .infoWrapper {
-  width: 30%;
+  width: 45%;
   padding: 55px 0px 20px 50px;
 }
 
@@ -780,6 +780,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .AboutProject__boxSubTitle {
   margin-bottom: 37px;
+}
+
+.e {
+  margin-bottom: 10px;
 }
 
 .boxSubTitle__title {
@@ -1221,6 +1225,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 5;
+  width: 300px;
 }
 .serviceContainer__bg {
   position: absolute;

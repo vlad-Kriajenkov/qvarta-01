@@ -17,7 +17,7 @@
                 >
                     
                     <div href="#"  class="ourServices__a textNormal">{{link.title}}
-                        <div class="ourServices__moreInfo">Перейти</div>
+                        <div class="ourServices__moreInfo">{{$t('main_navMoreInfo')}}</div>
                     </div>
 
                 </router-link>
@@ -62,16 +62,20 @@ export default {
     data(){
         return{
             showMenu: false,
-            links: [ 
-                {title: 'О нас', url: '/about'},
-                {title: 'Наши работы', url: '/work'},
-                {title: 'Наши услуги', url: '/work-product'},
-                {title: 'Блог', url: '/3'},
-                {title: 'Контакты', url: '/4'}
-                 
+        }
+    },
+    computed:{
+        links(){
+            return[
+                {title: this.$t('main_navLink1'), url: '/about'},
+                {title: this.$t('main_navLink2'), url: '/work'},
+                {title: this.$t('main_navLink3'), url: '/work-product'},
+                {title: this.$t('main_navLink4'), url: '/3'},
+                {title: this.$t('main_navLink5'), url: '/4'}
             ]
         }
     },
+
     methods:{
         setLocale(locale){
             import(`../../lang/${locale}.json`).then((msgs) =>{

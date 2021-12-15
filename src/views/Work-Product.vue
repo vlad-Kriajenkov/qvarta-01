@@ -2,20 +2,21 @@
     <div class="workProduct">
         <div class="workProduct__header">
             <div class="workProduct__boxTitle">
-                <div class="boxTitle__text textNormal">{{$t('WorksubTitle')}}</div>
+                <div class="boxTitle__text textNormal">{{$t('workProduct_Title')}}</div>
                 <div class="boxTitle__title textTitle">LUXIE VASE & LAMP</div>
-                <div class="boxTitle__text textNormal">Разработка дизайна</div>
+                <div class="boxTitle__text textNormal">{{$t('workProduct_Title2')}}</div>
             </div>
             <div class="workProduct__boxBtn">   
                 <button class="box1__btn textBtn"> 
-                    <p>Обсудить ваш проект</p>
+                    <p>{{$t('btnHeader')}}</p>
                     <div class="line"></div>
                 </button>
             </div>
         </div> 
         <div class="workProduct__luxieLamp">\
             <div class="luxieLamp__title textNormal">
-                Главная — Работы — <span class='textBold'>LUXIE VASE & LAMP</span>
+                {{$t('workProduct_namePage')}}
+                <span class='textBold'>LUXIE VASE & LAMP</span>
             </div>    
             <div class="luxieLamp__wrapperAboutProject">
                 <div data-aos="fade-right" class="wrapperAboutProject__columImg">
@@ -25,7 +26,7 @@
                 <div data-aos="fade-right" class="wrapperAboutProject__AboutProject">
                     <div class="AboutProject__boxTitle">
                         <div class="boxTitle__text textNormal">LUXIE VASE & LAMP</div>   
-                        <div class="boxTitle__title textTitle">О проекте</div>
+                        <div class="boxTitle__title textTitle">{{$t('workProduct_aboutProduct')}}</div>
                     </div>
                     <div
                     v-for="AboutProject in AboutProjects"
@@ -35,7 +36,7 @@
                         <div class="boxSubTitle__text textNormal">{{AboutProject.text}}</div>
                     </div>
                      <div class="AboutProject__boxSubTitle">
-                        <div class="boxSubTitle__title textTitleCard">Инспирация</div>
+                        <div class="boxSubTitle__title textTitleCard">{{$t('workProduct_aboutProductTitle6')}}</div>
                         <div class="boxSubTitle__texts textNormal">В наши дни люди забывают о природе, в нашем мире господствует индустриализация. Почти каждый сектор промышленности вносит свой вклад в крушение планеты.</div>
                         <div class="boxSubTitle__texts textNormal">Но человечество и природа неотделимы друг от друга! Нам нужно привести себя в гармонию с миром природы, мы должны вернуться к восприятию человечества как его части. </div>
                         <div class="boxSubTitle__texts textNormal">Этой работой мы хотим обратить ваше внимание на то, что природа - это главное в нашей жизни, это ЦЕНТР нашего мира, который мы любим и должны беречь. Итак, во-первых, это не лампа. </div>
@@ -58,11 +59,11 @@
                 <div class="workProduct__bg"></div>
             </div>
             <div class="footer__link">
-                <div class="link__text textNormal">Узнать больше</div>
+                <div class="link__text textNormal">{{$t('footerTitle')}}</div>
                 <div class="link__title textTitle">MINI PHA</div>
             </div>
             <div class="footer__timer">
-                <div class="timer__text textNormal">Через</div>
+                <div class="timer__text textNormal">{{$t('footerTimer')}}</div>
                 <div class="timer__title textTitle">0{{ currentTime }}</div>
             </div>
         </div>
@@ -84,29 +85,32 @@ export default {
         return{
             currentTime: 8,
             timer: null,
-            AboutProjects:[
+        }
+    },
+    computed:{
+        AboutProjects(){
+            return[
                 {
-                    title: 'Название',
+                    title: this.$t('workProduct_aboutProductTitle1'),
                     text: 'LUXIE VASE & LAMP'
                 },
                 {
-                    title: 'Задача',
+                    title: this.$t('workProduct_aboutProductTitle2'),
                     text: 'Разработка дизайна ночной лампы'
                 },
                 {
-                    title: 'Категории работ',
+                    title: this.$t('workProduct_aboutProductTitle3'),
                     text: 'Концепт-дизайн, разработка конструкции устройства, 3D - моделирование, предметная визуализация'
                 },
                 {
-                    title: 'Клиент',
+                    title: this.$t('workProduct_aboutProductTitle4'),
                     text: 'Qvarta products'
                 },
                 {
-                    title: 'Год',
+                    title: this.$t('workProduct_aboutProductTitle5'),
                     text: '2020'
-                },
-
-            ]         
+                }
+            ]
         }
     },
     methods: {
