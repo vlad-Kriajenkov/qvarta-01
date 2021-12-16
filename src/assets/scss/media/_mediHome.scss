@@ -1,4 +1,8 @@
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
+	.home__ourWorks{
+		max-width: 1440px;
+		margin: 0px auto;
+	}
 
 }
 
@@ -31,7 +35,7 @@
 		}
 
 		&__columnInfo {
-            padding: 130px 0px 80px 20px;
+            padding: 0px 0px 80px 20px;
 			margin: 0px;
 			width: 100%;
 
@@ -80,6 +84,19 @@
 			font-size: 32px;
 		}
 }
+.imgProducts {
+
+    &__imgLVL {
+        height: 400px;
+    }
+
+    &__imgBFS{
+       
+        height: 400px;
+    }
+  
+}
+
 .textNormal {
 	font-size: 14px;
 }
@@ -175,50 +192,7 @@
 		&__title {
 		}
 }
-/**/
-.mainNavHeader {
-    padding: 30px 20px 80px 20px;
-	height: 0px;
-	&__logg {
-	}
 
-	&__leng {
-		display: none;
-	}
-
-	&__mainNav {
-		
-	}
-}
-
-.menu {
-}
-.burger-container {
-}
-.burger {
-	background-color: black;
-}
-.burger::after{
-	background-color: black;
-}
-.burger::before{
-	background-color: black;
-}
-.leng {
-
-	&__ru {
-	}
-
-	&__line {
-	}
-
-	&__eng {
-	}
-}
-.textNormal {
-}
-
-/**/
 
 /**/
 .formContact {

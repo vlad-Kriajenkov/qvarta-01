@@ -1,6 +1,6 @@
 <template>
   <div class="mainNavHeader textTitle">
-    <div class="mainNavHeader__logg">QVARTA</div>
+    <div class="mainNavHeader__logg"></div>
     <div class="menu" id="mobile-toggle" @click="showMenu = !showMenu">
       <div class="burger-container">
         <div class="burger" :class="{ active: showMenu }"></div>

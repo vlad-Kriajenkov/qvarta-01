@@ -1,10 +1,11 @@
 <template>
     <div class="work">
        <div class="work__header">
+            <div class="header__logoWork textTitle">QVARTA</div>
             <div class="header__productColum" >
-                <div class="productColum__imgProducts"></div>
+              <div class="productColum__imgProducts"></div>
             </div>
-           <div class="header__infoColum">
+            <div class="header__infoColum">
                <div class="infoColum__text textNormal">{{$t('work_SubTitle')}}</div>
                <div class="infoColum__title textTitle">{{$t('work_title')}}</div>
                <button class="box1__btn textBtn">
@@ -21,8 +22,8 @@
             </div>         
             <div class="product__list">
                 <router-link 
-                class="product__item"
-                v-for="allPostsWork in allPostsWorks"
+                class="product__item" 
+                v-for="allPostsWork in allPostsWorks.slice(0, isClick ? allPostsWorks.length : 5)"
                 :key="allPostsWork.id"
                 to="/work-product"
                 >
@@ -32,12 +33,9 @@
                 </router-link>
             </div>  
              <div class="ourWorks__btn">
-                <router-link
-                to="/work-product">
                 <button class="different">
                     <div class="btn__text textBtn">{{$t('btnAllWork')}}</div>
                 </button>
-                </router-link>
             </div>
        </div>
         <div class="work__whatWeDo">
@@ -91,6 +89,7 @@ export default {
     },
     methods: {
     ...mapActions(['fetchPosts']),
+ 
     handleScroll: function (evt, el) {
     let height = document.documentElement.scrollHeight;
       if (window.scrollY > height) {

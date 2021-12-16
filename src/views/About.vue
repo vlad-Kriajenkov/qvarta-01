@@ -1,8 +1,8 @@
 <template>
   <div class="about">
     <div class="about__header">
+      <div class="header__logo textTitle">QVARTA</div>
       <div class="header__box1">
-        <div class="header__logo textTitle">QVARTA</div>
         <div class="header__text textNormal">{{$t('about_SubTitle')}}</div>
         <div class="header__title textTitle">
           <i18n path="about_titile">

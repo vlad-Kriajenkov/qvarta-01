@@ -1,11 +1,11 @@
 .services1 {
 
-    &__header {
+    &__header1 {
         display: flex;
     }
 }
 
-.header {
+.header1 {
     &__servicesColum {
         width: 50%;
         img{
@@ -13,7 +13,12 @@
         }
       
     }
-
+    &__logo{
+        position: absolute;
+        top: 27px;
+        left: 80px;
+        color: #fff;
+    }
     &__infoColum {
       
         height: 100vh;
@@ -29,7 +34,7 @@
 
     }
 }
-.infoColum {
+.infoColum1 {
 
     &__text {
         margin-bottom: 10px;
@@ -71,7 +76,7 @@
     &__infoServ {
         background: black;
         width: 50%;
-        padding: 50px;
+        padding: 20px;
     }
     &__infoServ:first-child{
         
@@ -202,6 +207,7 @@
 .showInfo{
     margin: 16px 0px 60px 0px;
     visibility: visible;
+    height: auto;
     opacity: 1;
     transition: visibility 1s linear, opacity 1s linear, margin 1s linear;
 }

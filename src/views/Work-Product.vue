@@ -1,6 +1,7 @@
 <template>
     <div class="workProduct">
         <div class="workProduct__header">
+            <div class="workProduct__logo textTitle">QVARTA</div>
             <div class="workProduct__boxTitle">
                 <div class="boxTitle__text textNormal">{{$t('workProduct_Title')}}</div>
                 <div class="boxTitle__title textTitle">LUXIE VASE & LAMP</div>

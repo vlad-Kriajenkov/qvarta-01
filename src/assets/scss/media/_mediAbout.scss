@@ -42,9 +42,13 @@
 		&__box1 {
             margin-bottom: 50px;
             width: 100%;
+			padding: 150px 0px 80px 20px;
 		}
 
 		&__logo {
+			position: absolute;
+			top: 27px;
+			left: 20px;
 		}
 
 		&__text {

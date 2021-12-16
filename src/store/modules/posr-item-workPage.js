@@ -5,6 +5,7 @@ export default{
             const workPage = await res.json()
 
             ctx.commit('updatePost', workPage)
+            console.log(workPage);
         }
     },
   

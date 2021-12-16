@@ -1,16 +1,17 @@
 <template>
     <div class="services1">
-        <div class="services1__header">
-            <div class="header__servicesColum" >
+        <div class="services1__header1">
+            <div class="header1__logo textTitle">QVARTA</div>
+            <div class="header1__servicesColum" >
                 <img src="../assets/img/Industrial-design/img-Header.svg" alt="">
             </div>
-            <div class="header__infoColum">
-                <div class="infoColum__text textNormal">{{$t('servicesSubTitle')}}</div>
+            <div class="header1__infoColum">
+                <div class="infoColum1__text textNormal">{{$t('servicesSubTitle')}}</div>
                 <div 
                 v-for="headerTitle in headerTitle"
                 :key="headerTitle.id"
                 
-                class="infoColum__title textTitle">{{headerTitle.title}}</div>
+                class="infoColum1__title textTitle">{{headerTitle.title}}</div>
                 <button class="box1__btn textBtn">
                     <p>{{$t('btnHeader')}}</p>
                     <div class="line"></div>

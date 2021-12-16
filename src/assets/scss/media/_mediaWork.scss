@@ -32,28 +32,32 @@
 		}
 }
 .header {
+	&__logoWork{
+		position: absolute;
+		top: 27px;
+		left: 20px;
+	}
+	&__productColum {
+		width: 100%;
+	}
 
-		&__productColum {
-            width: 100%;
-		}
-
-		&__infoColum {
-            width: 100%;
-            padding: 90px;
-		}
+	&__infoColum {
+		width: 100%;
+		padding: 90px;
+	}
 }
 .productColum {
 
-		&__imgProducts {
-		}
+	&__imgProducts {
+	}
 }
 .infoColum {
 
-		&__text {
-		}
+	&__text {
+	}
 
-		&__title {
-		}
+	&__title {
+	}
 }
 .textNormal {
 }
@@ -61,8 +65,8 @@
 }
 .box1 {
 
-		&__btn {
-		}
+	&__btn {
+	}
 }
 .textBtn {
 }
@@ -70,29 +74,29 @@
 }
 .product {
 
-		&__title {
-		}
+	&__title {
+	}
 
-		&__list {
-            margin: 0px 20px 0px 20px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            flex-direction: column;
-		}
+	&__list {
+		margin: 0px 20px 0px 20px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
 
-		&__item {
-            width: 100%;
-		}
+	&__item {
+		width: 100%;
+	}
 
-		&__img {
-		}
+	&__img {
+	}
 
-		&__titleItem {
-		}
+	&__titleItem {
+	}
 
-		&__text {
-		}
+	&__text {
+	}
 }
 .textBold {
 }
@@ -100,8 +104,8 @@
 }
 .ourWorks {
 
-		&__btn {
-		}
+	&__btn {
+	}
 }
 .different {
 }

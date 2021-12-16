@@ -9,7 +9,6 @@
        width: 50%;
        display: flex;
        flex-direction: column;
-       justify-content: center;
        margin-left: 80px;
     } 
     &__columnProduct{
@@ -21,7 +20,10 @@
      }
 }
 .column {
-
+    &__logo{
+        margin: 27px 0px 150px 0px;
+        
+    }
     &__info {
          
     }

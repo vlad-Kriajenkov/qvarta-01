@@ -6,10 +6,14 @@
 }
 
 .header {
+    &__logoWork{
+        position: absolute;
+        top: 27px;
+        left: 80px;
+    }
+
     &__productColum {
         width: 50%;
-        
-      
     }
 
     &__infoColum {
@@ -78,6 +82,7 @@
     &__item {
         width: 48%;
         margin-bottom: 80px;
+        color: black;
     }
     &__item:nth-child(3n) {
         width: 100%;

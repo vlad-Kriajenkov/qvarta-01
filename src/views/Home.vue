@@ -2,6 +2,7 @@
   <div class="home">
     <div class="home__header">
       <div class="home__columnInfo">
+        <div class="column__logo textTitle ">QVARTA</div>
         <div class="column__info">
           <p class="info__text textNormal">{{$t('home_SubTitle')}}</p>
           <div class="info__title textTitle">
@@ -47,8 +48,8 @@
       <post-list-work/>
       <div class="ourWorks__btn">
         <router-link
-        to="#">
-          <button class="different">
+        to="/work">
+          <button class="different"> 
             <div class="btn__text textBtn">{{$t('btnAllWork')}}</div>
           </button>
         </router-link>

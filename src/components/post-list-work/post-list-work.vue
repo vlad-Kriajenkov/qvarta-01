@@ -15,7 +15,10 @@ export default {
     components:{
         postItemWork
     },
-    computed: mapGetters(['allPosts']), 
+    computed:{
+        ...mapGetters(['allPosts']), 
+    },
+    
     methods: mapActions(['fetchPost']),
     mounted(){ 
     this.fetchPost();

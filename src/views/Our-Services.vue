@@ -1,6 +1,7 @@
 <template>
     <div class="ourService">
         <div class="ourService__header">
+            <div class="header__logo textTitle">QVARTA</div>
             <div class="header__servicesColum" >
                 <div class="servicesColum__imgProducts"></div>
             </div>
