@@ -155,14 +155,18 @@ export default {
   },
   methods: {
     handleScroll: function (evt, el) {
-      let height = document.documentElement.scrollHeight; 
-      if (window.scrollY > height) {
+       var scrollHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+    );
+       
+      if (window.scrollY+1 >= scrollHeight - innerHeight) {
         this.startTimer();
         this.startLine();
          this.startOpasity();
         console.log(scrollY);
       }
-      return window.scrollY > height;
     },
     startTimer() {
       this.timer = setInterval(() => {

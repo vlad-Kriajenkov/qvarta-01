@@ -23,7 +23,7 @@
             <div class="product__list">
                 <router-link 
                 class="product__item" 
-                v-for="allPostsWork in allPostsWorks.slice(0, isClick ? allPostsWorks.length : 5)"
+                v-for="allPostsWork in allPostsWorks"
                 :key="allPostsWork.id"
                 to="/work-product"
                 >
@@ -87,19 +87,25 @@ export default {
     
    
     },
+    destroyed() {
+        this.stopTimer()
+    },
     methods: {
     ...mapActions(['fetchPosts']),
- 
+    
     handleScroll: function (evt, el) {
-    let height = document.documentElement.scrollHeight;
-      if (window.scrollY > height) {
-        this.startTimer();
-        this.startLine();
-        this.startOpasity();
-        console.log(scrollY);
-         console.log(height);
-      }
-      return window.scrollY > height;
+        var scrollHeight = Math.max(
+            document.body.scrollHeight, document.documentElement.scrollHeight,
+            document.body.offsetHeight, document.documentElement.offsetHeight,
+            document.body.clientHeight, document.documentElement.clientHeight
+        );
+        
+        if (window.scrollY+1 >= scrollHeight - innerHeight) {
+            this.startTimer();
+            this.startLine();
+            this.startOpasity();
+            console.log(scrollY);
+        }
     },
     startTimer() {
       this.timer = setInterval(() => {
@@ -108,7 +114,7 @@ export default {
     },
     stopTimer() {
       clearTimeout(this.timer);
-    //   this.$router.push("/");
+      this.$router.push("/work-product");
     },
     startLine() {
       document.getElementById("line").classList.add("activeLine");

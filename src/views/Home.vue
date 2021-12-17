@@ -29,16 +29,17 @@
       <div class="slider__title textNormal">
         {{$t('home_SliderTitle')}} <span class="textBold">Q</span>
       </div>
-      <VueSlickCarousel :arrows="false" :dots="true" >
-          <div class="slider__quotes textNormal ml1">{{$t('home_SliderQuotes1')}}</div>
-          <div class="slider__quotes textNormal ml2">{{$t('home_SliderQuotes2')}}</div>
-          <div class="slider__quotes textNormal ml3">{{$t('home_SliderQuotes3')}}</div>
-          <div class="slider__quotes textNormal ml4">{{$t('home_SliderQuotes4')}}</div>
-      </VueSlickCarousel>
-         <!-- <div class="slider__quotes textNormal ml1">Продукт превыше всего.  Либо делаем крутой продукт, либо не делаем его вообще.</div>
-          <div class="slider__quotes textNormal ml2">Мы ценим честность. Честны перед собой, нашим клиентом и продуктом.</div>
-          <div class="slider__quotes textNormal ml3">Работаем ради денег. Главная задача проекта - принести вам прибыль. </div>
-          <div class="slider__quotes textNormal ml4">Клиент не всегда прав. Мы точно знаем, что в некоторых вещах разбираемся лучше.</div> -->
+ 
+
+      <slick
+        ref="slick"
+        :options="settings"
+      >
+        <div class="slider__quotes textNormal ml1">{{$t('home_SliderQuotes1')}}</div>
+        <div class="slider__quotes textNormal ml2">{{$t('home_SliderQuotes2')}}</div>
+        <div class="slider__quotes textNormal ml3">{{$t('home_SliderQuotes3')}}</div>
+        <div class="slider__quotes textNormal ml4">{{$t('home_SliderQuotes4')}}</div>
+      </slick>
     </div>
     <div class="home__ourWorks">
       <div class="ourWorks__header">
@@ -89,25 +90,32 @@
  
 
 <script >
-import VueSlickCarousel from 'vue-slick-carousel';
-import 'vue-slick-carousel/dist/vue-slick-carousel.css';
+
 import PostListWork from '../components/post-list-work/post-list-work.vue';
 import ourServices from '../components/our-services/our-services';
 import formFeedback from '../components/form-feedback/form-feedback.vue';
 import FormContact from '../components/form-contact/form-contact.vue';
 
+import Slick from 'vue-slick';
+import 'slick-carousel/slick/slick.css';
 
 export default {
   name: 'Home',
   components: {
-    VueSlickCarousel,
     PostListWork,
     ourServices,
     formFeedback,
-    FormContact
+    FormContact,
+    Slick
   },
   data(){
     return{
+      slickOptions: {
+          slidesToShow: 3,
+          
+          // Any other options that can be got from plugin documentation
+      },
+
       currentTime: 8,
       timer: null,
       newBg: false,
@@ -117,7 +125,9 @@ export default {
                 "infinite": false,
                 "speed": 500,
                 "slidesToShow": 1,
-                "slidesToScroll": 1
+                "slidesToScroll": 1,
+                "arrows":false,
+                "dots": true
                },
       quotes: [
         {
@@ -145,8 +155,6 @@ export default {
   }
   },
    mounted() {
-     
-     
       const textWrapper1 = document.querySelector('.ml1');
       const textWrapper2 = document.querySelector('.ml2');
       const textWrapper3 = document.querySelector('.ml3');
@@ -229,14 +237,20 @@ export default {
     this.stopTimer()
   }, 
   methods: {
+    
      handleScroll: function(evt, el){
-      if (window.scrollY > 4600) {
+        var scrollHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+    );
+       
+      if (window.scrollY+1 >= scrollHeight - innerHeight) {
           this.startTimer()
           this.startLine()
           this.startOpasity();
           console.log(scrollY);
       }
-      return window.scrollY > 4600
      },
       startTimer() {
         this.timer = setInterval(() => {
@@ -252,14 +266,65 @@ export default {
       }, 
       startOpasity(){
         document.getElementById("Bg").classList.add('activeOpacity')
-      }
+      },
+     next() {
+            this.$refs.slick.next();
+        },
+
+        prev() {
+            this.$refs.slick.prev();
+        },
+
+        reInit() {
+            // Helpful if you have to deal with v-for to update dynamic lists
+            this.$nextTick(() => {
+                this.$refs.slick.reSlick();
+            });
+        },
+
+        // Events listeners
+        handleAfterChange(event, slick, currentSlide) {
+            console.log('handleAfterChange', event, slick, currentSlide);
+        },
+        handleBeforeChange(event, slick, currentSlide, nextSlide) {
+            console.log('handleBeforeChange', event, slick, currentSlide, nextSlide);
+        },
+        handleBreakpoint(event, slick, breakpoint) {
+            console.log('handleBreakpoint', event, slick, breakpoint);
+        },
+        handleDestroy(event, slick) {
+            console.log('handleDestroy', event, slick);
+        },
+        handleEdge(event, slick, direction) {
+            console.log('handleEdge', event, slick, direction);
+        },
+        handleInit(event, slick) {
+            console.log('handleInit', event, slick);
+        },
+        handleReInit(event, slick) {
+            console.log('handleReInit', event, slick);
+        },
+        handleSetPosition(event, slick) {
+            console.log('handleSetPosition', event, slick);
+        },
+        handleSwipe(event, slick, direction) {
+            console.log('handleSwipe', event, slick, direction);
+        },
+        handleLazyLoaded(event, slick, image, imageSource) {
+            console.log('handleLazyLoaded', event, slick, image, imageSource);
+        },
+        handleLazeLoadError(event, slick, image, imageSource) {
+            console.log('handleLazeLoadError', event, slick, image, imageSource);
+        },
     },
     watch: {
       currentTime(time) {
         if (time === 0) {
           this.stopTimer()
         }
-      }
+      },
+      
+
     },
 }
 </script>
