@@ -9,7 +9,7 @@
             <i18n path="home_title"> 
               <br place="break" />
             </i18n>
-            </div>
+          </div>
         </div>
         <button class="column__btn textBtn ">
           <p>{{$t('btnHeader')}}</p> 
@@ -24,36 +24,46 @@
           <div class="imgProducts__imgBFS" :class="{newbg: newBg}"></div>
         </div>
       </div> 
-    </div>
-    <div class="home__slider">
-      <div class="slider__title textNormal">
-        {{$t('home_SliderTitle')}} <span class="textBold">Q</span>
+      <div class="home__leng">
+        <button 
+          @click="setLocale('ru')"
+        class="leng__ru textNormal">
+          ru
+          <div class="leng__line"></div>
+        </button>
+        <button 
+        @click="setLocale('en')"
+        class="leng__eng textNormal">
+          eng
+          <div class="leng__line"></div>
+        </button> 
       </div>
- 
-
-      <slick
-        ref="slick"
-        :options="settings"
-      >
-        <div class="slider__quotes textNormal ml1">{{$t('home_SliderQuotes1')}}</div>
-        <div class="slider__quotes textNormal ml2">{{$t('home_SliderQuotes2')}}</div>
-        <div class="slider__quotes textNormal ml3">{{$t('home_SliderQuotes3')}}</div>
-        <div class="slider__quotes textNormal ml4">{{$t('home_SliderQuotes4')}}</div>
-      </slick>
     </div>
+    <slickComponent 
+    @reload="animSlick"
+    :key="renderKey"></slickComponent>
     <div class="home__ourWorks">
       <div class="ourWorks__header">
         <div class="ourWorks__text textNormal">{{$t('home_ourWorksText')}}</div>
         <div class="ourWorks__title textTitleCard">{{$t('home_ourWorksTitle')}}</div>
       </div>
-      <post-list-work/>
+      <div class="ourWorks__container">
+          <div 
+          class="postItemWork"
+          v-for="allPost in allPosts.slice(0, isClick ? allPosts.length : 4)"
+          :key="allPost.id"
+          >
+              <img data-aos="fade-right" :src="require(`@/assets/${allPost.img}`)" alt="" class="postItemWork__img ">
+              <div data-aos="fade-up" class="postItemWork__title textTitleCard">{{allPost.title}}</div>
+              <div data-aos="fade-up" class="postItemWork__text textNormal">{{allPost.text}}</div>
+          </div>
+      </div>
       <div class="ourWorks__btn">
-        <router-link
-        to="/work">
-          <button class="different"> 
+          <button 
+          @click="isClick =!isClick"
+          class="different"> 
             <div class="btn__text textBtn">{{$t('btnAllWork')}}</div>
           </button>
-        </router-link>
       </div>
     </div>
     <div class="home__whatWeDo">
@@ -90,154 +100,55 @@
  
 
 <script >
-
-import PostListWork from '../components/post-list-work/post-list-work.vue';
+import {mapGetters, mapActions} from 'vuex'
 import ourServices from '../components/our-services/our-services';
 import formFeedback from '../components/form-feedback/form-feedback.vue';
 import FormContact from '../components/form-contact/form-contact.vue';
-
-import Slick from 'vue-slick';
-import 'slick-carousel/slick/slick.css';
+import slickComponent from '../components/v-slick/slick-slider';
 
 export default {
   name: 'Home',
   components: {
-    PostListWork,
     ourServices,
     formFeedback,
     FormContact,
-    Slick
+    slickComponent,
   },
   data(){
     return{
-      slickOptions: {
-          slidesToShow: 3,
-          
-          // Any other options that can be got from plugin documentation
-      },
-
+      isClick: false,
       currentTime: 8,
       timer: null,
       newBg: false,
-      settings:{
-                "dotsClass": "slick-dots custom-dot-class",
-                "edgeFriction": 0.35,
-                "infinite": false,
-                "speed": 500,
-                "slidesToShow": 1,
-                "slidesToScroll": 1,
-                "arrows":false,
-                "dots": true
-               },
-      quotes: [
-        {
-          id:1,
-          title: 'Продукт превыше всего.',
-          text:'Либо делаем крутой продукт, либо не делаем его вообще.'
-        },
-        {
-          id:2,
-          title:'Мы ценим честность',
-          text:'Честны перед собой, нашим клиентом и продуктом.'
-        },
-        {
-          id:3,
-          title:'Работаем ради денег',
-          text:'Главная задача проекта - принести вам прибыль. '
-        },
-        {
-          id:4,
-          title:'Клиент не всегда прав',
-          text:'Мы точно знаем, что в некоторых вещах разбираемся лучше.'
-        },
-      ],
-
-  }
+      renderKey: 1,
+    }
   },
-   mounted() {
-      const textWrapper1 = document.querySelector('.ml1');
-      const textWrapper2 = document.querySelector('.ml2');
-      const textWrapper3 = document.querySelector('.ml3');
-      const textWrapper4 = document.querySelector('.ml4');
-
-      textWrapper1.innerHTML = textWrapper1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-      textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-      textWrapper3.innerHTML = textWrapper3.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-      textWrapper4.innerHTML = textWrapper4.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-      console.log(textWrapper4);
-      this
-        .$anime
-        .timeline({loop: true})
-        .add({
-          targets: '.ml1 .letter',
-          opacity: [0,1],
-          easing: "easeInOutQuad",
-          duration: 2250,
-          delay: (el, i) => 150 * (i+1)
-        }).add({
-          targets: '.ml1',
-          opacity: 0,
-          duration: 1000,
-          easing: "easeOutExpo",
-          delay: 1000
-        });
-
-      this
-        .$anime
-        .timeline({loop: true})
-        .add({
-          targets: '.ml2 .letter',
-          opacity: [0,1],
-          easing: "easeInOutQuad",
-          duration: 2250,
-          delay: (el, i) => 150 * (i+1)
-        }).add({
-          targets: '.ml2',
-          opacity: 0,
-          duration: 1000,
-          easing: "easeOutExpo",
-          delay: 1000
-        });  
-
-         this
-        .$anime
-        .timeline({loop: true})
-        .add({
-          targets: '.ml3 .letter',
-          opacity: [0,1],
-          easing: "easeInOutQuad",
-          duration: 2250,
-          delay: (el, i) => 150 * (i+1)
-        }).add({
-          targets: '.ml3',
-          opacity: 0,
-          duration: 1000,
-          easing: "easeOutExpo",
-          delay: 1000
-        });  
-
-      this
-        .$anime
-        .timeline({loop: true})
-        .add({
-          targets: '.ml4 .letter',
-          opacity: [0,1],
-          easing: "easeInOutQuad",
-          duration: 2250,
-          delay: (el, i) => 150 * (i+1)
-        }).add({
-          targets: '.ml4',
-          opacity: 0,
-          duration: 1000,
-          easing: "easeOutExpo",
-          delay: 1000
-        });  
-  },
+  
   destroyed() {
     this.stopTimer()
   }, 
+  mounted(){ 
+    this.fetchPost();
+  },
   methods: {
-    
+    ...mapActions(['fetchPost']),
+  
+      setLocale(locale){
+            import(`../lang/${locale}.json`).then((msgs) =>{
+                this.$i18n.setLocaleMessage(locale, msgs)
+                this.$i18n.locale = locale
+                this.renderKey++
+            })
+           
+            
+        },
+     animSlick(locale){
+       alert(locale);
+      //  if (locale = "ru") {
+      //    this.renderKey++
+      //  }  
+      },
+
      handleScroll: function(evt, el){
         var scrollHeight = Math.max(
         document.body.scrollHeight, document.documentElement.scrollHeight,
@@ -267,55 +178,7 @@ export default {
       startOpasity(){
         document.getElementById("Bg").classList.add('activeOpacity')
       },
-     next() {
-            this.$refs.slick.next();
-        },
-
-        prev() {
-            this.$refs.slick.prev();
-        },
-
-        reInit() {
-            // Helpful if you have to deal with v-for to update dynamic lists
-            this.$nextTick(() => {
-                this.$refs.slick.reSlick();
-            });
-        },
-
-        // Events listeners
-        handleAfterChange(event, slick, currentSlide) {
-            console.log('handleAfterChange', event, slick, currentSlide);
-        },
-        handleBeforeChange(event, slick, currentSlide, nextSlide) {
-            console.log('handleBeforeChange', event, slick, currentSlide, nextSlide);
-        },
-        handleBreakpoint(event, slick, breakpoint) {
-            console.log('handleBreakpoint', event, slick, breakpoint);
-        },
-        handleDestroy(event, slick) {
-            console.log('handleDestroy', event, slick);
-        },
-        handleEdge(event, slick, direction) {
-            console.log('handleEdge', event, slick, direction);
-        },
-        handleInit(event, slick) {
-            console.log('handleInit', event, slick);
-        },
-        handleReInit(event, slick) {
-            console.log('handleReInit', event, slick);
-        },
-        handleSetPosition(event, slick) {
-            console.log('handleSetPosition', event, slick);
-        },
-        handleSwipe(event, slick, direction) {
-            console.log('handleSwipe', event, slick, direction);
-        },
-        handleLazyLoaded(event, slick, image, imageSource) {
-            console.log('handleLazyLoaded', event, slick, image, imageSource);
-        },
-        handleLazeLoadError(event, slick, image, imageSource) {
-            console.log('handleLazeLoadError', event, slick, image, imageSource);
-        },
+     
     },
     watch: {
       currentTime(time) {
@@ -326,5 +189,25 @@ export default {
       
 
     },
+    computed:{
+      ...mapGetters(['allPosts']), 
+      quots(){
+        return[
+          {
+            title: this.$t('home_SliderQuotes1')
+          },
+          {
+            title: this.$t('home_SliderQuotes2')
+          },
+          {
+            title: this.$t('home_SliderQuotes3')
+          },
+          {
+            title: this.$t('home_SliderQuotes4')
+          },
+        ]
+      },
+      
+    }
 }
 </script>

@@ -146,6 +146,24 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   z-index: 4;
 }
+.home__leng {
+  position: absolute;
+  right: 80px;
+  bottom: 50px;
+  display: flex;
+  z-index: 10;
+}
+.home__leng button div {
+  width: 0px;
+  height: 1px;
+  background: #fff;
+  transition: all 0.3s ease-out;
+}
+.home__leng button:hover div {
+  width: 100%;
+  margin-top: 5px;
+  transition: all 0.3s ease-out;
+}
 
 .column__logo {
   margin: 27px 0px 150px 0px;
@@ -239,6 +257,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 .ourWorks__btn button {
   background: none;
+}
+.ourWorks__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.postItemWork__title {
+  font-size: 24px;
+  margin: 38px 0px 10px 0px;
+}
+.postItemWork__text {
+  font-size: 13px;
+  width: 510px;
+}
+
+.postItemWork:nth-child(2n) {
+  margin-top: 120px;
 }
 
 .btn__text {
@@ -1455,18 +1491,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 5px;
 }
 
-.postItemWork__container:nth-child(2n) {
-  margin-top: 120px;
-}
-.postItemWork__title {
-  font-size: 24px;
-  margin: 38px 0px 10px 0px;
-}
-.postItemWork__text {
-  font-size: 13px;
-  width: 510px;
-}
-
 .ourServices {
   background: #1D1D1D;
   height: 100vh;
@@ -1732,6 +1756,9 @@ h1, h2, h3, h4, h5, h6 {
 .mainNav__logo {
   font-size: 40px;
   margin-bottom: 50px;
+}
+.mainNav__logo a {
+  color: #fff;
 }
 .mainNav__img {
   width: 50%;
@@ -2154,6 +2181,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
   }
 
+  .postItemWork:nth-child(2n) {
+    margin-bottom: 120px;
+  }
+
   /**/
   /*s*/
   .home__bg {
@@ -2300,6 +2331,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 90px;
   }
 
+  .productColum__imgProducts {
+    height: 400px;
+  }
+
   .product__list {
     margin: 0px 20px 0px 20px;
     display: flex;
@@ -2402,17 +2437,6 @@ h1, h2, h3, h4, h5, h6 {
   .mainNavHeader {
     padding: 30px 20px 80px 20px;
     height: 0px;
-  }
-  .burger {
-    background-color: black;
-  }
-
-  .burger::after {
-    background-color: black;
-  }
-
-  .burger::before {
-    background-color: black;
   }
 }
 @media (max-width: 480px) {

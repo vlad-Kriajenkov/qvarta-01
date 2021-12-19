@@ -23,7 +23,7 @@
             <div class="product__list">
                 <router-link 
                 class="product__item" 
-                v-for="allPostsWork in allPostsWorks"
+                v-for="allPostsWork in allPostsWorks.slice(0, isClick ? allPostsWorks.length : 5)"
                 :key="allPostsWork.id"
                 to="/work-product"
                 >
@@ -33,7 +33,9 @@
                 </router-link>
             </div>  
              <div class="ourWorks__btn">
-                <button class="different">
+                <button 
+                @click="isClick =!isClick"
+                class="different">
                     <div class="btn__text textBtn">{{$t('btnAllWork')}}</div>
                 </button>
             </div>
@@ -78,6 +80,7 @@ export default {
         return{
         currentTime: 8,
         timer: null,
+        isClick: false
         }
     },
     computed: mapGetters(['allPostsWorks']), 
@@ -132,3 +135,7 @@ export default {
   },
 }
 </script>
+
+<style >
+
+</style>

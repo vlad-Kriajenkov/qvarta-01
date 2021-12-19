@@ -6,16 +6,7 @@
         <div class="burger" :class="{ active: showMenu }"></div>
       </div>
     </div>
-    <!-- <div class="mainNavHeader__leng">
-      <button class="leng__ru textNormal">
-        ru
-        <div class="leng__line"></div>
-      </button>
-      <button class="leng__eng textNormal">
-        eng
-        <div class="leng__line"></div>
-      </button>
-    </div> -->
+   
     <main-nav :class="{ active2: showMenu }" class="mainNavHeader__mainNav" />
   </div>
 </template>
@@ -29,5 +20,10 @@ export default {
       showMenu: false, 
     };
   },
+   methods:{
+       
+    }
+ 
 };
 </script>
+

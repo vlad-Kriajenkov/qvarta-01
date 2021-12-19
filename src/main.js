@@ -11,6 +11,8 @@ import VueAnime from 'vue-animejs';
 import VueVideoPlayer from 'vue-video-player'
 import 'video.js/dist/video-js.css'
 import i18n from './plugins/i18n'
+
+
 Vue.use(VueAnime)
 Vue.use(ajax)
 Vue.config.productionTip = false

@@ -18,6 +18,39 @@
         z-index: 4;
        
      }
+     &__leng {
+        position: absolute;
+        right: 80px;
+        bottom: 50px;
+        display: flex;
+        z-index: 10;
+        button{
+           div{
+               width: 0px;
+               height: 1px;
+               
+               background: #fff;
+               -webkit-transition: all 0.3s ease-out;
+                -moz-transition: all 0.3s ease-out;
+                -ms-transition: all 0.3s ease-out;
+                -o-transition: all 0.3s ease-out;
+                transition: all 0.3s ease-out;
+           }
+        }
+        button:hover{
+            
+            div{
+                width: 100%;
+                margin-top: 5px;
+                -webkit-transition: all 0.3s ease-out;
+                -moz-transition: all 0.3s ease-out;
+                -ms-transition: all 0.3s ease-out;
+                -o-transition: all 0.3s ease-out;
+                transition: all 0.3s ease-out;
+            }
+            
+        }
+    }
 }
 .column {
     &__logo{
@@ -136,6 +169,27 @@
             background: none;
         } 
     }
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.postItemWork {
+    &__img {
+      
+    }
+    &__title {
+        font-size: 24px;
+        margin: 38px 0px 10px 0px;
+    }
+    &__text {
+        font-size: 13px;
+        width: 510px;
+    }
+}
+.postItemWork:nth-child(2n){
+    margin-top: 120px;
 }
 .btn {
 

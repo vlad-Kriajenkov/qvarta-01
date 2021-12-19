@@ -2,10 +2,10 @@
     <div class="mainNav">
         <div class="mainNav__conatinerContact">
             <div class="mainNav__logo textTitle">
-                <router-link to="/">
+                <router-link 
+                to="/">
                     QVARTA
                 </router-link>
-                
             </div>
             <div class="conatinerContact__boxInfo">
                  <router-link
@@ -61,7 +61,7 @@ export default {
     name:'main-nav',
     data(){
         return{
-            showMenu: false,
+
         }
     },
     computed:{
@@ -70,18 +70,19 @@ export default {
                 {title: this.$t('main_navLink1'), url: '/about'},
                 {title: this.$t('main_navLink2'), url: '/work'},
                 {title: this.$t('main_navLink3'), url: '/work-product'},
-                {title: this.$t('main_navLink4'), url: '/3'},
+                {title: this.$t('main_navLink4'), url: '/'},
                 {title: this.$t('main_navLink5'), url: '/4'}
             ]
         }
     },
-
     methods:{
         setLocale(locale){
             import(`../../lang/${locale}.json`).then((msgs) =>{
                 this.$i18n.setLocaleMessage(locale, msgs)
                 this.$i18n.locale = locale
+                 
             })
+            // this.$emit('reload', locale)
             
         }
     }
