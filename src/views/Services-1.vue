@@ -281,7 +281,7 @@ export default {
         },
         stopTimer() {
         clearTimeout(this.timer);
-          this.$router.push("/");
+          
            
         },
         startLine() {
@@ -295,6 +295,7 @@ export default {
     currentTime(time) {
       if (time === 0) {
         this.stopTimer();
+        this.$router.push("/");
       }
     },
   },

@@ -1,7 +1,9 @@
 <template>
   <div class="about">
     <div class="about__header">
-      <div class="header__logo textTitle">QVARTA</div>
+      <div class="header__logo textTitle">
+        QVARTA
+      </div>
       <div class="header__box1">
         <div class="header__text textNormal">{{$t('about_SubTitle')}}</div>
         <div class="header__title textTitle">
@@ -149,7 +151,7 @@ export default {
       ]
     }
   },
-  mounted() {},
+
   destroyed() {
     this.stopTimer();
   },
@@ -165,6 +167,7 @@ export default {
         this.startTimer();
         this.startLine();
          this.startOpasity();
+         
         console.log(scrollY);
       }
     },
@@ -175,7 +178,6 @@ export default {
     },
     stopTimer() {
       clearTimeout(this.timer);
-      this.$router.push("/work");
     },
     startLine() {
       document.getElementById("line").classList.add("activeLine");
@@ -188,6 +190,7 @@ export default {
     currentTime(time) {
       if (time === 0) {
         this.stopTimer();
+        this.$router.push("/work");
       }
     },
   },

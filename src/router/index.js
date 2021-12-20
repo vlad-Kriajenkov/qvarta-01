@@ -12,35 +12,42 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
+    meta: {layout: 'main'},
     component: Home
   },
   {
     path: '/about',
     name: 'About',
+    meta: {layout: 'main'},
     component: About,
   },
   {
     path: '/work',
     name: 'Work',
+    meta: {layout: 'main'},
     component: Work,
   },
   {
     path: '/work-product',
     name: 'Work-Product',
+    meta: {layout: 'main'},
     component: WorkProduct,
   },
   {
     path: '/Our-Services',
     name: 'Our-Services',
+    meta: {layout: 'main'},
     component: OurServices,
  
   },
   {
     path: '/Services1',
     name: 'Services1',
+    meta: {layout: 'main'},
     component: Services1,
   }
+  
 ]
 
 const router = new VueRouter({
@@ -50,6 +57,8 @@ const router = new VueRouter({
   scrollBehavior(to, from, savedPosition) {
     return { x: 0, y: 0 }
   },
+
+  
 })
 
 export default router

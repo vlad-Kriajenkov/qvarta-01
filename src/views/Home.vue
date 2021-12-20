@@ -170,7 +170,7 @@ export default {
       },
       stopTimer() {
         clearTimeout(this.timer)
-        // this.$router.push('Home') 
+      
       },
       startLine(){
         document.getElementById('line').classList.add('activeLine');
@@ -184,6 +184,7 @@ export default {
       currentTime(time) {
         if (time === 0) {
           this.stopTimer()
+          this.$router.push('/about') 
         }
       },
       

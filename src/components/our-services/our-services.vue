@@ -30,10 +30,10 @@ export default {
     computed:{
         links(){
             return[
-                {title: this.$t('formOurServicesLink1'), url: '/'},
-                {title: this.$t('formOurServicesLink2'), url: '/1'},
-                {title: this.$t('formOurServicesLink3'), url: '/2'},
-                {title: this.$t('formOurServicesLink4'), url: '/3'},
+                {title: this.$t('formOurServicesLink1'), url: ''},
+                {title: this.$t('formOurServicesLink2'), url: ''},
+                {title: this.$t('formOurServicesLink3'), url: ''},
+                {title: this.$t('formOurServicesLink4'), url: ''},
             ]
         }
     }

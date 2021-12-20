@@ -6,6 +6,7 @@
                 to="/">
                     QVARTA
                 </router-link>
+                <!-- <router-view userid="{{ Auth::user()->id }}" usertype="{{ Auth::user()->isAdmin }}"></router-view> -->
             </div>
             <div class="conatinerContact__boxInfo">
                  <router-link

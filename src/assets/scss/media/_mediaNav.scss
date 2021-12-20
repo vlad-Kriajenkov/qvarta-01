@@ -58,11 +58,14 @@
 .boxInfomainNav {
 
 		&__networks {
+			flex-direction: column;
+			margin-top: 138px;
 		}
 }
 .networks {
 
 		&__link {
+			margin-bottom: 18px;
 		}
 }
 .border {

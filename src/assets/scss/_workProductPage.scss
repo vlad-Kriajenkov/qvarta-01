@@ -21,8 +21,10 @@
     }
     &__boxTitle{
         position: absolute;
-        top: 45%;
-        left: 35%;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
         color:#fff;
         text-align: center;
     }

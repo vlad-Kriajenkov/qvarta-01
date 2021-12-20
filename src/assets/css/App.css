@@ -770,8 +770,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .workProduct__boxTitle {
   position: absolute;
-  top: 45%;
-  left: 35%;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
 }
@@ -2089,6 +2091,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0px 0px 80px 20px;
     margin: 0px;
     width: 100%;
+    height: 100vh;
   }
   .home__columnProduct {
     width: 100%;
@@ -2354,9 +2357,6 @@ h1, h2, h3, h4, h5, h6 {
     top: 27px;
     left: 20px;
   }
-  .workProduct__boxTitle {
-    left: 15%;
-  }
   .workProduct__boxBtn {
     right: 34%;
     bottom: 170px;
@@ -2428,6 +2428,15 @@ h1, h2, h3, h4, h5, h6 {
   }
   .mainNav__img {
     width: 0px;
+  }
+
+  .boxInfomainNav__networks {
+    flex-direction: column;
+    margin-top: 138px;
+  }
+
+  .networks__link {
+    margin-bottom: 18px;
   }
 
   .img__form {
