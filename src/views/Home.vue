@@ -128,7 +128,9 @@ export default {
     this.stopTimer()
   }, 
   mounted(){ 
+    
     this.fetchPost();
+    
   },
   methods: {
     ...mapActions(['fetchPost']),
@@ -180,18 +182,20 @@ export default {
       },
      
     },
-    watch: {
+    watch:{
+      
       currentTime(time) {
         if (time === 0) {
           this.stopTimer()
           this.$router.push('/about') 
         }
       },
-      
+     
 
     },
     computed:{
       ...mapGetters(['allPosts']), 
+    
       quots(){
         return[
           {

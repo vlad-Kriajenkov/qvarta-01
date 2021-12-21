@@ -151,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 80px;
   bottom: 50px;
   display: flex;
-  z-index: 10;
+  z-index: 4;
 }
 .home__leng button div {
   width: 0px;
@@ -2119,6 +2119,14 @@ h1, h2, h3, h4, h5, h6 {
     height: 400px;
   }
 
+  .home__leng button {
+    color: #000000;
+  }
+  .home__leng button div {
+    width: 100%;
+    background: #000000;
+  }
+
   .textNormal {
     font-size: 14px;
   }
@@ -2201,51 +2209,6 @@ h1, h2, h3, h4, h5, h6 {
 
   /**/
   /**/
-  .form-feedback {
-    padding: 80px 20px 80px 20px;
-  }
-  .boxForm__inputbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .boxForm__inputbox input {
-    width: 100%;
-    margin-bottom: 55px;
-    border-bottom: 1px solid black;
-  }
-  .boxForm__inputbox input::-moz-placeholder {
-    font-size: 20px;
-  }
-  .boxForm__inputbox input:-ms-input-placeholder {
-    font-size: 20px;
-  }
-  .boxForm__inputbox input::placeholder {
-    font-size: 20px;
-  }
-  .boxBtn {
-    margin: 70px auto 0px auto;
-  }
-
-  /**/
-  /**/
-  .formContact__conatinerContact {
-    padding: 80px 20px 90px 20px;
-  }
-
-  .boxInfo__email {
-    font-size: 19px;
-  }
-  .boxInfo__phone {
-    font-size: 19px;
-  }
-  .boxInfo__address {
-    font-size: 19px;
-  }
-  .boxInfo__networks {
-    font-size: 19px;
-  }
-
   /**/
 }
 @media (max-width: 480px) {
@@ -2422,6 +2385,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 480px) {
+  .dashboard {
+    background-color: black;
+  }
+
   .mainNav__conatinerContact {
     width: 100%;
     padding: 40px 20px 40px 20px;
@@ -2446,6 +2413,17 @@ h1, h2, h3, h4, h5, h6 {
   .mainNavHeader {
     padding: 30px 20px 80px 20px;
     height: 0px;
+  }
+  .test1 {
+    background-color: black;
+  }
+
+  .test1::after {
+    background-color: black;
+  }
+
+  .test1::before {
+    background-color: black;
   }
 }
 @media (max-width: 480px) {
@@ -2511,4 +2489,46 @@ h1, h2, h3, h4, h5, h6 {
   .serviceContainer {
     width: 100%;
   }
+}
+.form-feedback {
+  padding: 80px 20px 80px 20px;
+}
+.boxForm__inputbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.boxForm__inputbox input {
+  width: 100%;
+  margin-bottom: 40px;
+  border-bottom: 1px solid black;
+}
+.boxForm__inputbox input::-moz-placeholder {
+  font-size: 20px;
+}
+.boxForm__inputbox input:-ms-input-placeholder {
+  font-size: 20px;
+}
+.boxForm__inputbox input::placeholder {
+  font-size: 20px;
+}
+.boxBtn {
+  margin: 70px auto 0px auto;
+}
+
+.formContact__conatinerContact {
+  padding: 80px 20px 90px 20px;
+}
+
+.boxInfo__email {
+  font-size: 19px;
+}
+.boxInfo__phone {
+  font-size: 19px;
+}
+.boxInfo__address {
+  font-size: 19px;
+}
+.boxInfo__networks {
+  font-size: 19px;
 }

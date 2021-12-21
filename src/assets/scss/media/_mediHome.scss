@@ -45,7 +45,7 @@
 			width: 100%;
 			height: fit-content;
 		}
-
+		
 		&__slider {
 		}
 
@@ -95,6 +95,35 @@
         height: 400px;
     }
   
+}
+.home {
+
+	&__leng {
+		button{
+			color: #000000;
+			div{
+				width: 100%;
+				background:#000000 ;
+			}
+		}
+	
+	}
+}
+.leng {
+
+	&__ru {
+		
+
+	}
+
+	&__line {
+		
+	}
+
+	&__eng {
+	}
+}
+.textNormal {
 }
 
 .textNormal {
@@ -304,7 +333,6 @@
       
     }
     &__bg{
-        // background: url('../assets/img/footer/homeFoter.svg') no-repeat center center;
 		height: 420px;
     }
     &__footer {
@@ -329,125 +357,9 @@
 }
 /**/
 
-/**/
-.form-feedback {
-	padding: 80px 20px 80px 20px;
-	&__boxTitle {
-	}
 
-	&__boxForm {
-	}
-}
-.boxTitle {
-
-	&__tetx {
-	}
-
-	&__title {
-	}
-}
-
-.boxForm {
-
-	&__inputbox {
-		display: flex;
-		flex-direction: column;
-    	justify-content: space-between;
-		
-		input{
-			width: 100%;
-			margin-bottom: 55px;
-			border-bottom: 1px solid black;
-		}
-		input::placeholder{
-			font-size: 20px;
-		}
-	}
-
-	&__btn {
-	}
-}
-.boxBtn {
-	margin: 70px auto 0px auto;
-}
-/**/
 
 /**/
-.formContact {
-
-	&__conatinerMap {
-	}
-
-	&__conatinerContact {
-		padding: 80px 20px 90px 20px;
-	}
-}
-.conatinerContact {
-
-	&_text {
-	}
-
-	&_title {
-	}
-
-	&__boxTitle {
-	}
-
-	&__boxInfo {
-	}
-}
-
-.boxInfo {
-
-	&__email {
-		font-size: 19px;
-	}
-
-	&__phone {
-		font-size: 19px;
-	}
-
-	&__address {
-		font-size: 19px;
-	}
-
-	&__networks {
-		font-size: 19px;
-	}
-}
-.email {
-
-	&__title {
-	}
-
-	&__link {
-	}
-}
-
-.phone {
-
-	&__title {
-	}
-
-	&__text {
-	}
-}
-.address {
-
-	&__title {
-	}
-
-	&__text {
-	}
-}
-.networks {
-
-	&__link {
-	}
-}
-.border {
-}
-
 /**/
 
 }

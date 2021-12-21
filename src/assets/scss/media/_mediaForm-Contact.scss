@@ -1,0 +1,75 @@
+
+.formContact {
+
+	&__conatinerMap {
+	}
+
+	&__conatinerContact {
+		padding: 80px 20px 90px 20px;
+	}
+}
+.conatinerContact {
+
+	&_text {
+	}
+
+	&_title {
+	}
+
+	&__boxTitle {
+	}
+
+	&__boxInfo {
+	}
+}
+
+.boxInfo {
+
+	&__email {
+		font-size: 19px;
+	}
+
+	&__phone {
+		font-size: 19px;
+	}
+
+	&__address {
+		font-size: 19px;
+	}
+
+	&__networks {
+		font-size: 19px;
+	}
+}
+.email {
+
+	&__title {
+	}
+
+	&__link {
+	}
+}
+
+.phone {
+
+	&__title {
+	}
+
+	&__text {
+	}
+}
+.address {
+
+	&__title {
+	}
+
+	&__text {
+	}
+}
+.networks {
+
+	&__link {
+	}
+}
+.border {
+}

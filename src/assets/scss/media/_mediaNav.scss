@@ -19,6 +19,10 @@
 }
 
 @media (max-width: 480px) {
+	
+.dashboard{
+	background-color: black;
+}
     .mainNav {
 
 		&__conatinerContact {
@@ -94,16 +98,15 @@
 		}
 }
 
-.burger {
-	// background-color: black;
+.test1 {
+	background-color: black;
 	
 }
-.burger::after{
-	// background-color: black;
+.test1::after{
+	background-color: black;
 }
-.burger::before{
-	// background-color: black;
-}
-
+.test1::before{
+	background-color: black;
 }
 
+}

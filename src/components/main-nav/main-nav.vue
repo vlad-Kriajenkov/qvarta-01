@@ -1,12 +1,16 @@
 <template>
     <div class="mainNav">
         <div class="mainNav__conatinerContact">
-            <div class="mainNav__logo textTitle">
+            <div 
+            @click="removeBurger"
+            class="mainNav__logo textTitle">
                 <router-link 
-                to="/">
+                to="/" 
+               
+                >
                     QVARTA
                 </router-link>
-                <!-- <router-view userid="{{ Auth::user()->id }}" usertype="{{ Auth::user()->isAdmin }}"></router-view> -->
+                
             </div>
             <div class="conatinerContact__boxInfo">
                  <router-link
@@ -17,7 +21,7 @@
                     class="ourServicesmainNav__link"
                 >
                     
-                    <div href="#"  class="ourServices__a textNormal">{{link.title}}
+                    <div @click="removeBurger" href="#"  class="ourServices__a textNormal">{{link.title}}
                         <div class="ourServices__moreInfo">{{$t('main_navMoreInfo')}}</div>
                     </div>
 
@@ -84,8 +88,12 @@ export default {
                  
             })
             // this.$emit('reload', locale)
-            
-        }
-    }
+        },
+        removeBurger(){
+            document.getElementById('burger').classList.remove("active");
+            document.getElementById('mainNav').classList.remove("active2");
+        },
+    },
+   
 }
 </script>
