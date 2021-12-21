@@ -553,16 +553,54 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 36px;
   margin-bottom: 100px;
 }
-.staff__wrapperlist {
+.staff__listStaff {
   display: flex;
-  justify-content: space-between;
+  margin-bottom: 120px;
+}
+.staff__listStaff:nth-child(2) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.listStaff__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
 }
 .listStaff__name {
-  margin: 40px 0px 10px 0px;
   font-size: 24px;
 }
 .listStaff__position {
-  font-size: 16px;
+  font-size: 14px;
+}
+.listStaff__infoPerson {
+  font-size: 14px;
+}
+.listStaff__quot {
+  font-size: 32px;
+}
+.listStaff__networks {
+  display: flex;
+}
+
+.networksAbout__link {
+  margin-right: 60px;
+}
+.networksAbout__link a {
+  color: #ffff;
+  padding: 0px 5px 0px 5px;
+}
+.networksAbout__link .border {
+  width: 0px;
+  height: 1px;
+  background: #ffff;
+  margin-top: 10px;
+  transition: width 0.3s linear;
+}
+.networksAbout__link:hover .border {
+  width: 100%;
+  transition: width 0.3s linear;
 }
 
 /**/
@@ -2157,11 +2195,11 @@ h1, h2, h3, h4, h5, h6 {
 
   .footer__link {
     left: 20px;
-    top: 80px;
+    top: 20px;
   }
   .footer__timer {
     left: 20px;
-    bottom: 80px;
+    bottom: 20px;
   }
 
   /**/
@@ -2199,7 +2237,12 @@ h1, h2, h3, h4, h5, h6 {
   /**/
   /*s*/
   .home__bg {
+    width: 100%;
     height: 420px;
+    background-image: url("../img/home/foterMob.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   /*e*/
   /**/
@@ -2218,38 +2261,59 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
   }
   .about__content {
-    padding: 30px 0px 100px 20PX;
+    padding: 30px 0px 79px 0px;
   }
+  .about__clients {
+    margin-bottom: 80px;
+  }
+  .about__staff {
+    padding: 80px 20px 0px 20px;
+  }
+
   .header__box1 {
-    margin-bottom: 50px;
     width: 100%;
-    padding: 150px 0px 80px 20px;
+    padding: 150px 0px 61px 20px;
   }
   .header__logo {
     position: absolute;
     top: 27px;
     left: 20px;
   }
-  .header__box2 {
-    background: #fff;
-    border-bottom: 1px solid black;
-  }
-
   .box2__room {
     width: 100%;
     height: 420px;
-    background: url(/img/Room.9ebcb30e.svg) no-repeat center center;
+    background-image: url("../img/About/about-rooms/Room.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin-bottom: 0px;
   }
   .infoWrapper {
     width: 81%;
   }
 
+  .content__namePage {
+    padding: 0px 20px;
+  }
+  .content__infoAbout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .infoAbout__list {
+    padding: 0px 20px;
+  }
   .infoAbout__bg {
-    display: none;
+    background-image: url(/img/rack.e4bd3e7b.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: 375px;
   }
 
   .list__item {
+    width: auto;
     margin-bottom: 50px;
   }
 
@@ -2258,15 +2322,19 @@ h1, h2, h3, h4, h5, h6 {
   }
   .clients__title {
     padding-left: 20px;
+    margin-bottom: 26px;
   }
   .clients__logo {
     display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   .clients__logo img {
-    width: 64%;
+    width: 40%;
     margin-bottom: 20px;
+  }
+
+  #FEELREAL,
+#URE {
+    display: none;
   }
 
   .staff__wrapperlist {
@@ -2274,27 +2342,65 @@ h1, h2, h3, h4, h5, h6 {
   }
   .staff__listStaff {
     margin-bottom: 20px;
+    flex-direction: column;
+  }
+  .staff__listStaff:nth-child(2) {
+    display: flex;
+    flex-direction: column;
   }
 
+  .listStaff__box {
+    padding: 60px 0px 60px 0px;
+  }
   .listStaff__img {
     width: 100%;
+  }
+  .listStaff__position {
+    margin: 10px 0px 37px 0px;
+  }
+  .listStaff__infoPerson {
+    font-size: 14px;
+  }
+  .listStaff__quot {
+    margin: 76px 0px 86px 0px;
+    font-size: 23px;
+  }
+  .listStaff__networks {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .networksAbout__link {
+    margin-bottom: 17px;
+  }
+
+  .about__bg {
+    width: 100%;
+    height: 420px;
+    background-image: url("../img/About/foterMob.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 @media (max-width: 480px) {
   .work__header {
-    display: block;
+    display: flex;
+    flex-wrap: wrap-reverse;
   }
   .header__logoWork {
     position: absolute;
     top: 27px;
     left: 20px;
+    color: #fff;
   }
   .header__productColum {
     width: 100%;
   }
   .header__infoColum {
     width: 100%;
-    padding: 90px;
+    padding: 20px;
+    height: 400px;
   }
 
   .productColum__imgProducts {
@@ -2313,6 +2419,15 @@ h1, h2, h3, h4, h5, h6 {
   }
   .about__bg {
     height: 480px;
+  }
+
+  .work__bg {
+    width: 100%;
+    height: 422px;
+    background: url("../img/Work/foterMob.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 @media (max-width: 480px) {

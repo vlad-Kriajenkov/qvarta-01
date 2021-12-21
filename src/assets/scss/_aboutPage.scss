@@ -218,27 +218,77 @@
     }
 
     &__wrapperlist {
-        display: flex;
-        justify-content: space-between;
+        
     }
 
     &__listStaff {
+        display: flex;
+        margin-bottom: 120px;
+    }
+    &__listStaff:nth-child(2){
+        display: flex;
+        flex-direction: row-reverse;
     }
 }
 
+
+
+
 .listStaff {
+    &__box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 20px ; 
+    }
+    
 
     &__img {
     }
 
     &__name {
-        margin: 40px 0px 10px 0px;
+       
         font-size: 24px;
     }
 
     &__position {
-        font-size: 16px;
+        font-size: 14px;
     }
+
+    &__infoPerson {
+        font-size: 14px;
+    }
+
+    &__quot {
+        font-size: 32px;
+    }
+    &__networks{
+        display: flex;
+    }
+}
+
+.networksAbout {
+
+    &__link {
+        margin-right: 60px;
+        a{
+            color: #ffff;
+            padding: 0px 5px 0px 5px;
+        }
+        .border{
+            width:0px;
+            height:1px;
+            background:#ffff;
+            margin-top: 10px; 
+            transition: width 0.3s linear;
+        }
+    }
+    &__link:hover{
+        .border{
+            width: 100%;
+            transition: width 0.3s linear;
+        }
+    }    
 }
 
 /**/

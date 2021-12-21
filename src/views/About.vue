@@ -50,10 +50,10 @@
       <div class="clients__text textNormal">{{$t('about_clientsText')}}</div>
       <div class="clients__title textTitle">{{$t('about_clientsTitle')}}</div>
       <div class="clients__logo">
-        <img src="../assets/img/About/clients/PHILIPMORIRIS_logo.svg" alt="" />
-        <img src="../assets/img/About/clients/spacebit.svg" alt="" />
-        <img src="../assets/img/About/clients/logo.png" alt="" />
-        <img src="../assets/img/About/clients/FEELREAL_logo.svg" alt="" />
+        <img id="PHILIPMORIRIS" src="../assets/img/About/clients/PHILIPMORIRIS_logo.svg" alt="PHILIPMORIRIS" />
+        <img id="spacebit" src="../assets/img/About/clients/spacebit.svg" alt="spacebit" />
+        <img id="URE" src="../assets/img/About/clients/logo.png" alt="URE" />
+        <img id="FEELREAL" src="../assets/img/About/clients/FEELREAL_logo.svg" alt="FEELREAL" />
       </div>
     </div>
     <div class="about__staff">
@@ -62,8 +62,29 @@
       <div class="staff__wrapperlist">
         <div v-for="staf in staff" :key="staf.id" class="staff__listStaff">
           <img class="listStaff__img" :src="staf.img" alt="staff" />
-          <div class="listStaff__name textTitleCard">{{ staf.name }}</div>
-          <div class="listStaff__position textNormal">{{ staf.position }}</div>
+          <div class="listStaff__box">
+            <div>
+              <div class="listStaff__name textTitleCard">{{ staf.name }}</div>
+              <div class="listStaff__position textNormal">{{ staf.position }}</div>
+            </div>
+            <div class="listStaff__infoPerson textNormal">{{ staf.infoPerson }}</div>
+            <div class="listStaff__quot textTitleCard ">{{ staf.quote }}</div>
+            <div class="listStaff__networks">
+              <div class="networksAbout__link">
+                  <a href="#" class="textNormal"> Behance</a>
+                  <div class="border"></div>
+              </div>
+              <div class="networksAbout__link">
+                  <a href="#" class="textNormal">Facebook</a>
+                  <div class="border"></div>
+              </div>
+              <div class="networksAbout__link">
+                  <a href="#" class="textNormal">Telegram</a>
+                  <div class="border"></div>
+              </div>
+            </div>
+          </div>  
+          
         </div>
       </div>
     </div>
@@ -110,13 +131,17 @@ export default {
       staff: [
         {
           img: require("../assets/img/About/staff/staf1.svg"),
-          name: "Имя",
-          position: "Позиция",
+          name: "Артемий Дробязко",
+          position: "Co-founder / Project manager",
+          infoPerson: "Скрупулезно подходит к каждому проекту. Детали, детали и снова детали. Начинал карьеру… Но когда понял, что его идеи не могут реализовать другие — начал постигать дзэн… и игру на гитаре, чтобы музыкой снимать рабочее напряжение.",
+          quote: "Честны перед собой, нашим клиентом и продуктом."
         },
         {
           img: require("../assets/img/About/staff/staf2.svg"),
-          name: "Имя",
-          position: "Позиция",
+          name: "Макс Мисечко",
+          position: "Co-founder / Product Design Engineer",
+          infoPerson: "Скрупулезно подходит к каждому проекту. Детали, детали и снова детали. Начинал карьеру… Но когда понял, что его идеи не могут реализовать другие — начал постигать дзэн… и игру на гитаре, чтобы музыкой снимать рабочее напряжение.",
+          quote: "Либо делаем крутой продукт, либо не делаем его вообще. "
         },
       ],
     };

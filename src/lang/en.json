@@ -13,7 +13,7 @@
     "about_SubTitle":"about us",
     "about_titile":"A strong {break} team creates strong {break} products",
     "about_infoHederBold":"The basis of our studio is based on four principles, ",
-    "about_infoHederNormal":"which are our strengths and the key to the success of our products",
+    "about_infoHederNormal":"which are our strengths and the key to the success of our products", 
     "about_namePage":" Home {action}",
     "about_namePageOpen":"about us ",
 
@@ -27,8 +27,8 @@
     "about_cardText4":"We're always honest with ourselves, our clients, our partners, and the product. And we expect the same from you.",
     "about_clientsText":"they trust us",
     "about_clientsTitle":"Our customers",
-    "about_stafText":"specialists",
-    "about_stafTitle":"Our team ",
+    "about_stafText":"Who you will be working with",
+    "about_stafTitle":"Faunders",
 
     "work_SubTitle":"works",
     "work_title":"Our work",
