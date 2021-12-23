@@ -149,19 +149,14 @@
   .burger-container:hover>.burger::after{
     width: 24px;
   }
-//   .burger-container:hover>.burger-active::before {
-//     bottom:0;
-//   }
-//   .burger-container:hover>.burger-active::after{
-//     top: -5px;
-//   }
-//   .burger-active {
-//     transform: rotate(225deg);
-//   }
-//   .burger-active::before {
-//     bottom:0;
-//   }
-//   .burger-active::after {
-//     transform: rotate(90deg);
-//     top:-5px;
-//   }
+
+  .test1 {
+    background-color: black;
+    
+  }
+  .test1::after{
+    background-color: black;
+  }
+  .test1::before{
+    background-color: black;
+  }

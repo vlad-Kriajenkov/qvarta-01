@@ -1,4 +1,26 @@
 
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+
+    
+}
+
+@media (max-width:650px) {
+}
+
+@media (max-width: 480px) {
+	
 .form-feedback {
 	padding: 80px 20px 80px 20px;
 	&__boxTitle {
@@ -38,4 +60,7 @@
 }
 .boxBtn {
 	margin: 70px auto 0px auto;
+}
+
+
 }

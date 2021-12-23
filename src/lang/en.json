@@ -1,6 +1,6 @@
 {
     "home_SubTitle": "industrial design studio",
-    "home_title": "Our products {break} created to work",
+    "home_title": "Our products {break} created to work", 
     
     "home_SliderTitle":"concept",
     "home_SliderQuotes1":"The product comes first. Either we make a cool product or we don't make it at all.",
@@ -101,7 +101,8 @@
     "services_addendum3":"Author's supervision of production of enclosures and  electronics",
     "services_addendum4":"Digital imaging",
 
-
+    "contactSubTitle":"contact us",
+    "contactTitle":"Our contacts",
 
     "main_navLink1":"About Us",
     "main_navLink2":"Our work",

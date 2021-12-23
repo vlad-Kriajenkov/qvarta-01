@@ -62,7 +62,23 @@
             // background: #fff;
 		}
 }
+.colum {
 
+    &__btnScrollAbout {
+        background: none;
+        border-left: none;
+        width: fit-content;
+        height: auto;
+        position: absolute;
+		color: #fff;
+        bottom: -100px;
+		left: 49%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+        display: flex;
+        padding-left: 5px;
+    }
+}
 .box1 {
 
 		&__btn {
@@ -87,8 +103,10 @@
 		}
 }
 .infoWrapper {
-    width: 81%;
-   
+    width: 100%;
+	padding: 0px 20px;
+	margin-bottom: 100px;
+	font-size: 19px;
 }
 .textBold {
 }
@@ -96,6 +114,7 @@
 
 		&__namePage {
 			padding: 0px 20px;
+			margin-bottom: 79px;
 		}
 
 		&__infoAbout {
@@ -122,7 +141,7 @@
 
 		&__item {
 			width: auto;
-            margin-bottom: 50px;
+            margin-bottom: 73px;
 		}
 }
 .item {

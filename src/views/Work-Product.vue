@@ -8,11 +8,17 @@
                 <div class="boxTitle__text textNormal">{{$t('workProduct_Title2')}}</div>
             </div>
             <div class="workProduct__boxBtn">   
-                <button class="box1__btn textBtn"> 
+                <button 
+                id="goto" 
+                @click="goto('formFeedback')" 
+                class="box1__btn textBtn"> 
                     <p>{{$t('btnHeader')}}</p>
                     <div class="line"></div>
                 </button>
             </div>
+            <button class="colum__btnScrollWorkPoduct  textBtn">
+                scroll
+            </button>
         </div> 
         <div class="workProduct__luxieLamp">\
             <div class="luxieLamp__title textNormal">
@@ -52,7 +58,9 @@
             </div>
             <itemVideoPlayer/> 
         </div>
-        <form-feedback/>
+        <div class="page" ref="formFeedback">
+            <form-feedback/>
+        </div>
         <form-contact/>
         <div v-scroll="handleScroll"  class="workProduct__footer ">
             <hr class="workProduct_footerLine" id="line" />
@@ -118,6 +126,12 @@ export default {
         this.stopTimer()
     }, 
     methods: {
+    goto(refName) {
+        var element = this.$refs[refName];
+        console.log(element);
+        var top = element.offsetTop;
+        window.scrollTo(0, top);
+    },       
     handleScroll: function (evt, el) {
         var scrollHeight = Math.max(
             document.body.scrollHeight, document.documentElement.scrollHeight,

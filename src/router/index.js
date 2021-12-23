@@ -6,6 +6,7 @@ import Work from '../views/Work.vue'
 import WorkProduct from '../views/Work-Product.vue'
 import OurServices from '../views/Our-Services.vue'
 import Services1 from '../views/Services-1.vue'
+import Contacts from '../views/Contacts.vue'
 
 Vue.use(VueRouter)
 
@@ -46,6 +47,12 @@ const routes = [
     name: 'Services1',
     meta: {layout: 'main'},
     component: Services1,
+  },
+  {
+    path: '/Contacts',
+    name: 'contacts',
+    meta: {layout: 'main'},
+    component: Contacts,
   }
   
 ]

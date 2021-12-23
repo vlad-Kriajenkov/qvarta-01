@@ -11,10 +11,18 @@
             </i18n>
           </div>
         </div>
-        <button class="column__btn textBtn ">
+        <button  
+        id="goto" 
+        @click="goto('formFeedback')" 
+        class="column__btn textBtn ">
           <p>{{$t('btnHeader')}}</p> 
           <div class="line"></div>
         </button>
+      
+        <button class="colum__btnScroll textBtn">
+          scroll
+        </button>
+        
       </div>
       <div 
       class="home__columnProduct" 
@@ -73,7 +81,9 @@
         <our-services/>
       </div>
     </div>
-    <formFeedback/>
+    <div class="page" ref="formFeedback">
+        <formFeedback/>
+    </div>
     <form-contact/>
     <div
       v-scroll="handleScroll" 
@@ -134,7 +144,12 @@ export default {
   },
   methods: {
     ...mapActions(['fetchPost']),
-  
+      goto(refName) {
+        var element = this.$refs[refName];
+        console.log(element);
+        var top = element.offsetTop;
+        window.scrollTo(0, top);
+      },
       setLocale(locale){
             import(`../lang/${locale}.json`).then((msgs) =>{
                 this.$i18n.setLocaleMessage(locale, msgs)

@@ -1,0 +1,145 @@
+.contacts {
+
+    &__columnInfo { 
+        background-color: #1D1D1D;
+        width: 50%;
+        height: 100vh;
+        padding: 27px 80px 90px 80px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }   
+
+    &__conatinerContact {
+        z-index: 4;
+        width: 50%;
+        height: 100vh;
+        padding: 134px 80px 90px 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       
+    }
+}
+.wrapperContHeder {
+    display: flex;
+    
+}
+.columnInfo {
+    &__logo {
+        
+        color: #fff;
+    }
+
+    &__info {
+        color: #fff;
+    }
+
+    &__btn {
+    }
+}
+.info {
+
+    &__text {
+    }
+
+    &__title {
+    }
+}
+.conatinerContact {
+
+    &_text {
+    }
+
+    &_title {
+    }
+
+    &__boxTitle {
+    }
+
+    &__boxInfoCont {
+    
+    }
+}
+.boxInfoCont {
+
+    &__email {
+        font-size: 16px;
+        // margin-bottom: 38px;
+    }
+
+    &__phone {
+        font-size: 16px;
+        // margin-bottom: 38px;
+    }
+    &__address{
+        font-size: 16px;
+        // margin-bottom: 150px;
+    }
+    &__networks {
+        font-size: 16px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 10px 0px 10px;
+       
+       
+    }
+}
+
+.email {
+
+    &__title {
+    }
+
+    &__link {
+    }
+}
+.textTitleCard {
+}
+.phone {
+
+    &__title {
+    }
+
+    &__text {
+    }
+}
+.address {
+
+    &__title {
+    }
+
+    &__text {
+    }
+}
+.network {
+
+    &__link {
+        a{
+            color: #000;
+            padding: 0px 5px 0px 5px;
+        }
+        .border{
+            width:0px;
+            height:1px;
+            background:#000;
+            margin-top: 10px; 
+            transition: width 0.3s linear;
+        }
+    }
+    &__link:hover{
+        .border{
+            width: 100%;
+            transition: width 0.3s linear;
+        }
+    }    
+}
+.contact__conatinerMap{
+    width: 100%;
+    height: 420px;
+}
+.mobContac{
+    display: none;
+
+}

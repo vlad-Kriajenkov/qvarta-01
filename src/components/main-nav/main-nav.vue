@@ -74,9 +74,9 @@ export default {
             return[
                 {title: this.$t('main_navLink1'), url: '/about'},
                 {title: this.$t('main_navLink2'), url: '/work'},
-                {title: this.$t('main_navLink3'), url: '/work-product'},
+                {title: this.$t('main_navLink3'), url: '/Our-Services'},
                 {title: this.$t('main_navLink4'), url: '/'},
-                {title: this.$t('main_navLink5'), url: '/4'}
+                {title: this.$t('main_navLink5'), url: '/Contacts'}
             ]
         }
     },

@@ -1,16 +1,22 @@
 <template>
   <div class="work">
-    <div class="work__header">
-      <div class="header__logoWork textTitle">QVARTA</div>
-      <div class="header__productColum">
+    <div class="work__headerWork">
+      <div class="headerWork__logoWork textTitle">QVARTA</div>
+      <div class="headerWork__productColum">
         <div class="productColum__imgProducts"></div>
       </div>
-      <div class="header__infoColum">
+      <div class="headerWork__infoColum">
         <div class="infoColum__text textNormal">{{ $t("work_SubTitle") }}</div>
         <div class="infoColum__title textTitle">{{ $t("work_title") }}</div>
-        <button class="box1__btn textBtn">
+        <button
+        id="goto" 
+        @click="goto('formFeedback')" 
+        class="box1__btn textBtn">
           <p>{{ $t("btnHeader") }}</p>
           <div class="line"></div>
+        </button>
+         <button class="colum__btnScrollWork  textBtn">
+          scroll
         </button>
       </div>
     </div>
@@ -58,7 +64,10 @@
         <our-services />
       </div>
     </div>
-    <form-feedback />
+    <div class="page" ref="formFeedback">
+      <form-feedback />
+    </div>
+   
     <form-contact />
     <div v-scroll="handleScroll" class="work__footer">
       <hr class="work_footerLine" id="line" />
@@ -103,7 +112,12 @@ export default {
   },
   methods: {
     ...mapActions(["fetchPosts"]),
-
+    goto(refName) {
+      var element = this.$refs[refName];
+      console.log(element);
+      var top = element.offsetTop;
+      window.scrollTo(0, top);
+    },
     handleScroll: function (evt, el) {
       var scrollHeight = Math.max(
         document.body.scrollHeight,

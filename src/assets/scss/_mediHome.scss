@@ -84,6 +84,26 @@
 			font-size: 32px;
 		}
 }
+
+.colum {
+
+    &__btnScroll {
+        background: none;
+        border-left: none;
+        width: fit-content;
+        height: auto;
+        position: absolute;
+		color: #fff;
+        bottom: -385px;
+       
+		left: 49%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+        display: flex;
+        padding-left: 5px;
+    }
+}
+
 .imgProducts {
 
     &__imgLVL {

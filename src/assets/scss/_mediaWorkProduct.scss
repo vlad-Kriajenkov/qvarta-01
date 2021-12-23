@@ -1,0 +1,174 @@
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+
+    
+}
+
+@media (max-width:650px) {
+}
+
+@media (max-width: 480px) {
+    .workProduct {
+
+		&_footerLine {
+		}
+
+		&__header {
+			height: 800px;
+			background-image: url("../img/work-product/hedaer-bg-Mob.svg") ;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover ;
+			
+		}
+		&__logo{
+		
+			top: 27px;
+			left: 20px;
+		}
+
+		&__boxTitle {
+            
+		}
+
+		&__boxBtn {
+            right: 34%;
+            bottom: 170px;
+		}
+
+		&__luxieLamp {
+            padding: 0px 20px;
+		}
+
+		&__footer {
+		}
+
+		&__bg {
+		}
+}
+.boxTitle {
+
+		&__text {
+		}
+
+		&__title {
+		}
+}
+.box1 {
+
+		&__btn {
+		}
+}
+.luxieLamp {
+
+		&__title {
+		}
+
+		&__wrapperAboutProject {
+            display: flex;
+            flex-direction: column;
+		}
+
+		&__boxImg {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            img{
+                width: 100%;
+                padding: 0px 0px 40px 0px;
+            }
+		}
+}
+.colum {
+
+    &__btnScrollWorkPoduct {
+        background: none;
+        border-left: none;
+        width: fit-content;
+        height: auto;
+        position: absolute;
+		color: #fff;
+        bottom: -22px;
+		left: 49%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+        display: flex;
+        padding-left: 5px;
+    }
+}
+.wrapperAboutProject {
+
+		&__columImg {
+            width: 100%;
+            img{
+                padding: 0px 0px 40px 0px;
+            }
+		}
+
+		&__AboutProject {
+            width: 100%;
+		}
+}
+.AboutProject {
+
+		&__boxTitle {
+		}
+
+		&__boxSubTitle {
+		}
+}
+.boxSubTitle {
+
+		&__title {
+		}
+
+		&__text {
+		}
+
+		&__texts {
+		}
+}
+.textTitleCard {
+}
+.darkened {
+}
+.footer {
+
+		&__link {
+		}
+
+		&__timer {
+		}
+}
+.link {
+
+		&__text {
+		}
+
+		&__title {
+		}
+}
+.timer {
+
+		&__text {
+		}
+
+		&__title {
+		}
+}
+
+
+}
+

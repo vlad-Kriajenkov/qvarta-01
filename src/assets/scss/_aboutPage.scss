@@ -45,7 +45,21 @@
 
     }
 }
+.colum {
 
+    &__btnScrollAbout {
+        background: none;
+        border-left: 2px solid #fff;
+        color: #fff;
+        width: fit-content;
+        height: 61px;
+        position: absolute;
+        bottom: 0;
+        left: 80px;
+        display: flex;
+        padding-left: 5px;
+    }
+}
 .box1 {
 
     &__btn {

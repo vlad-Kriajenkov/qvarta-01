@@ -12,9 +12,15 @@
                 :key="headerTitle.id"
                 
                 class="infoColum1__title textTitle">{{headerTitle.title}}</div>
-                <button class="box1__btn textBtn">
+                <button 
+                id="goto" 
+                @click="goto('formFeedback')"                 
+                class="box1__btn textBtn">
                     <p>{{$t('btnHeader')}}</p>
                     <div class="line"></div>
+                </button>
+                <button class="colum__btnScrollServices textBtn">
+                    scroll
                 </button>
             </div>
         </div>
@@ -103,7 +109,9 @@
                 </router-link>
             </div>
         </div>
-        <form-feedback/>
+        <div class="page" ref="formFeedback">
+            <form-feedback/>
+        </div>        
         <form-contact/>
         <div v-scroll="handleScroll"  class="workProduct__footer ">
             <hr class="workProduct_footerLine" id="line" />
@@ -257,9 +265,15 @@ export default {
         this.stopTimer()
     },
     methods: {
-      fav: function(stage){
+    goto(refName) {
+        var element = this.$refs[refName];
+        console.log(element);
+        var top = element.offsetTop;
+        window.scrollTo(0, top);
+    },  
+    fav: function(stage){
         this.selectedItem = stage
-      },
+    },
     handleScroll: function (evt, el) {
         var scrollHeight = Math.max(
             document.body.scrollHeight, document.documentElement.scrollHeight,

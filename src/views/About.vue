@@ -11,21 +11,27 @@
             <br place="break" />
           </i18n>
         </div>
-        <button class="box1__btn textBtn">
+        <button 
+        id="goto" 
+        @click="goto('formFeedback')"
+        class="box1__btn textBtn">
           <p>{{$t('btnHeader')}}</p>
           <div class="line"></div>
+        </button>
+        <button class="colum__btnScrollAbout textBtn">
+                scroll
         </button>
       </div>
       <div class="header__box2">
         <div class="box2__room"></div>
-        <div class="box2__info">
+        <div id="Info" class="box2__info">
           <div class="infoWrapper textNormal">
             <span class="textBold">{{$t('about_infoHederBold')}}</span>{{$t('about_infoHederNormal')}}</div>
         </div>
-      </div>
+      </div> 
     </div>
     <div class="about__content">
-      <div class="content__namePage textNormal">
+      <div id="namaPage" class="content__namePage textNormal">
         <i18n path="about_namePage">
           <span class="textBold" place="action"> — {{$t('about_namePageOpen')}}</span>
         </i18n>
@@ -88,7 +94,9 @@
         </div>
       </div>
     </div>
-    <form-feedback />
+    <div class="page" ref="formFeedback">
+      <form-feedback/>
+    </div> 
     <form-contact />
     <div v-scroll="handleScroll" class="about__footer">
       <hr class="about_footerLine" id="line" />
@@ -146,6 +154,15 @@ export default {
       ],
     };
   },
+  mounted(){
+    if (window.innerWidth < 420 ) {
+      let container = document.querySelector('#Info');
+      let target = document.querySelector('#namaPage');
+      target.insertAdjacentElement('afterEnd', container);
+    }
+     
+     
+  },
   computed:{
     infoCards(){
       return [
@@ -181,6 +198,13 @@ export default {
     this.stopTimer();
   },
   methods: {
+    goto(refName) {
+      var element = this.$refs[refName];
+      console.log(element);
+      var top = element.offsetTop;
+      window.scrollTo(0, top);
+    },
+
     handleScroll: function (evt, el) {
        var scrollHeight = Math.max(
         document.body.scrollHeight, document.documentElement.scrollHeight,
@@ -212,6 +236,8 @@ export default {
     }
   },
   watch: {
+   
+
     currentTime(time) {
       if (time === 0) {
         this.stopTimer();

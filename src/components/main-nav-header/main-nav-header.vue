@@ -25,29 +25,47 @@ export default {
     bUrgerHome(){
       document.getElementById('burger').classList.toggle("active");
       document.getElementById('mainNav').classList.toggle("active2");
-
-    if(this.$route.path === '/'){
-        document.getElementById('burger').classList.toggle("test1");
-      }else if (this.$route.path != '/') {
-        document.getElementById('burger').classList.remove("test1");
+    if (window.innerWidth < 420 ) {
+      if(this.$route.path === '/'){
+          document.getElementById('burger').classList.toggle("test1");
       }
+    }
+    if (window.innerWidth > 420 ) {
+       if (this.$route.path === '/Contacts') {
+        document.getElementById('burger').classList.toggle("test1");
+      }
+    }
+
+     
     }
   },
   mounted(){
-     if(this.$route.path === '/'){
-        document.getElementById('burger').classList.add("test1");
-      }else if (this.$route.path != '/') {
+    if (window.innerWidth < 420 ) {
+      if(this.$route.path === '/'){
+          document.getElementById('burger').classList.toggle("test1");
+      }else {
         document.getElementById('burger').classList.remove("test1");
-       
       }
+    }
+    if (window.innerWidth > 420 ) {
+       if (this.$route.path === '/Contacts') {
+        document.getElementById('burger').classList.toggle("test1");
+      }
+    }
   },
   watch:{
     $route(to, from){
-      if(this.$route.path === '/'){
-        document.getElementById('burger').classList.add("test1");
-      }else if (this.$route.path != '/') {
+      if (window.innerWidth < 420 ) {
+        if(this.$route.path === '/'){
+            document.getElementById('burger').classList.toggle("test1");
+        }else {
         document.getElementById('burger').classList.remove("test1");
-       
+      }
+      }
+      if (window.innerWidth > 420 ) {
+        if (this.$route.path === '/Contacts') {
+          document.getElementById('burger').classList.toggle("test1");
+        }
       }
     }
     

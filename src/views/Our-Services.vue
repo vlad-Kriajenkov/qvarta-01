@@ -1,16 +1,22 @@
 <template>
     <div class="ourService">
-        <div class="ourService__header">
+        <div class="ourService__header" id="ourServiceHeader" >
             <div class="header__logo textTitle">QVARTA</div>
-            <div class="header__servicesColum" >
+            <div  class="header__servicesColum" id="headerServicesColum" >
                 <div class="servicesColum__imgProducts"></div>
             </div>
            <div class="header__infoColum">
                 <div class="infoColum__text textNormal">{{$t('ourService_SubTitle')}}</div>
                 <div class="infoColum__title textTitle">{{$t('ourService_title')}}</div>
-                <button class="box1__btn textBtn">
+                <button 
+                id="goto" 
+                @click="goto('formFeedback')"
+                class="box1__btn textBtn">
                     <p>{{$t('btnHeader')}}</p>
                     <div class="line"></div> 
+                </button>
+                <button class="colum__btnScrollOurServices textBtn">
+                    scroll
                 </button>
            </div>
        </div>
@@ -43,10 +49,12 @@
                    <img  :src="require(`@/assets/${serviceCard.img}`)" alt="">
                </div>
            </div>
-       </div>
-       <form-feedback/>
-       <form-contact/>
-       <div v-scroll="handleScroll"  class="ourService__footer ">
+        </div>
+        <div class="page" ref="formFeedback">
+            <form-feedback/>
+        </div> 
+        <form-contact/>
+        <div v-scroll="handleScroll"  class="ourService__footer ">
             <hr class="ourService_footerLine" id="line" />
             <div id="Bg" class="darkened">
                 <div class="ourService__bg"></div>
@@ -167,7 +175,21 @@ export default {
     destroyed() {
         this.stopTimer()
     },
+    mounted(){
+        if (window.innerWidth < 420 ) {
+            let container = document.querySelector('#ourServiceHeader');
+            let imgbg = document.querySelector('#headerServicesColum');
+            container.append(imgbg)
+        }
+      
+    },
     methods: {
+        goto(refName) {
+            var element = this.$refs[refName];
+            console.log(element);
+            var top = element.offsetTop;
+            window.scrollTo(0, top);
+        },
         handleScroll: function (evt, el) {
         var scrollHeight = Math.max(
             document.body.scrollHeight, document.documentElement.scrollHeight,

@@ -20,7 +20,7 @@
         color: #fff;
     }
     &__infoColum {
-      
+        position: relative;
         height: 100vh;
         width: 50%;
         // height: 100vh;
@@ -29,7 +29,7 @@
         justify-content: center;
         flex-direction: column;
         align-items: flex-start;
-        padding: 160px;
+        padding: 130px;
         color: #fff;
 
     }
@@ -48,11 +48,22 @@
     &__btn {
     }
 }
-.textBtn {
-}
-.line {
-}
 
+.colum {
+
+    &__btnScrollServices {
+        background: none;
+        border-left: 2px solid #fff;
+        color: #fff;
+        width: fit-content;
+        height: 61px;
+        position: absolute;
+        bottom: 0;
+        left: 130px;
+        display: flex;
+        padding-left: 5px;
+    }
+}
 
 /**/
 .services1 {

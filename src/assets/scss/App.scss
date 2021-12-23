@@ -7,6 +7,7 @@
 @import '_workProductPage';
 @import '_ourServicesPage';
 @import '_services1';
+@import '_contactPage';
 
 @import '_main-nav-header';
 @import '_sliderHome';
@@ -19,9 +20,10 @@
 @import '_mediHome';
 @import '_mediAbout';
 @import '_mediaWork';
-@import './media/mediaWorkProduct';
-@import './media/mediaOurServices';
+@import '_mediaWorkProduct';
+@import '_mediaOurServices';
 @import './media/mediaNav';
-@import './media/mediaServices1';
+@import '_mediaServices1';
 @import './media/_mediaForm-feedback';
 @import './media/_mediaForm-Contact';
+@import '_mediaContactPage';
