@@ -154,7 +154,7 @@ export default {
     currentTime(time) {
       if (time === 0) {
         this.stopTimer();
-        // this.$router.push("/work-product");
+        this.$router.push("/work-product");
       }
     },
   },
