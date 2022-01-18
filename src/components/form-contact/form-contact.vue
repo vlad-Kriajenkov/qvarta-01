@@ -55,7 +55,7 @@ export default {
     name: 'form-contact',
     data(){
         return{
-             mapStyle: {
+            mapStyle: {
             styles: [
             {
                 "elementType": "geometry",
