@@ -298,5 +298,94 @@
     }
 }
 
-
 /**/
+
+/* workProduct__footer*/
+.services {
+
+    &_footerLine {
+        position: absolute; 
+        top:0;
+        left: 0;
+        z-index: 2;
+        width: 20%;
+        height: 2px;
+        background: #ffff;
+    }
+    &_footerLine.activeLine{
+        width: 100%;
+        transition: width 8s linear;
+    }
+    &__bg{
+        width: 100%;
+        height: 420px;
+        background-image: url('../img/footer/electronicsFoter-min.png');
+        background-position: center ; 
+        background-repeat: no-repeat;
+        background-size: cover ;
+    }
+    &__footer {
+        position: relative;
+        
+    }
+}
+
+.footer {
+
+    &__link {
+        position: absolute;
+        left: 80px;
+        bottom: 80px;
+        color: #ffff;
+        z-index: 2;
+    }
+
+    &__timer {
+        position: absolute;
+        right: 80px;
+        bottom: 80px;
+        color: #ffff;
+        z-index: 2;
+    }
+}
+.link {
+
+    &__text {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 29px;
+    }
+}
+.timer {
+
+    &__text {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 29px;
+    }
+}
+.darkened {
+    position: relative;
+   
+  }
+.darkened::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);  
+    z-index: 1;
+  }
+.activeOpacity::before{
+    background-color: rgba(255, 255, 255, 0); 
+    transition: background-color 7s linear;
+  }
+/* workProduct__footer*/

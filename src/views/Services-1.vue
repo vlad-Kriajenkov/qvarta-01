@@ -113,10 +113,10 @@
             <form-feedback/>
         </div>        
         <form-contact/>
-        <div v-scroll="handleScroll"  class="workProduct__footer ">
-            <hr class="workProduct_footerLine" id="line" />
+        <div v-scroll="handleScroll"  class="services__footer ">
+            <hr class="services_footerLine" id="line" />
             <div id="Bg" class="darkened">
-                <div class="workProduct__bg"></div>
+                <div class="services__bg"></div>
             </div>
             <div class="footer__link">
                 <div class="link__text textNormal">{{$t('footerTitle')}}</div>
@@ -241,22 +241,22 @@ export default {
                 {
                 title: this.$t('services_addendum1'),
                 url: '/about',
-                img: 'img/Industrial-design/Addendum/img-1.svg'
+                img: 'img/Industrial-design/Addendum/electronics-min.png'
                 },
                 {
                 title: this.$t('services_addendum2'), 
                 url: '/work-product',
-                img: 'img/Industrial-design/Addendum/img-2.svg'
+                img: 'img/Industrial-design/Addendum/prototype-min.png'
                 },
                 {
                 title: this.$t('services_addendum3'), 
                 url: '/3',
-                img: 'img/Industrial-design/Addendum/img-3.svg'
+                img: 'img/Industrial-design/Addendum/clayton-cardinalli-min.png'
                 },
                 {
                 title: this.$t('services_addendum4'), 
                 url: '/4',
-                img: 'img/Industrial-design/Addendum/img-4.svg'
+                img: 'img/Industrial-design/Addendum/medDevices-min.png'
                 }
             ]
         }

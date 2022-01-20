@@ -217,7 +217,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .imgProducts__imgLVL {
-  background-image: url("../img/home/img-1.svg");
+  background-image: url("../img/home/img-2-min.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -229,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .imgProducts__imgBFS {
   display: none;
-  background-image: url("../img/home/Img-2.svg");
+  background-image: url("../img/home/Img-1-min.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -351,7 +351,7 @@ h1, h2, h3, h4, h5, h6 {
 .home__bg {
   width: 100%;
   height: 420px;
-  background-image: url("../img/footer/homeFoter.svg");
+  background-image: url("../img/footer/homeFoter-min.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -494,7 +494,7 @@ h1, h2, h3, h4, h5, h6 {
 .box2__room {
   width: 93%;
   height: 100%;
-  background: url("../img/About/about-rooms/Room.svg") no-repeat right;
+  background: url("../img/About/about-rooms/aboutHeaderDes-min.png") no-repeat right;
   margin: 0px 0px 120px 0px;
 }
 .box2__info {
@@ -526,7 +526,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-around;
 }
 .infoAbout__bg {
-  background: url("../img/About/about-rooms/rack.svg") no-repeat left center;
+  background: url("../img/About/about-rooms/aboutRoom-min.png") no-repeat left center;
   width: 64%;
   height: 540px;
 }
@@ -649,7 +649,7 @@ h1, h2, h3, h4, h5, h6 {
 .about__bg {
   width: 100%;
   height: 420px;
-  background-image: url("../img/footer/aboutFooter.svg");
+  background-image: url("../img/footer/FoterDes-min.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -732,7 +732,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .productColum__imgProducts {
-  background-image: url("../img/Work/Img-3.svg");
+  background-image: url("../img/Work/workHaeder-min.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -795,7 +795,7 @@ h1, h2, h3, h4, h5, h6 {
 .whatWeDo__imgBlock {
   width: 50%;
   height: 100vh;
-  background: url("../img/Work/img-2.svg") no-repeat center center;
+  background: url("../img/Work/bg-min.png") no-repeat center center;
   background-size: cover;
 }
 .whatWeDo__ourServices {
@@ -820,7 +820,7 @@ h1, h2, h3, h4, h5, h6 {
 .work__bg {
   width: 100%;
   height: 420px;
-  background-image: url("../img/footer/aboutFooter.svg");
+  background-image: url("../img/footer/FoterDes-min.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -832,7 +832,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* work__footer*/
 .workProduct__header {
-  background-image: url("../img/work-product/luxie-lamp-headr.svg");
+  background-image: url("../img/work-product/luxie-lamp-headr-min.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -966,7 +966,7 @@ h1, h2, h3, h4, h5, h6 {
 .workProduct__bg {
   width: 100%;
   height: 420px;
-  background-image: url("../img/work-product/imf-Footer.svg");
+  background-image: url("../img/footer/workFoter-min.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1063,7 +1063,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .servicesColum__imgProducts {
-  background-image: url("../img/Our-Services/img-Header.svg");
+  background-image: url("../img/Our-Services/servicesHeaderDes-min.png");
   background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1168,7 +1168,7 @@ h1, h2, h3, h4, h5, h6 {
 .ourService__bg {
   width: 100%;
   height: 420px;
-  background-image: url("../img/footer/aboutFooter.svg");
+  background-image: url("../img/footer/FoterDes-min.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1458,6 +1458,84 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /**/
+/* workProduct__footer*/
+.services_footerLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 20%;
+  height: 2px;
+  background: #ffff;
+}
+.services_footerLine.activeLine {
+  width: 100%;
+  transition: width 8s linear;
+}
+.services__bg {
+  width: 100%;
+  height: 420px;
+  background-image: url("../img/footer/electronicsFoter-min.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.services__footer {
+  position: relative;
+}
+
+.footer__link {
+  position: absolute;
+  left: 80px;
+  bottom: 80px;
+  color: #ffff;
+  z-index: 2;
+}
+.footer__timer {
+  position: absolute;
+  right: 80px;
+  bottom: 80px;
+  color: #ffff;
+  z-index: 2;
+}
+
+.link__text {
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+.link__title {
+  font-size: 29px;
+}
+
+.timer__text {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.timer__title {
+  font-size: 29px;
+}
+
+.darkened {
+  position: relative;
+}
+
+.darkened::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.activeOpacity::before {
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 7s linear;
+}
+
+/* workProduct__footer*/
 .contacts__columnInfo {
   background-color: #1D1D1D;
   width: 50%;
@@ -2447,7 +2525,7 @@ h1, h2, h3, h4, h5, h6 {
   .home__bg {
     width: 100%;
     height: 420px;
-    background-image: url("../img/home/foterMob.svg");
+    background-image: url("../img/footer/homeFoterMob-min.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2508,7 +2586,6 @@ h1, h2, h3, h4, h5, h6 {
   .box2__room {
     width: 100%;
     height: 420px;
-    background-image: url("../img/About/about-rooms/Room.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2534,7 +2611,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0px 20px;
   }
   .infoAbout__bg {
-    background-image: url(/img/rack.e4bd3e7b.svg);
+    background-image: url("../img/About/about-rooms/aboutRoom-min.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2607,7 +2684,7 @@ h1, h2, h3, h4, h5, h6 {
   .about__bg {
     width: 100%;
     height: 420px;
-    background-image: url("../img/About/foterMob.svg");
+    background-image: url("../img/footer/FoterMob-min.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2672,7 +2749,7 @@ h1, h2, h3, h4, h5, h6 {
   .work__bg {
     width: 100%;
     height: 422px;
-    background: url("../img/Work/foterMob.svg");
+    background: url("../img/footer/FoterMob-min.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2681,7 +2758,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
   .workProduct__header {
     height: 800px;
-    background-image: url("../img/work-product/hedaer-bg-Mob.svg");
+    background-image: url("../img/work-product/hedaer-bg-Mob-min.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2697,6 +2774,15 @@ h1, h2, h3, h4, h5, h6 {
   .workProduct__luxieLamp {
     padding: 0px 20px;
   }
+  .workProduct__bg {
+    width: 100%;
+    height: 420px;
+    background-image: url("../img/footer/workFoterMob-min.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .luxieLamp__wrapperAboutProject {
     display: flex;
     flex-direction: column;

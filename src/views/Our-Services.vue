@@ -93,7 +93,7 @@ export default {
                     num: "01",
                     title: this.$t('ourService_CardTitle1'),
                     text: this.$t('ourService_CardText1'),
-                    img: "img/Our-Services/img-1.svg",
+                    img: "img/Our-Services/promDiz-min.png",
                     url:"/Services1",
                 },
                 {
@@ -101,7 +101,7 @@ export default {
                     num:"02",
                     title: this.$t('ourService_CardTitle2'),
                     text: this.$t('ourService_CardText2'),
-                    img: "img/Our-Services/img-2.svg",
+                    img: "img/Our-Services/medDevices-min.png",
                     url:"/",
                 },
                 {
@@ -109,7 +109,7 @@ export default {
                     num:"03",
                     title: this.$t('ourService_CardTitle3'),
                     text: this.$t('ourService_CardText3'),
-                    img: "img/Our-Services/img-3.svg",
+                    img: "img/Our-Services/electronics-min.png",
                     url:"/",
                 },
                 {
@@ -117,7 +117,7 @@ export default {
                     num:"04",
                     title: this.$t('ourService_CardTitle4'),
                     text: this.$t('ourService_CardText4'),
-                    img: "img/Our-Services/img-4.svg",
+                    img: "img/Our-Services/drawing-min.png",
                     url:"/",
                 },
                 {
@@ -125,7 +125,7 @@ export default {
                     num:"05",
                     title: this.$t('ourService_CardTitle5'),
                     text: this.$t('ourService_CardText5'),
-                    img: "img/Our-Services/img-5.svg",
+                    img: "img/Our-Services/design-min.png",
                     url:"/",
                 },
                 {
@@ -133,7 +133,7 @@ export default {
                     num:"06",
                     title: this.$t('ourService_CardTitle6'),
                     text: this.$t('ourService_CardText6'),
-                    img: "img/Our-Services/img-6.svg",
+                    img: "img/Our-Services/3D-mod-min.png",
                     url:"/",
                 },
                 {
@@ -141,7 +141,7 @@ export default {
                     num:"07",
                     title: this.$t('ourService_CardTitle7'),
                     text: this.$t('ourService_CardText7'),
-                    img: "img/Our-Services/img-7.svg",
+                    img: "img/Our-Services/technicalStudies-min.png",
                     url:"/",
                 },
                 {
@@ -149,7 +149,7 @@ export default {
                     num:"08",
                     title: this.$t('ourService_CardTitle8'),
                     text: this.$t('ourService_CardText8'),
-                    img: "img/Our-Services/img-8.svg",
+                    img: "img/Our-Services/sam-moqadam-min.png",
                     url:"/",
                 },
                 {
@@ -157,7 +157,7 @@ export default {
                     num:"09",
                     title: this.$t('ourService_CardTitle9'),
                     text: this.$t('ourService_CardText9'),
-                    img: "img/Our-Services/img-9.svg",
+                    img: "img/Our-Services/prototype-min.png",
                     url:"/",
                 }, 
                 {
@@ -165,7 +165,7 @@ export default {
                     num:"10",
                     title: this.$t('ourService_CardTitle10'),
                     text: this.$t('ourService_CardText10'),
-                    img: "img/Our-Services/img-10.svg",
+                    img: "img/Our-Services/clayton-cardinalli-min.png",
                     url:"/",
                 }
             ]
