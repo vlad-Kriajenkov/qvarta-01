@@ -31,6 +31,7 @@ html, body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  
 }
 
 input, button, textarea {
@@ -167,6 +168,14 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease-out;
 }
 
+.column__logo {
+  position: relative;
+  z-index: 4;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #000;
+}
 .column__info {
   margin-top: 100px;
 }
@@ -180,6 +189,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
   z-index: 3;
   position: relative;
+  color: black;
 }
 .column__btn p {
   padding: 5px;
@@ -204,8 +214,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100vh;
 }
-
-.colum__btnScroll {
+.column__btnScroll {
   background: none;
   border-left: 2px solid #000;
   width: -webkit-fit-content;
@@ -213,7 +222,24 @@ h1, h2, h3, h4, h5, h6 {
   width: fit-content;
   height: 61px;
   display: flex;
+  align-items: flex-end;
   padding-left: 5px;
+}
+
+@-webkit-keyframes timing-fromto {
+  50% {
+    margin-bottom: 3.6em;
+  }
+}
+
+@keyframes timing-fromto {
+  50% {
+    margin-bottom: 3.6em;
+  }
+}
+.btnScroll__animText {
+  -webkit-animation: timing-fromto 5s infinite linear;
+          animation: timing-fromto 5s infinite linear;
 }
 
 .imgProducts__imgLVL {
@@ -270,6 +296,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .ourWorks__btn button {
   background: none;
+  color: black;
 }
 .ourWorks__container {
   display: flex;
@@ -319,17 +346,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /*home__ourWorks*/
 /*home__whatWeDo*/
-.home__whatWeDo {
+.home__whatWeDoHome {
   display: flex;
 }
 
-.whatWeDo__imgBlock {
+.whatWeDoHome__imgBlock {
   width: 50%;
-  height: 100vh;
+  height: 600px;
   background: url("../img/Lamp/LampForm.svg") no-repeat center center;
   background-size: cover;
 }
-.whatWeDo__ourServices {
+.whatWeDoHome__ourServices {
   width: 50%;
 }
 
@@ -429,6 +456,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 27px;
   left: 80px;
   color: #fff;
+  z-index: 4;
 }
 .header__text {
   font-size: 16px;
@@ -456,7 +484,18 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   left: 80px;
   display: flex;
+  align-items: flex-end;
   padding-left: 5px;
+}
+
+@keyframes timing-fromto {
+  50% {
+    margin-bottom: 3.6em;
+  }
+}
+.btnScrollAbout__animText {
+  -webkit-animation: timing-fromto 5s infinite linear;
+          animation: timing-fromto 5s infinite linear;
 }
 
 .box1__btn {
@@ -714,6 +753,8 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 27px;
   left: 80px;
+  z-index: 4;
+  color: #fff;
 }
 .headerWork__productColum {
   width: 50%;
@@ -755,7 +796,18 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   left: 130px;
   display: flex;
+  align-items: flex-end;
   padding-left: 5px;
+}
+
+@keyframes timing-fromto {
+  50% {
+    margin-bottom: 3.6em;
+  }
+}
+.btnScrollWork__animText {
+  -webkit-animation: timing-fromto 5s infinite linear;
+          animation: timing-fromto 5s infinite linear;
 }
 
 /**/
@@ -794,7 +846,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .whatWeDo__imgBlock {
   width: 50%;
-  height: 100vh;
+  height: 600px;
   background: url("../img/Work/bg-min.png") no-repeat center center;
   background-size: cover;
 }
@@ -885,7 +937,18 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   left: 80px;
   display: flex;
+  align-items: flex-end;
   padding-left: 5px;
+}
+
+@keyframes timing-fromto {
+  50% {
+    margin-bottom: 3.6em;
+  }
+}
+.btnScrollWorkPoduct__animText {
+  -webkit-animation: timing-fromto 5s infinite linear;
+          animation: timing-fromto 5s infinite linear;
 }
 
 /**/
@@ -1059,7 +1122,18 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   left: 130px;
   display: flex;
+  align-items: flex-end;
   padding-left: 5px;
+}
+
+@keyframes timing-fromto {
+  50% {
+    margin-bottom: 3.6em;
+  }
+}
+.btnScrollOurServices__animText {
+  -webkit-animation: timing-fromto 5s infinite linear;
+          animation: timing-fromto 5s infinite linear;
 }
 
 .servicesColum__imgProducts {
@@ -1273,7 +1347,18 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   left: 130px;
   display: flex;
+  align-items: flex-end;
   padding-left: 5px;
+}
+
+@keyframes timing-fromto {
+  50% {
+    margin-bottom: 3.6em;
+  }
+}
+.btnScrollServices__animText {
+  -webkit-animation: timing-fromto 5s infinite linear;
+          animation: timing-fromto 5s infinite linear;
 }
 
 /**/
@@ -1561,7 +1646,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .columnInfo__logo {
+  position: relative;
+  z-index: 4;
   color: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .columnInfo__info {
   color: #fff;
@@ -1748,6 +1838,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .slider__quotes {
   font-size: 32px;
+  width: 70% !important;
 }
 
 .slick-slide.slick-active.slick-current {
@@ -1785,7 +1876,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .ourServices {
   background: #1D1D1D;
-  height: 100vh;
+  height: 600px;
   color: #ffff;
   padding: 70px 80px 0px 80px;
 }
@@ -1957,14 +2048,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 .formContact__conatinerContact {
   width: 50%;
-  height: 100vh;
+  height: 600px;
   background: #1D1D1D;
   color: #ffff;
   padding: 80px 80px 90px 80px;
 }
 .formContact__conatinerMap {
   width: 50%;
-  height: 100vh;
+  height: 600px;
 }
 
 .conatinerContact_text {
@@ -2362,12 +2453,6 @@ h1, h2, h3, h4, h5, h6 {
   order: 6;
 }
 
-@media (min-width: 1400px) {
-  .home__ourWorks {
-    max-width: 1440px;
-    margin: 0px auto;
-  }
-}
 @media (max-width: 767px) {
   .selection__Stage {
     display: none;
@@ -2392,7 +2477,7 @@ h1, h2, h3, h4, h5, h6 {
   .home__ourWorks {
     margin: 0px 20px 0px 20px;
   }
-  .home__whatWeDo {
+  .home__whatWeDoHome {
     display: block;
   }
   .column__info {
@@ -2409,7 +2494,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 32px;
   }
 
-  .colum__btnScroll {
+  .column__btnScroll {
     background: none;
     border-left: none;
     width: -webkit-fit-content;
@@ -2418,12 +2503,17 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
     position: absolute;
     color: #fff;
-    bottom: -150px;
+    bottom: -80px;
     left: 49%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
     display: flex;
     padding-left: 5px;
+  }
+
+  .btnScroll__animText {
+    -webkit-animation: none;
+            animation: none;
   }
 
   .imgProducts__imgLVL {
@@ -2463,10 +2553,10 @@ h1, h2, h3, h4, h5, h6 {
     left: 44.5%;
   }
 
-  .whatWeDo__imgBlock {
+  .whatWeDoHome__imgBlock {
     display: none;
   }
-  .whatWeDo__ourServices {
+  .whatWeDoHome__ourServices {
     width: 100%;
   }
 
@@ -2574,13 +2664,18 @@ h1, h2, h3, h4, h5, h6 {
     width: fit-content;
     height: auto;
     position: absolute;
-    color: #fff;
     bottom: -100px;
+    color: #fff;
     left: 49%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
     display: flex;
     padding-left: 5px;
+  }
+
+  .btnScrollAbout__animText {
+    -webkit-animation: none;
+            animation: none;
   }
 
   .box2__room {
@@ -2732,6 +2827,11 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 5px;
   }
 
+  .btnScrollWork__animText {
+    -webkit-animation: none;
+            animation: none;
+  }
+
   .product__list {
     margin: 0px 20px 0px 20px;
     display: flex;
@@ -2742,6 +2842,17 @@ h1, h2, h3, h4, h5, h6 {
   .product__item {
     width: 100%;
   }
+  .work__whatWeDo {
+    display: block;
+  }
+
+  .whatWeDo__imgBlock {
+    width: 100%;
+  }
+  .whatWeDo__ourServices {
+    width: 100%;
+  }
+
   .about__bg {
     height: 480px;
   }
@@ -2783,6 +2894,9 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
   }
 
+  .luxieLamp__title {
+    margin: 40px 0px 50px 0px;
+  }
   .luxieLamp__wrapperAboutProject {
     display: flex;
     flex-direction: column;
@@ -2807,7 +2921,7 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
     position: absolute;
     color: #fff;
-    bottom: -22px;
+    bottom: -60px;
     left: 49%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -2815,11 +2929,20 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 5px;
   }
 
+  .btnScrollWorkPoduct__animText {
+    -webkit-animation: none;
+            animation: none;
+  }
+
   .wrapperAboutProject__columImg {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
   }
   .wrapperAboutProject__columImg img {
-    padding: 0px 0px 40px 0px;
+    padding: 0px 0px 20px 0px;
+    width: 100%;
   }
   .wrapperAboutProject__AboutProject {
     width: 100%;
@@ -2843,7 +2966,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 400px;
   }
 
-  .colum__btnScrollOurServices {
+  .colum__btnScrollServices {
     background: none;
     border-left: none;
     width: -webkit-fit-content;
@@ -2851,13 +2974,18 @@ h1, h2, h3, h4, h5, h6 {
     width: fit-content;
     height: auto;
     position: absolute;
-    color: #000;
-    bottom: -380px;
+    color: #fff;
+    bottom: 30px;
     left: 49%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
     display: flex;
     padding-left: 5px;
+  }
+
+  .btnScrollServices__animText {
+    -webkit-animation: none;
+            animation: none;
   }
 
   .servicesColum__imgProducts {
@@ -2951,7 +3079,30 @@ h1, h2, h3, h4, h5, h6 {
   }
   .header1__infoColum {
     width: 100%;
+    height: 425px;
     padding: 0px 20px 0px 20px;
+  }
+
+  .colum__btnScrollOurServices {
+    background: none;
+    border-left: none;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: auto;
+    position: absolute;
+    color: #fff;
+    bottom: -380px;
+    left: 49%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    padding-left: 5px;
+  }
+
+  .btnScrollOurServices__animText {
+    -webkit-animation: none;
+            animation: none;
   }
 
   .productInfo__serviceBox {

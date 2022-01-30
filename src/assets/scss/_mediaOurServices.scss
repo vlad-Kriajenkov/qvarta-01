@@ -55,19 +55,24 @@
 }
 .colum {
 
-    &__btnScrollOurServices {
+    &__btnScrollServices {
         background: none;
         border-left: none;
         width: fit-content;
         height: auto;
         position: absolute;
-		color: #000;
-        bottom: -380px;
+		color: #fff;
+        bottom: 30px;
 		left: 49%;
 		margin-right: -50%;
 		transform: translate(-50%, -50%);
         display: flex;
         padding-left: 5px;
+    }
+}
+.btnScrollServices {
+    &__animText {
+        animation: none;
     }
 }
 .servicesColum {

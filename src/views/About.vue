@@ -1,9 +1,12 @@
 <template>
   <div class="about">
     <div class="about__header">
-      <div class="header__logo textTitle">
-        QVARTA
-      </div>
+      <router-link 
+      class="header__logo"
+      to="/">
+          <div class="textTitle">QVARTA</div>
+      </router-link>
+    
       <div class="header__box1">
         <div class="header__text textNormal">{{$t('about_SubTitle')}}</div>
         <div class="header__title textTitle">
@@ -19,7 +22,7 @@
           <div class="line"></div>
         </button>
         <button class="colum__btnScrollAbout textBtn">
-                scroll
+          <div class="btnScrollAbout__animText">scroll</div>
         </button>
       </div>
       <div class="header__box2">

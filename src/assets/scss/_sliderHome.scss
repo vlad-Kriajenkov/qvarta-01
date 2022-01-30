@@ -16,10 +16,12 @@
 
     &__quotes {
         font-size: 32px;
+        width: 70% !important;
     }
 }
 .slick-slide.slick-active.slick-current{
     margin-bottom: 167px;
+    // padding: 0px 150px;
 }
 .slick-list{
     

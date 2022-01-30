@@ -45,7 +45,7 @@
                 width: 100%;
                 margin-top: 5px;
                 -webkit-transition: all 0.3s ease-out;
-                -moz-transition: all 0.3s ease-out;
+                -moz-transition: all 0.3s ease-out; 
                 -ms-transition: all 0.3s ease-out;
                 -o-transition: all 0.3s ease-out;
                 transition: all 0.3s ease-out;
@@ -57,6 +57,10 @@
 .column {
     &__logo{
         // margin: 0px 0px 200px 0px;
+        position: relative;
+        z-index: 4;
+        width: fit-content;
+        color: #000;
         
     }
     &__info {
@@ -71,6 +75,7 @@
         font-size: 16px;
         z-index: 3;
         position: relative;
+        color: black;
         p{
             padding: 5px;
         }
@@ -98,26 +103,31 @@
             height: 100vh;
         }
     }
-}
-
-.colum {
-
     &__btnScroll {
         background: none;
         border-left: 2px solid #000;
         width: fit-content;
         height: 61px;
-        // position: absolute;
-        // bottom: 0;
-        // left: 80px;
         display: flex;
+        align-items: flex-end;
         padding-left: 5px;
+        
+    }
+}
+@keyframes timing-fromto {
+    50%{
+        // top: 80%; 
+        margin-bottom: 3.6em;
+      }
+  }
+.btnScroll {
+    &__animText {
+        
+        animation: timing-fromto 5s infinite linear;
     }
 }
 
-
 .imgProducts {
-
     &__imgLVL {
         background-image: url("../img/home/img-2-min.png") ;
         background-position: center;
@@ -140,14 +150,11 @@
     }
     &__imgBFS.newbg {
         display: block;
-        // visibility: visible;
-        // transition: visibility 0.2s linear ;
     }
 }
 .info {
 
     &__text {
-   
         font-size: 16px;
     }
 
@@ -184,8 +191,10 @@
         flex-direction: column;
         align-items: center;
         padding: 70px 0px 111px 0px;
+        
         button{
             background: none;
+            color:black;
         } 
     }
     &__container {
@@ -245,15 +254,15 @@
 /*home__whatWeDo*/
 .home {
 
-    &__whatWeDo {
+    &__whatWeDoHome {
         display: flex;
     }
 }
-.whatWeDo {
+.whatWeDoHome {
    
     &__imgBlock {
         width: 50%;
-        height: 100vh;
+        height: 600px;
         background: url('../img/Lamp/LampForm.svg') no-repeat center center ; 
         -webkit-background-size: cover;
         -moz-background-size: cover;

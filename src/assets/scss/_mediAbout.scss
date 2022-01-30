@@ -70,13 +70,18 @@
         width: fit-content;
         height: auto;
         position: absolute;
+		bottom: -100px;
 		color: #fff;
-        bottom: -100px;
 		left: 49%;
 		margin-right: -50%;
 		transform: translate(-50%, -50%);
         display: flex;
         padding-left: 5px;
+    }
+}
+.btnScrollAbout { 
+    &__animText {
+        animation: none;
     }
 }
 .box1 {

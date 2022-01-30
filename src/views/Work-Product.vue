@@ -1,7 +1,11 @@
 <template>
     <div class="workProduct">
         <div class="workProduct__header">
-            <div class="workProduct__logo textTitle">QVARTA</div>
+            <router-link 
+            class="workProduct__logo"
+            to="/">
+                <div class="textTitle">QVARTA</div>
+            </router-link>
             <div class="workProduct__boxTitle">
                 <div class="boxTitle__text textNormal">{{$t('workProduct_Title')}}</div>
                 <div class="boxTitle__title textTitle">LUXIE VASE & LAMP</div>
@@ -17,18 +21,18 @@
                 </button>
             </div>
             <button class="colum__btnScrollWorkPoduct  textBtn">
-                scroll
+                <div class="btnScrollWorkPoduct__animText">scroll</div>
             </button>
         </div> 
-        <div class="workProduct__luxieLamp">\
+        <div class="workProduct__luxieLamp">
             <div class="luxieLamp__title textNormal">
                 {{$t('workProduct_namePage')}}
                 <span class='textBold'>LUXIE VASE & LAMP</span>
             </div>    
             <div class="luxieLamp__wrapperAboutProject">
-                <div data-aos="fade-right" class="wrapperAboutProject__columImg">
-                    <img src="../assets/img/work-product/img-1.svg" alt="">
-                    <img src="../assets/img/work-product/img-2.svg" alt="">
+                <div  class="wrapperAboutProject__columImg">
+                    <img data-aos="fade-right" src="../assets/img/work-product/img-1.png" alt="">
+                    <img  data-aos="fade-right" src="../assets/img/work-product/img-2.svg" alt="">
                 </div>
                 <div data-aos="fade-right" class="wrapperAboutProject__AboutProject">
                     <div class="AboutProject__boxTitle">

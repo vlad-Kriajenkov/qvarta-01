@@ -68,7 +68,7 @@ export default {
           targets: '.ml1 .letter',
           opacity: [0,1],
           easing: "easeInOutQuad",
-          duration: 2250,
+          duration: 550,
           delay: (el, i) => 150 * (i+1)
         }).add({
           targets: '.ml1',
@@ -86,7 +86,7 @@ export default {
             targets: '.ml2 .letter',
             opacity: [0,1],
             easing: "easeInOutQuad",
-            duration: 2250,
+            duration: 550,
             delay: (el, i) => 150 * (i+1)
             }).add({
             targets: '.ml2',
@@ -103,7 +103,7 @@ export default {
             targets: '.ml3 .letter',
             opacity: [0,1],
             easing: "easeInOutQuad",
-            duration: 2250,
+            duration: 550,
             delay: (el, i) => 150 * (i+1)
             }).add({
             targets: '.ml3',
@@ -120,7 +120,7 @@ export default {
             targets: '.ml4 .letter',
             opacity: [0,1],
             easing: "easeInOutQuad",
-            duration: 2250,
+            duration: 550,
             delay: (el, i) => 150 * (i+1)
             }).add({
             targets: '.ml4',
@@ -142,7 +142,7 @@ export default {
             targets: '.ml1 .letter',
             opacity: [0,1],
             easing: "easeInOutQuad",
-            duration: 2250,
+            duration: 550,
             delay: (el, i) => 150 * (i+1)
             }).add({
             targets: '.ml1',

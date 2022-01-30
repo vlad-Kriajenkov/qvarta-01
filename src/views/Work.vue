@@ -1,7 +1,11 @@
 <template>
   <div class="work">
     <div class="work__headerWork">
-      <div class="headerWork__logoWork textTitle">QVARTA</div>
+      <router-link 
+      to="/"
+      class="headerWork__logoWork">
+        <div class=" textTitle">QVARTA</div>
+      </router-link>
       <div class="headerWork__productColum">
         <div class="productColum__imgProducts"></div>
       </div>
@@ -15,8 +19,8 @@
           <p>{{ $t("btnHeader") }}</p>
           <div class="line"></div>
         </button>
-         <button class="colum__btnScrollWork  textBtn">
-          scroll
+         <button class="colum__btnScrollWork textBtn">
+          <div class="btnScrollWork__animText">scroll</div>
         </button>
       </div>
     </div>
@@ -55,7 +59,7 @@
       <div class="ourWorks__btn">
         <button @click="isClick = !isClick" class="different">
           <div class="btn__text textBtn">{{ $t("btnAllWork") }}</div>
-        </button>
+        </button> 
       </div>
     </div>
     <div class="work__whatWeDo">

@@ -67,12 +67,16 @@
         position: absolute;
 		color: #000;
         bottom: -385px;
-       
 		left: 49%;
 		margin-right: -50%;
 		transform: translate(-50%, -50%);
         display: flex;
         padding-left: 5px;
+    }
+}
+.btnScrollWork {
+    &__animText {
+        animation: none;
     }
 }
 .infoColum {
@@ -138,12 +142,20 @@
 		&__text {
 		}
 }
+.work {
+
+	&__whatWeDo {
+		display: block;
+	}
+}
 .whatWeDo {
 
 		&__imgBlock {
+			width: 100%;
 		}
 
 		&__ourServices {
+			width: 100%;
 		}
 }
 .about {

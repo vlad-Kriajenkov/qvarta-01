@@ -2,7 +2,12 @@
     <div class="contacts">
         <div class="wrapperContHeder">
             <div class="contacts__columnInfo">
-                <div class="columnInfo__logo textTitle ">QVARTA</div>
+                <router-link 
+                class="columnInfo__logo"
+                to="/">
+                    <div class="textTitle">QVARTA</div>
+                </router-link>
+                
                 <div class="columnInfo__info">
                     <p class="info__text textNormal">{{$t('contactSubTitle')}}</p>
                     <div class="info__title textTitle">

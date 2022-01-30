@@ -1,7 +1,11 @@
 <template>
     <div class="services1">
         <div class="services1__header1">
-            <div class="header1__logo textTitle">QVARTA</div>
+            <router-link
+            class="header1__logo"
+            to="/">
+                <div class=" textTitle">QVARTA</div>
+            </router-link>
             <div class="header1__servicesColum" >
                 <img src="../assets/img/Industrial-design/img-Header.svg" alt="">
             </div>
@@ -20,7 +24,7 @@
                     <div class="line"></div>
                 </button>
                 <button class="colum__btnScrollServices textBtn">
-                    scroll
+                    <div class="btnScrollServices__animText">scroll</div>
                 </button>
             </div>
         </div>

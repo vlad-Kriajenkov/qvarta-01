@@ -80,6 +80,7 @@
 .luxieLamp {
 
 		&__title {
+			margin: 40px 0px 50px 0px;
 		}
 
 		&__wrapperAboutProject {
@@ -107,7 +108,7 @@
         height: auto;
         position: absolute;
 		color: #fff;
-        bottom: -22px;
+        bottom: -60px;
 		left: 49%;
 		margin-right: -50%;
 		transform: translate(-50%, -50%);
@@ -115,12 +116,21 @@
         padding-left: 5px;
     }
 }
+.btnScrollWorkPoduct {
+    &__animText {
+        animation: none;
+    }
+}
 .wrapperAboutProject {
 
 		&__columImg {
-            width: 100%;
+			width: 100%;
+			display: flex;
+    		flex-direction: column;
+			justify-content: normal;
             img{
-                padding: 0px 0px 40px 0px;
+                padding: 0px 0px 20px 0px;
+				width: 100%;
             }
 		}
 

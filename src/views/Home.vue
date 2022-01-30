@@ -1,8 +1,13 @@
 <template>
   <div class="home">
+    
     <div class="home__header">
       <div class="home__columnInfo">
-        <div class="column__logo textTitle ">QVARTA</div>
+        <router-link
+        class="column__logo"
+        to="/">
+          <div class=" textTitle ">QVARTA</div>
+        </router-link>
         <div class="column__info">
           <p class="info__text textNormal">{{$t('home_SubTitle')}}</p>
           <div class="info__title textTitle">
@@ -13,14 +18,14 @@
         </div>
         <button  
         id="goto" 
-        @click="goto('formFeedback')" 
+        @click="goto('formFeedback')"  
         class="column__btn textBtn ">
           <p>{{$t('btnHeader')}}</p> 
           <div class="line"></div>
         </button>
-      
-        <button class="colum__btnScroll textBtn">
-          scroll
+
+        <button class="column__btnScroll textBtn">
+          <div class="btnScroll__animText">scroll</div>
         </button>
         
       </div>
@@ -74,10 +79,10 @@
           </button>
       </div>
     </div>
-    <div class="home__whatWeDo">
-      <div class="whatWeDo__imgBlock">
+    <div class="home__whatWeDoHome">
+      <div class="whatWeDoHome__imgBlock">
       </div>
-      <div class="whatWeDo__ourServices">
+      <div class="whatWeDoHome__ourServices">
         <our-services/>
       </div>
     </div>
@@ -195,6 +200,7 @@ export default {
       startOpasity(){
         document.getElementById("Bg").classList.add('activeOpacity')
       },
+      
      
     },
     watch:{
