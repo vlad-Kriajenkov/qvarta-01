@@ -4,13 +4,7 @@
             <div 
             @click="removeBurger"
             class="mainNav__logo textTitle">
-                <router-link 
-                to="/" 
-               
-                >
-                    QVARTA
-                </router-link>
-                
+                <router-link to="/">QVARTA</router-link>
             </div>
             <div class="conatinerContact__boxInfo">
                  <router-link
@@ -20,11 +14,11 @@
                     :to="link.url"
                     class="ourServicesmainNav__link"
                 >
-                    
-                    <div @click="removeBurger" href="#"  class="ourServices__a textNormal">{{link.title}}
-                        <div class="ourServices__moreInfo">{{$t('main_navMoreInfo')}}</div>
+                    <div @click="removeBurger" href="#"  class="ourServicesmainNav__a textNormal">{{link.title}}
+                        <div class="ourServicesmainNav__moreInfo">{{$t('main_navMoreInfo')}}</div>
+                        <div class="ourServicesmainNav__line"></div>
                     </div>
-
+                    <div class="ourServicesmainNav__line1"></div>
                 </router-link>
                 <div class="boxInfomainNav__networks">
                     <div class="networks__link">

@@ -53,7 +53,7 @@
       </div>
     </div>
     <slickComponent 
-    @reload="animSlick"
+    
     :key="renderKey"></slickComponent>
     <div class="home__ourWorks">
       <div class="ourWorks__header">
@@ -111,9 +111,6 @@
   
 </template>
 
-
- 
-
 <script >
 import {mapGetters, mapActions} from 'vuex'
 import ourServices from '../components/our-services/our-services';
@@ -161,16 +158,7 @@ export default {
                 this.$i18n.locale = locale
                 this.renderKey++
             })
-           
-            
         },
-     animSlick(locale){
-       alert(locale);
-      //  if (locale = "ru") {
-      //    this.renderKey++
-      //  }  
-      },
-
      handleScroll: function(evt, el){
         var scrollHeight = Math.max(
         document.body.scrollHeight, document.documentElement.scrollHeight,
@@ -204,15 +192,12 @@ export default {
      
     },
     watch:{
-      
       currentTime(time) {
         if (time === 0) {
           this.stopTimer()
           this.$router.push('/about') 
         }
       },
-     
-
     },
     computed:{
       ...mapGetters(['allPosts']), 

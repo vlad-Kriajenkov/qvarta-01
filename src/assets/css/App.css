@@ -31,7 +31,6 @@ html, body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  
 }
 
 input, button, textarea {
@@ -1891,10 +1890,11 @@ h1, h2, h3, h4, h5, h6 {
 .ourServices__link {
   color: #707070;
   font-size: 24px;
+  position: relative;
 }
 .ourServices__a {
   position: relative;
-  border-bottom: 2px solid #707070;
+  border-bottom: 2px solid #1D1D1D;
   padding-bottom: 16px;
   margin-bottom: 22px;
   font-size: 19px;
@@ -1902,9 +1902,25 @@ h1, h2, h3, h4, h5, h6 {
   transition: padding-left 0.2s linear;
 }
 .ourServices__a:hover {
-  border-bottom: 2px solid #ffff;
+  border-bottom: 2px solid #1D1D1D;
   padding-left: 10px;
   transition: padding-left 0.2s linear;
+}
+.ourServices__line {
+  position: absolute;
+  top: 35px;
+  width: 10%;
+  height: 2px;
+  background: #fff;
+  transition: width 2s linear;
+}
+.ourServices__line1 {
+  position: absolute;
+  top: 35px;
+  width: 10%;
+  height: 2px;
+  background: #fff;
+  transition: width 2s linear;
 }
 
 .ourServices__a .ourServices__moreInfo {
@@ -1924,6 +1940,11 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
   top: 15%;
   transition: visibility 0.2s ease-out, top 0.2s linear, opacity 0.3s linear;
+}
+
+.ourServices__a:hover .ourServices__line {
+  width: 100%;
+  transition: width 1s linear;
 }
 
 .column__btnWhite {
@@ -2246,7 +2267,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: padding-left 0.2s linear;
 }
 
-.ourServices__a .ourServices__moreInfo {
+.ourServicesmainNav__a .ourServicesmainNav__moreInfo {
   visibility: hidden;
   opacity: 0;
   color: #fff;
@@ -2258,7 +2279,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: visibility 0.2s ease-out, top 0.2s linear, opacity 0.3s linear;
 }
 
-.ourServices__a:hover .ourServices__moreInfo {
+.ourServicesmainNav__a:hover .ourServicesmainNav__moreInfo {
   visibility: visible;
   opacity: 1;
   top: 15%;
@@ -2558,15 +2579,6 @@ h1, h2, h3, h4, h5, h6 {
   }
   .whatWeDoHome__ourServices {
     width: 100%;
-  }
-
-  .ourServices {
-    padding: 70px 20px 0px 20px;
-    height: 620px;
-  }
-  .ourServices__a {
-    color: #fff;
-    border-bottom: 2px solid #fff;
   }
 
   .footer__link {
@@ -3182,6 +3194,18 @@ h1, h2, h3, h4, h5, h6 {
   }
   .boxInfo__networks {
     font-size: 19px;
+  }
+}
+@media (max-width: 480px) {
+  .ourServices {
+    padding: 70px 20px 0px 20px;
+    height: 620px;
+  }
+  .ourServices__line {
+    top: 30px;
+  }
+  .ourServices__line1 {
+    top: 30px;
   }
 }
 @media (max-width: 480px) {

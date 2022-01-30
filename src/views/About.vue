@@ -207,7 +207,6 @@ export default {
       var top = element.offsetTop;
       window.scrollTo(0, top);
     },
-
     handleScroll: function (evt, el) {
        var scrollHeight = Math.max(
         document.body.scrollHeight, document.documentElement.scrollHeight,
@@ -219,7 +218,6 @@ export default {
         this.startTimer();
         this.startLine();
          this.startOpasity();
-         
         console.log(scrollY);
       }
     },
@@ -239,8 +237,6 @@ export default {
     }
   },
   watch: {
-   
-
     currentTime(time) {
       if (time === 0) {
         this.stopTimer();
