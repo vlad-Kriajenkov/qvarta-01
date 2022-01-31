@@ -25,55 +25,7 @@
         font-size: 40px;
         
     }
-    &__leng {
-        position: absolute;
-        right: 80px;
-        bottom: 50px;
-        display: flex;
-        z-index: 10;
-        button{
-           div{
-               width: 0px;
-               height: 1px;
-               
-               background: #fff;
-               -webkit-transition: all 0.3s ease-out;
-                -moz-transition: all 0.3s ease-out;
-                -ms-transition: all 0.3s ease-out;
-                -o-transition: all 0.3s ease-out;
-                transition: all 0.3s ease-out;
-           }
-        }
-        button:hover{
-            
-            div{
-                width: 100%;
-                margin-top: 5px;
-                -webkit-transition: all 0.3s ease-out;
-                -moz-transition: all 0.3s ease-out;
-                -ms-transition: all 0.3s ease-out;
-                -o-transition: all 0.3s ease-out;
-                transition: all 0.3s ease-out;
-            }
-            
-        }
-    }
-}
-.leng {
-
-    &__ru {
-        background: none;
-        color: #fff;
-        margin-right: 10px;
-       
-    }
-    &__ru:hover{
-        
-    }
-    &__eng {
-        background: none;
-        color: #fff;
-    }
+    
 }
 
 

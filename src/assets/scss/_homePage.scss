@@ -54,6 +54,27 @@
         }
     }
 }
+.leng {
+
+    &__ru {
+        background: none;
+        color: #fff;
+        margin-right: 10px;
+       
+    }
+    
+    &__eng {
+        background: none;
+        color: #fff;
+        margin-right: 10px;
+    }
+    &__ukr {
+        display: none;
+        background: none;
+        color: #fff;
+        margin-right: 10px;
+  }
+}
 .column {
     &__logo{
         // margin: 0px 0px 200px 0px;

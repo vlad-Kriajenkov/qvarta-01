@@ -39,15 +39,24 @@
       </div> 
       <div class="home__leng">
         <button 
+        id="ru"
           @click="setLocale('ru')"
         class="leng__ru textNormal">
           ru
           <div class="leng__line"></div>
         </button>
         <button 
+        id="en"
         @click="setLocale('en')"
         class="leng__eng textNormal">
           eng
+          <div class="leng__line"></div>
+        </button> 
+        <button 
+        id="ukr" 
+        @click="setLocale('ukr')"
+        class="leng__ukr textNormal">
+          ukr
           <div class="leng__line"></div>
         </button> 
       </div>
@@ -156,6 +165,23 @@ export default {
                 this.$i18n.locale = locale
                 this.renderKey++
             })
+            if (locale == "ru") {
+              document.getElementById('ru').style.display ="none";
+              document.getElementById('ukr').style.display ="block";   
+              document.getElementById('en').style.display ="block"            
+
+            }
+            if (locale == "en") {
+              document.getElementById('en').style.display ="none";
+              document.getElementById('ukr').style.display ="block"
+              document.getElementById('ru').style.display ="block"
+            }
+            if (locale == "ukr") {
+              document.getElementById('ukr').style.display ="none";
+              document.getElementById('en').style.display ="block"
+              document.getElementById('ru').style.display ="block"
+            }
+
         },
      handleScroll: function(evt, el){
         var scrollHeight = Math.max(

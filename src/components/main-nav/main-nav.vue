@@ -39,17 +39,25 @@
         </div>
         <div class="mainNav__img">
             <div class="img__form"></div>
-            <div class="mainNavHeader__leng">
+            <div class="mainNav__leng">
                 <button 
+                id="ru"
                 @click="setLocale('ru')"
-                class="leng__ru textNormal">ru
+                class="lengNav__ru textNormal">ru
                     <div class="leng__line"></div>
                 </button>
                 <button 
+                id="en"
                 @click="setLocale('en')"
-                class="leng__eng textNormal">eng
+                class="lengNav__eng textNormal">eng
                     <div class="leng__line"></div>
                 </button>
+                <button 
+                    id="ukr" 
+                    @click="setLocale('ukr')"
+                    class="lengNav__ukr textNormal">ukr
+                    <div class="leng__line"></div>
+                </button> 
             </div>
         </div>
     </div>
@@ -81,7 +89,22 @@ export default {
                 this.$i18n.locale = locale
                  
             })
-            // this.$emit('reload', locale)
+            if (locale == "ru") {
+              document.getElementById('ru').style.display ="none";
+              document.getElementById('ukr').style.display ="block";   
+              document.getElementById('en').style.display ="block"            
+
+            }
+            if (locale == "en") {
+              document.getElementById('en').style.display ="none";
+              document.getElementById('ukr').style.display ="block"
+              document.getElementById('ru').style.display ="block"
+            }
+            if (locale == "ukr") {
+              document.getElementById('ukr').style.display ="none";
+              document.getElementById('en').style.display ="block"
+              document.getElementById('ru').style.display ="block"
+            }
         },
         removeBurger(){
             document.getElementById('burger').classList.remove("active");

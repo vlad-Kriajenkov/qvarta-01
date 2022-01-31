@@ -330,6 +330,23 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease-out;
 }
 
+.leng__ru {
+  background: none;
+  color: #fff;
+  margin-right: 10px;
+}
+.leng__eng {
+  background: none;
+  color: #fff;
+  margin-right: 10px;
+}
+.leng__ukr {
+  display: none;
+  background: none;
+  color: #fff;
+  margin-right: 10px;
+}
+
 .column__logo {
   position: relative;
   z-index: 4;
@@ -1881,34 +1898,6 @@ h1, h2, h3, h4, h5, h6 {
 .mainNavHeader__logg {
   font-size: 40px;
 }
-.mainNavHeader__leng {
-  position: absolute;
-  right: 80px;
-  bottom: 50px;
-  display: flex;
-  z-index: 10;
-}
-.mainNavHeader__leng button div {
-  width: 0px;
-  height: 1px;
-  background: #fff;
-  transition: all 0.3s ease-out;
-}
-.mainNavHeader__leng button:hover div {
-  width: 100%;
-  margin-top: 5px;
-  transition: all 0.3s ease-out;
-}
-
-.leng__ru {
-  background: none;
-  color: #fff;
-  margin-right: 10px;
-}
-.leng__eng {
-  background: none;
-  color: #fff;
-}
 
 .menu {
   display: inline-block;
@@ -2332,6 +2321,41 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   display: flex;
   align-items: center;
+}
+.mainNav__leng {
+  position: absolute;
+  right: 80px;
+  bottom: 50px;
+  display: flex;
+  z-index: 10;
+}
+.mainNav__leng button div {
+  width: 0px;
+  height: 1px;
+  background: #fff;
+  transition: all 0.3s ease-out;
+}
+.mainNav__leng button:hover div {
+  width: 100%;
+  margin-top: 5px;
+  transition: all 0.3s ease-out;
+}
+
+.lengNav__ru {
+  background: none;
+  color: #fff;
+  margin-right: 10px;
+}
+.lengNav__eng {
+  background: none;
+  color: #fff;
+  margin-right: 10px;
+}
+.lengNav__ukr {
+  display: none;
+  background: none;
+  color: #fff;
+  margin-right: 10px;
 }
 
 .img__form {
