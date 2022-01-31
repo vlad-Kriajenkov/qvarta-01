@@ -9,7 +9,7 @@
       <div class="headerWork__productColum">
         <div class="productColum__imgProducts"></div>
       </div>
-      <div class="headerWork__infoColum">
+      <div class="headerWork__infoColum"> 
         <div class="infoColum__text textNormal">{{ $t("work_SubTitle") }}</div>
         <div class="infoColum__title textTitle">{{ $t("work_title") }}</div>
         <button

@@ -130,169 +130,6 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
-@media (max-width: 480px) {
-  .work__headerWork {
-    display: flex;
-    flex-wrap: wrap-reverse;
-  }
-  .headerWork__logoWork {
-    position: absolute;
-    top: 27px;
-    left: 20px;
-    color: #fff;
-    z-index: 4;
-  }
-  .headerWork__productColum {
-    width: 100%;
-  }
-  .headerWork__infoColum {
-    width: 100%;
-    padding: 20px;
-    height: 400px;
-  }
-
-  .productColum__imgProducts {
-    height: 400px;
-  }
-
-  .colum__btnScrollWork {
-    background: none;
-    border-left: none;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: auto;
-    position: absolute;
-    color: #000;
-    bottom: -385px;
-    left: 49%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    padding-left: 5px;
-  }
-
-  .btnScrollWork__animText {
-    -webkit-animation: none;
-            animation: none;
-  }
-
-  .product__list {
-    margin: 0px 20px 0px 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .product__item {
-    width: 100%;
-  }
-  .work__whatWeDo {
-    display: block;
-  }
-
-  .whatWeDo__imgBlock {
-    width: 100%;
-  }
-  .whatWeDo__ourServices {
-    width: 100%;
-  }
-
-  .about__bg {
-    height: 480px;
-  }
-
-  .work__bg {
-    width: 100%;
-    height: 422px;
-    background: url("../img/footer/FoterMob-min.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-@media (max-width: 480px) {
-  .workProduct__header {
-    height: 800px;
-    background-image: url("../img/work-product/hedaer-bg-Mob-min.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .workProduct__logo {
-    top: 27px;
-    left: 20px;
-  }
-  .workProduct__boxBtn {
-    right: 34%;
-    bottom: 170px;
-  }
-  .workProduct__luxieLamp {
-    padding: 0px 20px;
-  }
-  .workProduct__bg {
-    width: 100%;
-    height: 420px;
-    background-image: url("../img/footer/workFoterMob-min.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .luxieLamp__title {
-    margin: 40px 0px 50px 0px;
-  }
-  .luxieLamp__wrapperAboutProject {
-    display: flex;
-    flex-direction: column;
-  }
-  .luxieLamp__boxImg {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-  .luxieLamp__boxImg img {
-    width: 100%;
-    padding: 0px 0px 40px 0px;
-  }
-
-  .colum__btnScrollWorkPoduct {
-    background: none;
-    border-left: none;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: auto;
-    position: absolute;
-    color: #fff;
-    bottom: -60px;
-    left: 49%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    padding-left: 5px;
-  }
-
-  .btnScrollWorkPoduct__animText {
-    -webkit-animation: none;
-            animation: none;
-  }
-
-  .wrapperAboutProject__columImg {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: normal;
-  }
-  .wrapperAboutProject__columImg img {
-    padding: 0px 0px 20px 0px;
-    width: 100%;
-  }
-  .wrapperAboutProject__AboutProject {
-    width: 100%;
-  }
-}
 .home__header {
   display: flex;
   justify-content: space-between;
@@ -614,6 +451,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* home__footer*/
+.none {
+  display: none !important;
+}
+
+.block {
+  display: block !important;
+}
+
 .about__header {
   background: #1D1D1D;
   display: flex;
@@ -2985,67 +2830,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 480px) {
-  .ourService__header {
-    display: flex;
-    flex-direction: column;
-  }
-  .ourService__listServices {
-    padding: 0px 20px;
-  }
-  .header__servicesColum {
-    width: 100%;
-    height: 400px;
-  }
-  .header__infoColum {
-    width: 100%;
-    padding: 0px 20px;
-    height: 400px;
-  }
-
-  .colum__btnScrollServices {
-    background: none;
-    border-left: none;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: auto;
-    position: absolute;
-    color: #fff;
-    bottom: 30px;
-    left: 49%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    padding-left: 5px;
-  }
-
-  .btnScrollServices__animText {
-    -webkit-animation: none;
-            animation: none;
-  }
-
-  .servicesColum__imgProducts {
-    height: 400px;
-  }
-
-  .listServices__wrapperCard {
-    display: flex;
-    flex-direction: column;
-  }
-  .listServices__wrapperCard:nth-child(2n) {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .wrapperCard__itemCard {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .wrapperCard__itemProducct {
-    width: 100%;
-  }
-}
-@media (max-width: 480px) {
   .dashboard {
     background-color: black;
   }
@@ -3085,93 +2869,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .test1::before {
     background-color: black;
-  }
-}
-@media (max-width: 480px) {
-  .services1__header1 {
-    display: flex;
-    flex-direction: column;
-  }
-  .services1__productInfo {
-    padding: 0px 20px;
-  }
-  .services1__stagesDev {
-    padding: 0px 20px 20px 20px;
-  }
-  .services1__addendum {
-    padding: 0px 20px;
-  }
-
-  .header1__logo {
-    top: 27px;
-    left: 20px;
-  }
-  .header1__servicesColum {
-    width: 100%;
-  }
-  .header1__servicesColum img {
-    width: 100%;
-    height: auto;
-  }
-  .header1__infoColum {
-    width: 100%;
-    height: 425px;
-    padding: 0px 20px 0px 20px;
-  }
-
-  .colum__btnScrollOurServices {
-    background: none;
-    border-left: none;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: auto;
-    position: absolute;
-    color: #fff;
-    bottom: -380px;
-    left: 49%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    padding-left: 5px;
-  }
-
-  .btnScrollOurServices__animText {
-    -webkit-animation: none;
-            animation: none;
-  }
-
-  .productInfo__serviceBox {
-    display: flex;
-    flex-direction: column;
-  }
-  .serviceBox__infoServ {
-    width: 100%;
-  }
-  .serviceBox__bgImg {
-    width: 100%;
-  }
-
-  .examples__boxProduct {
-    flex-direction: column;
-  }
-
-  .boxProduct {
-    width: auto;
-  }
-  .boxProduct__text {
-    width: auto;
-  }
-
-  .stagesBox__title {
-    font-size: 24px;
-  }
-  .addendum__serviceContainer {
-    flex-direction: column;
-  }
-
-  .serviceContainer {
-    width: 100%;
   }
 }
 @media (max-width: 480px) {

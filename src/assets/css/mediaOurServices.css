@@ -1,0 +1,61 @@
+@media (max-width: 480px) {
+  .ourService__header {
+    display: flex;
+    flex-direction: column;
+  }
+  .ourService__listServices {
+    padding: 0px 20px;
+  }
+  .header__servicesColum {
+    width: 100%;
+    height: 400px;
+  }
+  .header__infoColum {
+    width: 100%;
+    padding: 0px 20px;
+    height: 400px;
+  }
+
+  .colum__btnScrollServices {
+    background: none;
+    border-left: none;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: auto;
+    position: absolute;
+    color: #fff;
+    bottom: 30px;
+    left: 49%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    padding-left: 5px;
+  }
+
+  .btnScrollServices__animText {
+    -webkit-animation: none;
+            animation: none;
+  }
+
+  .servicesColum__imgProducts {
+    height: 400px;
+  }
+
+  .listServices__wrapperCard {
+    display: flex;
+    flex-direction: column;
+  }
+  .listServices__wrapperCard:nth-child(2n) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapperCard__itemCard {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .wrapperCard__itemProducct {
+    width: 100%;
+  }
+}

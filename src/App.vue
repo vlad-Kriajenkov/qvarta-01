@@ -22,5 +22,8 @@ export default {
 </script>
 <style>
 @import './assets/css/App.css';
-
+@import './assets/css/mediaWork.css';
+@import './assets/css/mediaWorkProduct.css';
+@import './assets/css/mediaOurServices.css';
+@import './assets/css/mediaServices1.css';
 </style>

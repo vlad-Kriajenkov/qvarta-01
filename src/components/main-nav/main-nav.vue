@@ -90,20 +90,67 @@ export default {
                  
             })
             if (locale == "ru") {
-              document.getElementById('ru').style.display ="none";
-              document.getElementById('ukr').style.display ="block";   
-              document.getElementById('en').style.display ="block"            
+              let ru = document.querySelectorAll('#ru');
+              let ukr = document.querySelectorAll('#ukr');
+              let en = document.querySelectorAll('#en');
+              ru.forEach((el) => {
+                el.classList.add("none");
+              });
+              ukr.forEach((el) => {
+                el.classList.add("block");
+              });
+              en.forEach((el) => {
+                el.classList.add("block");
+              });    
 
+              en.forEach((el) => {
+                el.classList.remove("none");
+              });
+              ru.forEach((el) => {
+                el.classList.remove("block");
+              });
+              
             }
             if (locale == "en") {
-              document.getElementById('en').style.display ="none";
-              document.getElementById('ukr').style.display ="block"
-              document.getElementById('ru').style.display ="block"
+              let en = document.querySelectorAll('#en');
+              let ukr = document.querySelectorAll('#ukr');
+              let ru = document.querySelectorAll('#ru');
+              ru.forEach((el) => {
+                el.classList.add("block");
+              });
+              ukr.forEach((el) => {
+                el.classList.add("block");
+              });
+              en.forEach((el) => {
+                el.classList.add("none");
+              });   
+              ru.forEach((el) => {
+                el.classList.remove("none");
+              });
+              en.forEach((el) => {
+                el.classList.remove("block");
+              });   
             }
             if (locale == "ukr") {
-              document.getElementById('ukr').style.display ="none";
-              document.getElementById('en').style.display ="block"
-              document.getElementById('ru').style.display ="block"
+              let en = document.querySelectorAll('#en');
+              let ukr = document.querySelectorAll('#ukr');
+              let ru = document.querySelectorAll('#ru');
+              ru.forEach((el) => {
+                el.classList.add("block");
+              });
+              ukr.forEach((el) => {
+                el.classList.add("none");
+              });
+              en.forEach((el) => {
+                el.classList.add("block");
+              });  
+
+              ukr.forEach((el) => {
+                el.classList.remove("block");
+              });  
+              en.forEach((el) => {
+                el.classList.add("none");
+              });
             }
         },
         removeBurger(){

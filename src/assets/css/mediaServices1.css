@@ -1,0 +1,87 @@
+@media (max-width: 480px) {
+  .services1__header1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .services1__productInfo {
+    padding: 0px 20px;
+  }
+  .services1__stagesDev {
+    padding: 0px 20px 20px 20px;
+  }
+  .services1__addendum {
+    padding: 0px 20px;
+  }
+
+  .header1__logo {
+    top: 27px;
+    left: 20px;
+  }
+  .header1__servicesColum {
+    width: 100%;
+  }
+  .header1__servicesColum img {
+    width: 100%;
+    height: auto;
+  }
+  .header1__infoColum {
+    width: 100%;
+    height: 425px;
+    padding: 0px 20px 0px 20px;
+  }
+
+  .colum__btnScrollOurServices {
+    background: none;
+    border-left: none;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: auto;
+    position: absolute;
+    color: #fff;
+    bottom: -380px;
+    left: 49%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    padding-left: 5px;
+  }
+
+  .btnScrollOurServices__animText {
+    -webkit-animation: none;
+            animation: none;
+  }
+
+  .productInfo__serviceBox {
+    display: flex;
+    flex-direction: column;
+  }
+  .serviceBox__infoServ {
+    width: 100%;
+  }
+  .serviceBox__bgImg {
+    width: 100%;
+  }
+
+  .examples__boxProduct {
+    flex-direction: column;
+  }
+
+  .boxProduct {
+    width: auto;
+  }
+  .boxProduct__text {
+    width: auto;
+  }
+
+  .stagesBox__title {
+    font-size: 24px;
+  }
+  .addendum__serviceContainer {
+    flex-direction: column;
+  }
+
+  .serviceContainer {
+    width: 100%;
+  }
+}
