@@ -140,9 +140,7 @@ export default {
     this.stopTimer()
   }, 
   mounted(){ 
-    
     this.fetchPost();
-    
   },
   methods: {
     ...mapActions(['fetchPost']),
@@ -170,8 +168,9 @@ export default {
           this.startTimer()
           this.startLine()
           this.startOpasity();
-          console.log(scrollY);
+          console.log(window.scrollY, 'a');
       }
+      
      },
       startTimer() {
         this.timer = setInterval(() => {
@@ -194,8 +193,8 @@ export default {
     watch:{
       currentTime(time) {
         if (time === 0) {
-          this.stopTimer()
-          this.$router.push('/about') 
+          this.stopTimer();
+          this.$router.push('/about');
         }
       },
     },
